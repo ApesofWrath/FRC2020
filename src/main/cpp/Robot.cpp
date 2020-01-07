@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  /*----------------------------------------------------------------------------*/
+=======
+/*----------------------------------------------------------------------------*/
+>>>>>>> Init
 /* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
 /* Open Source Software - may be modified and shared by FRC teams. The code   */
 /* must be accompanied by the FIRST BSD license file in the root directory of */
@@ -9,15 +13,21 @@
 
 #include <iostream>
 
+<<<<<<< HEAD
 
 #include <frc/smartdashboard/SmartDashboard.h>
 
 
 
+=======
+#include <frc/smartdashboard/SmartDashboard.h>
+
+>>>>>>> Init
 void Robot::RobotInit() {
   m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
+<<<<<<< HEAD
 
 /*   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
   m_descolor_chooser.AddObject("Red",    Colors::RED);
@@ -57,6 +67,8 @@ void Robot::RobotInit() {
 
   arm = new Arm();
   intake = new Intake();
+=======
+>>>>>>> Init
 }
 
 /**
@@ -67,9 +79,13 @@ void Robot::RobotInit() {
  * <p> This runs after the mode specific periodic functions, but before
  * LiveWindow and SmartDashboard integrated updating.
  */
+<<<<<<< HEAD
 void Robot::RobotPeriodic() {
   
 }
+=======
+void Robot::RobotPeriodic() {}
+>>>>>>> Init
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
