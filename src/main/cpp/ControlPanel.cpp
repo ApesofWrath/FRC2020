@@ -22,7 +22,6 @@ std::string ControlPanel::getColor(Colors c) {
   }
 }
 
-
 Colors ColorFromFRCColor(frc::Color detectedColor) {
     frc::SmartDashboard::PutNumber("Red", detectedColor.red);
     frc::SmartDashboard::PutNumber("Green", detectedColor.green);

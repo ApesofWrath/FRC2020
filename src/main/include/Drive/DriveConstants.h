@@ -1,5 +1,4 @@
-#ifndef SRC_DRIVECONSTANTS_H_
-#define SRC_DRIVECONSTANTS_H_
+#pragma once
 
 #include "Constants.h"
 
@@ -121,6 +120,15 @@ const double MAX_FPS = 10.0;//; //used in auton pathfinder
 
 const double FF_SCALE = 0.7; //auton
 
+constexpr auto K_S = 0.105_V;
+constexpr auto K_V = 2.39 * 1_V * 1_s / 1_m;
+constexpr auto K_A = 0.202 * 1_V * 1_s * 1_s / 1_m;
+constexpr auto K_R_SQUARED = 0.999_m;
+constexpr auto K_TRACK_WIDTH = 0.7101365226646625;
+constexpr auto K_P_AUTON_FB = 2.79;
+constexpr auto K_D_AUTON_FB = 1.24;
+constexpr auto K_MAX_ACCEL = 10.77;
+
 #endif //both bots
 
 const double WHEEL_DIAMETER = 6.0; //inches, for fps for auton
@@ -128,4 +136,3 @@ const double TICKS_PER_ROT = 2048 * (84/8);//1365.0; //about 3 encoder rotations
 const double TICKS_PER_FOOT = 1315.0; //auton
 const double MINUTE_CONVERSION = 600.0; //part of the conversion from ticks velocity to rpm
 
-#endif

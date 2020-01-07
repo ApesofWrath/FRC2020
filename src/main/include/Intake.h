@@ -1,3 +1,4 @@
+#pragma once
 // #ifndef SRC_INTAKE_H_
 // #define SRC_INTAKE_H_
 
@@ -6,6 +7,7 @@
 // #include "Robot.h"
 #include "rev/CANSparkMax.h"
 #include "Arm.h"
+#include "Shooter.h"
 
 class Intake {
 public:
@@ -26,7 +28,7 @@ public:
     void In();
     void Out();
 
-    void IntakeStateMachine(Arm *arm, bool stop, bool in, bool out);
+    void IntakeStateMachine();
 
 
 

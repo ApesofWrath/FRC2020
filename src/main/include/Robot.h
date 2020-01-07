@@ -11,14 +11,20 @@
 
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
+#include <frc/WPILib.h>
 
-#include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 #include "ControlPanel.h"
 #include "Drive/DriveController.h"
+#include "RobotContainer.h"
+#include "Auton/AutonDrive.h"
+#include "AHRS.h"
 
 #include "Arm.h"
 #include "Intake.h"
+#include <cameraserver/CameraServer.h>
+// #include <frc/WPILib.h>
+#include "Shooter.h"
 
 class Robot : public frc::TimedRobot {
  public: 
@@ -37,6 +43,8 @@ class Robot : public frc::TimedRobot {
   TalonSRX* talon1;
   Arm* arm;
   Intake* intake;
+  TalonSRX* talon0;
+  Shooter* shooter, speed;
 
 
   rev::CANSparkMax *neo_1, *neo_2, *neo_3, *neo_4;
@@ -54,13 +62,20 @@ class Robot : public frc::TimedRobot {
     
   void UpdateButtons();
 
-  bool rest, up, down, stop, in , out;
+  bool stop_intake, in_intake, out_intake;
+  
+  bool shoot_shooter, intake_shooter, stop_shooter, waiting_shooter;
 
  private:
-  frc::SendableChooser<std::string> m_chooser;
+  // frc::SendableChooser<std::string> m_chooser;
 
-  const std::string kAutoNameDefault = "Default";
-  const std::string kAutoNameCustom = "My Auto";
+  // const std::string kAutoNameDefault = "Default";
+  // const std::string kAutoNameCustom = "My Auto";
   std::string m_autoSelected;
+  AutonDrive *a_drive;
+  frc::SendableChooser<Colors> m_descolor_chooser;
+  
+  frc2::Command* m_autonomousCommand = nullptr;
+  RobotContainer *m_container;
+  const Colors kDesColorDefault = Colors::WHITE;
 };
-

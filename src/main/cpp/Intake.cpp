@@ -27,30 +27,19 @@ void Intake::Stop() {
 void Intake::In() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.3);
-  intakeSparkM0->Set(0.30);
+  intakeSparkM0->Set(0.25);
 
 }
 
 void Intake::Out() {
 
   // talonIntake->Set(ControlMode::PercentOutput, -0.3);
-  intakeSparkM0->Set(-0.30);
+  intakeSparkM0->Set(-0.25);
 
 }
 
-void Intake::IntakeStateMachine(Arm *arm, bool stop, bool in, bool out) {
-
-  if (stop) {
-    intake_state = STOP_STATE;
-    arm->intake_arm_state = Arm::States::UP_STATE;
-  } else if(in) {
-    intake_state = IN_STATE;
-    arm->intake_arm_state = Arm::States::DOWN_STATE;
-  } else if(out) {
-    intake_state = OUT_STATE;  
-  }
+void Intake::IntakeStateMachine() {
   
-  arm->IntakeArmStateMachine();
   frc::SmartDashboard::PutNumber("INTAKE STATE", intake_state);
 
   switch(intake_state) {
