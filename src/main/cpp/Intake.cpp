@@ -14,43 +14,32 @@
 Intake::Intake() {
 
 //  talonIntake = new TalonSRX(0);
-intakeSparkM0 = new rev::CANSparkMax(22, rev::CANSparkMax::MotorType::kBrushless);
+intakeSparkM0 = new rev::CANSparkMax(intakeWheelSpark, rev::CANSparkMax::MotorType::kBrushless);
 
 }
 
 void Intake::Stop() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.0);
-  intakeSparkM0->Set(0);
+  intakeSparkM0->Set(IDLE_WHEEL_SPEED);
 }
 
 void Intake::In() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.3);
-  intakeSparkM0->Set(0.30);
+  intakeSparkM0->Set(IN_WHEEL_SPEED);
 
 }
 
 void Intake::Out() {
 
   // talonIntake->Set(ControlMode::PercentOutput, -0.3);
-  intakeSparkM0->Set(-0.30);
+  intakeSparkM0->Set(OUT_WHEEL_SPEED);
 
 }
 
-void Intake::IntakeStateMachine(Arm *arm, bool stop, bool in, bool out) {
+void Intake::IntakeStateMachine() {
 
-  if (stop) {
-    intake_state = STOP_STATE;
-    arm->intake_arm_state = Arm::States::UP_STATE;
-  } else if(in) {
-    intake_state = IN_STATE;
-    arm->intake_arm_state = Arm::States::DOWN_STATE;
-  } else if(out) {
-    intake_state = OUT_STATE;  
-  }
-  
-  arm->IntakeArmStateMachine();
   frc::SmartDashboard::PutNumber("INTAKE STATE", intake_state);
 
   switch(intake_state) {

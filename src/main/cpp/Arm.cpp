@@ -15,14 +15,14 @@
 double kP = 0.8, kI = 0, kD = 0.0, kIz = 0, kFF = 0, kMaxOutput = 0.3, kMinOutput = -0.3;
 
 
-Arm::Arm() {
+Arm::Arm(DriveBase* drive) {
 
 //  talonArm = new TalonSRX(1); uh maybe talon for intake not arm?
-  armSparkM0 = new rev::CANSparkMax(21, rev::CANSparkMax::MotorType::kBrushless);
+  armSparkM0 = new rev::CANSparkMax(21, rev::CANSparkMax::MotorType::kBrushless); //RIGHT SIDE Leader
   armEncoder = new rev::CANEncoder(armSparkM0->GetEncoder());
   armPID = new rev::CANPIDController(armSparkM0->GetPIDController());
   analog = new rev::CANAnalog(armSparkM0->GetAnalog());
-  armSparkM1 = new rev::CANSparkMax(24, rev::CANSparkMax::MotorType::kBrushless);
+  armSparkM1 = new rev::CANSparkMax(24, rev::CANSparkMax::MotorType::kBrushless);//LEFT SIDE Follower
   // rev::CANSparkMax armSpark0{1, rev::CANSparkMax::MotorType::kBrushless};
   armSparkM0->RestoreFactoryDefaults();
   armSparkM1->RestoreFactoryDefaults();
@@ -33,8 +33,6 @@ Arm::Arm() {
 
   armStartPos = armEncoder->GetPosition();
   targetPos = armStartPos;
-
-  joy = new frc::Joystick(0);
 
   armPID->SetP(kP);
   armPID->SetI(kI);
@@ -59,6 +57,7 @@ Arm::Arm() {
   
   //armPID->SetSmartMotionAccelStrategy(rev::CANPIDController::AccelStrategy::kSCurve);
 
+  m_drive = drive;
 
 }
 
@@ -78,7 +77,7 @@ void Arm::Up() {
   //   armSparkM0->Set(0);
   // }
    //armPID->SetReference(armStartPos, rev::ControlType::kPosition);
-  MoveToPosition(armStartPos);
+  MoveToPosition(armStartPos+START_OFFSET);
   //  armSparkM0->Set(1.0f);
 }
 
@@ -98,7 +97,7 @@ void Arm::Down() {
   //   armSparkM0 ->Set(0);
   // }
   //armPID->SetReference(armStartPos+5, rev::ControlType::kPosition);
-  MoveToPosition(armStartPos+15);
+  MoveToPosition(armStartPos+DOWN_POS);
   //armSparkM0->Set(-1.0f);
 }
 
@@ -113,6 +112,23 @@ void Arm::MoveToPosition(double desiredPosition){
   frc::SmartDashboard::PutNumber("intake position error", desiredPosition - (armEncoder->GetPosition()));
   armPID->SetReference(desiredPosition, rev::ControlType::kPosition);
 }
+
+// void Arm::ShouldBeInSmartMode() {
+//   if (abs(m_drive->GetAngularSpeed()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+//     return true;
+//   }
+//   if (abs(m_drive->GetAngularAcceleration()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+//     return true;
+//   }
+//   if (abs(m_drive->GetForwardSpeed()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+//     return true;
+//   }
+//   if (abs(m_drive->GetForwardAcceleration()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+//     return true;
+//   }
+
+
+// }
 
 void Arm::IntakeArmStateMachine() {
   armCurrPos = armEncoder->GetPosition();
@@ -154,16 +170,16 @@ void Arm::IntakeArmStateMachine() {
     case UP_STATE:
       if (last_intake_arm_state != UP_STATE) {
         targetPos = armStartPos;
-        MoveToPosition(armStartPos);
+        MoveToPosition(armStartPos + START_OFFSET);
       }
       frc::SmartDashboard::PutString("INTAKE ARM", "up");
     break;
 
     case DOWN_STATE:
       if (last_intake_arm_state != DOWN_STATE) {
-        targetPos = armStartPos + 15;
+        targetPos = armStartPos + DOWN_POS;
       }
-      if (abs(targetPos - armCurrPos) > 5){
+      if (abs(targetPos - armCurrPos) > 0){
          MoveToPosition(targetPos);
       } else {
         Rest();
