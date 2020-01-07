@@ -1,0 +1,1298 @@
+[
+  {
+    "name": "linuxathena",
+    "architecture": "arm-v7",
+    "operatingSystem": "linux",
+    "flavor": "default",
+    "buildType": "debug",
+    "cppPath": "C:\\Users\\Public\\wpilib\\2020\\roborio\\bin\\arm-frc2020-linux-gnueabi-g++.exe",
+    "cPath": "C:\\Users\\Public\\wpilib\\2020\\roborio\\bin\\arm-frc2020-linux-gnueabi-gcc.exe",
+    "msvc": false,
+    "gcc": true,
+    "systemCppMacros": [],
+    "systemCppArgs": [],
+    "systemCMacros": [],
+    "systemCArgs": [],
+    "allLibFiles": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\17be284ca49dcd43c5e6079bc11e4683\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f62f5159720fca7e80ab926c74c67356\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8e7c424b10134fce5b8bf7c582c6aa47\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5cb4fd32cc140418c25f37d6e85f6eb1\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\b5b402a566cef7b0b4d5d3446fbc6c4f\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\e1f009ddbd33f886deb60252422e0495\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1b4b6fc0f4d56e39af7d5bea2f1c63e0\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\40f77b5cef30768c6e76b9ba9e59dcb8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c09dea0534d208512cdb93bb123d1e70\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibSources": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\17be284ca49dcd43c5e6079bc11e4683\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f62f5159720fca7e80ab926c74c67356\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8e7c424b10134fce5b8bf7c582c6aa47\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5cb4fd32cc140418c25f37d6e85f6eb1\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\b5b402a566cef7b0b4d5d3446fbc6c4f\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\e1f009ddbd33f886deb60252422e0495\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1b4b6fc0f4d56e39af7d5bea2f1c63e0\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\40f77b5cef30768c6e76b9ba9e59dcb8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c09dea0534d208512cdb93bb123d1e70\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibHeaders": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+    ],
+    "binaries": [
+      {
+        "componentName": "frcUserProgram",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "-Wall",
+              "-Wextra",
+              "-std=c++17",
+              "-Wformat=2",
+              "-pedantic",
+              "-Wno-psabi",
+              "-g",
+              "-Wno-unused-parameter",
+              "-Wno-error=deprecated-declarations",
+              "-fPIC",
+              "-rdynamic",
+              "-pthread",
+              "-Og"
+            ],
+            "macros": []
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": true
+      }
+    ],
+    "sourceBinaries": [
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgram",
+        "cpp": true,
+        "args": [
+          "-Wall",
+          "-Wextra",
+          "-std=c++17",
+          "-Wformat=2",
+          "-pedantic",
+          "-Wno-psabi",
+          "-g",
+          "-Wno-unused-parameter",
+          "-Wno-error=deprecated-declarations",
+          "-fPIC",
+          "-rdynamic",
+          "-pthread",
+          "-Og"
+        ],
+        "macros": [],
+        "sharedLibrary": false,
+        "executable": true
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgram",
+        "cpp": true,
+        "args": [
+          "-Wall",
+          "-Wextra",
+          "-std=c++17",
+          "-Wformat=2",
+          "-pedantic",
+          "-Wno-psabi",
+          "-g",
+          "-Wno-unused-parameter",
+          "-Wno-error=deprecated-declarations",
+          "-fPIC",
+          "-rdynamic",
+          "-pthread",
+          "-Og"
+        ],
+        "macros": [],
+        "sharedLibrary": false,
+        "executable": true
+      }
+    ],
+    "nameBinaryMap": {
+      "frcUserProgram": 0
+    }
+  },
+  {
+    "name": "linuxathena",
+    "architecture": "arm-v7",
+    "operatingSystem": "linux",
+    "flavor": "default",
+    "buildType": "release",
+    "cppPath": "C:\\Users\\Public\\wpilib\\2020\\roborio\\bin\\arm-frc2020-linux-gnueabi-g++.exe",
+    "cPath": "C:\\Users\\Public\\wpilib\\2020\\roborio\\bin\\arm-frc2020-linux-gnueabi-gcc.exe",
+    "msvc": false,
+    "gcc": true,
+    "systemCppMacros": [],
+    "systemCppArgs": [],
+    "systemCMacros": [],
+    "systemCArgs": [],
+    "allLibFiles": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\17be284ca49dcd43c5e6079bc11e4683\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f62f5159720fca7e80ab926c74c67356\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8e7c424b10134fce5b8bf7c582c6aa47\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5cb4fd32cc140418c25f37d6e85f6eb1\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\b5b402a566cef7b0b4d5d3446fbc6c4f\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\e1f009ddbd33f886deb60252422e0495\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1b4b6fc0f4d56e39af7d5bea2f1c63e0\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\40f77b5cef30768c6e76b9ba9e59dcb8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c09dea0534d208512cdb93bb123d1e70\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibSources": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\17be284ca49dcd43c5e6079bc11e4683\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f62f5159720fca7e80ab926c74c67356\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8e7c424b10134fce5b8bf7c582c6aa47\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5cb4fd32cc140418c25f37d6e85f6eb1\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\b5b402a566cef7b0b4d5d3446fbc6c4f\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\e1f009ddbd33f886deb60252422e0495\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1b4b6fc0f4d56e39af7d5bea2f1c63e0\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\40f77b5cef30768c6e76b9ba9e59dcb8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c09dea0534d208512cdb93bb123d1e70\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibHeaders": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+    ],
+    "binaries": [
+      {
+        "componentName": "frcUserProgram",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "-Wall",
+              "-Wextra",
+              "-std=c++17",
+              "-Wformat=2",
+              "-pedantic",
+              "-Wno-psabi",
+              "-g",
+              "-Wno-unused-parameter",
+              "-Wno-error=deprecated-declarations",
+              "-fPIC",
+              "-rdynamic",
+              "-pthread",
+              "-O2"
+            ],
+            "macros": []
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": true
+      }
+    ],
+    "sourceBinaries": [
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgram",
+        "cpp": true,
+        "args": [
+          "-Wall",
+          "-Wextra",
+          "-std=c++17",
+          "-Wformat=2",
+          "-pedantic",
+          "-Wno-psabi",
+          "-g",
+          "-Wno-unused-parameter",
+          "-Wno-error=deprecated-declarations",
+          "-fPIC",
+          "-rdynamic",
+          "-pthread",
+          "-O2"
+        ],
+        "macros": [],
+        "sharedLibrary": false,
+        "executable": true
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgram",
+        "cpp": true,
+        "args": [
+          "-Wall",
+          "-Wextra",
+          "-std=c++17",
+          "-Wformat=2",
+          "-pedantic",
+          "-Wno-psabi",
+          "-g",
+          "-Wno-unused-parameter",
+          "-Wno-error=deprecated-declarations",
+          "-fPIC",
+          "-rdynamic",
+          "-pthread",
+          "-O2"
+        ],
+        "macros": [],
+        "sharedLibrary": false,
+        "executable": true
+      }
+    ],
+    "nameBinaryMap": {
+      "frcUserProgram": 0
+    }
+  },
+  {
+    "name": "windowsx86-64",
+    "architecture": "x86-64",
+    "operatingSystem": "Windows 10",
+    "flavor": "default",
+    "buildType": "debug",
+    "cppPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\bin\\HostX64\\x64\\cl.exe",
+    "cPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\bin\\HostX64\\x64\\cl.exe",
+    "msvc": true,
+    "gcc": false,
+    "systemCppMacros": [],
+    "systemCppArgs": [],
+    "systemCMacros": [],
+    "systemCArgs": [],
+    "allLibFiles": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\07b26fa03b875f43d7a3611a7db0c14c\\googletest-1.9.0-4-437e100-1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\17be284ca49dcd43c5e6079bc11e4683\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f62f5159720fca7e80ab926c74c67356\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8e7c424b10134fce5b8bf7c582c6aa47\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5cb4fd32cc140418c25f37d6e85f6eb1\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\b5b402a566cef7b0b4d5d3446fbc6c4f\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\e1f009ddbd33f886deb60252422e0495\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\620f1178da4ca778b02553a21fadce1b\\googletest-1.9.0-4-437e100-1-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1b4b6fc0f4d56e39af7d5bea2f1c63e0\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\40f77b5cef30768c6e76b9ba9e59dcb8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c09dea0534d208512cdb93bb123d1e70\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibSources": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\17be284ca49dcd43c5e6079bc11e4683\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f62f5159720fca7e80ab926c74c67356\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8e7c424b10134fce5b8bf7c582c6aa47\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5cb4fd32cc140418c25f37d6e85f6eb1\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\b5b402a566cef7b0b4d5d3446fbc6c4f\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\e1f009ddbd33f886deb60252422e0495\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\620f1178da4ca778b02553a21fadce1b\\googletest-1.9.0-4-437e100-1-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1b4b6fc0f4d56e39af7d5bea2f1c63e0\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\40f77b5cef30768c6e76b9ba9e59dcb8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c09dea0534d208512cdb93bb123d1e70\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibHeaders": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\07b26fa03b875f43d7a3611a7db0c14c\\googletest-1.9.0-4-437e100-1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+    ],
+    "binaries": [
+      {
+        "componentName": "frcUserProgramTest",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\test\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\frcUserProgramTest\\headers\\"
+              ],
+              "includes": [
+                "**/*.cpp"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/Od",
+              "/MDd"
+            ],
+            "macros": [
+              "RUNNING_FRC_TESTS"
+            ]
+          },
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/Od",
+              "/MDd"
+            ],
+            "macros": [
+              "RUNNING_FRC_TESTS"
+            ]
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\07b26fa03b875f43d7a3611a7db0c14c\\googletest-1.9.0-4-437e100-1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "componentName": "frcUserProgram",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/Od",
+              "/MDd"
+            ],
+            "macros": []
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": true
+      }
+    ],
+    "sourceBinaries": [
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\test\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/Od",
+          "/MDd"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\frcUserProgramTest\\headers\\"
+          ],
+          "includes": [
+            "**/*.cpp"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/Od",
+          "/MDd"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/Od",
+          "/MDd"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/Od",
+          "/MDd"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      }
+    ],
+    "nameBinaryMap": {
+      "frcUserProgram": 1,
+      "frcUserProgramTest": 0
+    }
+  },
+  {
+    "name": "windowsx86-64",
+    "architecture": "x86-64",
+    "operatingSystem": "Windows 10",
+    "flavor": "default",
+    "buildType": "release",
+    "cppPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\bin\\HostX64\\x64\\cl.exe",
+    "cPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\bin\\HostX64\\x64\\cl.exe",
+    "msvc": true,
+    "gcc": false,
+    "systemCppMacros": [],
+    "systemCppArgs": [],
+    "systemCMacros": [],
+    "systemCArgs": [],
+    "allLibFiles": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\07b26fa03b875f43d7a3611a7db0c14c\\googletest-1.9.0-4-437e100-1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\17be284ca49dcd43c5e6079bc11e4683\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f62f5159720fca7e80ab926c74c67356\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8e7c424b10134fce5b8bf7c582c6aa47\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5cb4fd32cc140418c25f37d6e85f6eb1\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\b5b402a566cef7b0b4d5d3446fbc6c4f\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\e1f009ddbd33f886deb60252422e0495\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\620f1178da4ca778b02553a21fadce1b\\googletest-1.9.0-4-437e100-1-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1b4b6fc0f4d56e39af7d5bea2f1c63e0\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\40f77b5cef30768c6e76b9ba9e59dcb8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c09dea0534d208512cdb93bb123d1e70\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibSources": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\17be284ca49dcd43c5e6079bc11e4683\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f62f5159720fca7e80ab926c74c67356\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8e7c424b10134fce5b8bf7c582c6aa47\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\5cb4fd32cc140418c25f37d6e85f6eb1\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\b5b402a566cef7b0b4d5d3446fbc6c4f\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\e1f009ddbd33f886deb60252422e0495\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\620f1178da4ca778b02553a21fadce1b\\googletest-1.9.0-4-437e100-1-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1b4b6fc0f4d56e39af7d5bea2f1c63e0\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\40f77b5cef30768c6e76b9ba9e59dcb8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c09dea0534d208512cdb93bb123d1e70\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibHeaders": [
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\07b26fa03b875f43d7a3611a7db0c14c\\googletest-1.9.0-4-437e100-1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+    ],
+    "binaries": [
+      {
+        "componentName": "frcUserProgramTest",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\test\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\frcUserProgramTest\\headers\\"
+              ],
+              "includes": [
+                "**/*.cpp"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/O2",
+              "/MD"
+            ],
+            "macros": [
+              "RUNNING_FRC_TESTS"
+            ]
+          },
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/O2",
+              "/MD"
+            ],
+            "macros": [
+              "RUNNING_FRC_TESTS"
+            ]
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\07b26fa03b875f43d7a3611a7db0c14c\\googletest-1.9.0-4-437e100-1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "componentName": "frcUserProgram",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/O2",
+              "/MD"
+            ],
+            "macros": []
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\32f92d540f27767165b8fb46ab0acba1\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\76b7b5b2c410c2d25472c42ad9ec6ab2\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\38095d779f23a0b2b79994e0ec26d2e8\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f3c0102dbc6068e83c71c61229d41e78\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\98e8f55bd8f110b4d000e6e28c4bf855\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\dc0a514f51ac4ea6981ffcf19cf01dda\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\3eaf715eec4ac7b00b57ee255d3d7f66\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4793131df0dff4705e5b0cdeaaa44609\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\4e31cbb91672053b2d8c31fbd59f7cea\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\103f3b66759f79e0312c6429f1dbba65\\cci-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\1f97c45de306a3485f6f450a304f1ca1\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\0528013d056d5a1b40e5c1ca312dddc2\\canutils-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\f2bfdfbc901068699ad3bcca2f3b4672\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\656420431c5598e6aa860e3f6663397c\\core-5.18.2-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\db59950a2905de7a150b62502f4985ae\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\8a5a6bb337c5b8e2a84ceac01c3c2259\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\c4c6bbaecccda1163e676653c3ec953c\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\osgoo\\.gradle\\caches\\transforms-2\\files-2.1\\62f52c96b7f59a4d20e8ce4b4c4be0cb\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": true
+      }
+    ],
+    "sourceBinaries": [
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\test\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/O2",
+          "/MD"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\frcUserProgramTest\\headers\\"
+          ],
+          "includes": [
+            "**/*.cpp"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/O2",
+          "/MD"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/O2",
+          "/MD"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\osgoo\\Desktop\\Robotics\\2020\\FRC2020-UPDATEDERTSM\\FRC2020\\src\\main\\include\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/O2",
+          "/MD"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      }
+    ],
+    "nameBinaryMap": {
+      "frcUserProgram": 1,
+      "frcUserProgramTest": 0
+    }
+  }
+]

@@ -1,11 +1,14 @@
 // #ifndef SRC_INTAKE_H_
 // #define SRC_INTAKE_H_
+#pragma once
+
 
 #include <ctre/Phoenix.h>
 #include <frc/WPILib.h>
 // #include "Robot.h"
 #include "rev/CANSparkMax.h"
 #include "Arm.h"
+#include "Shooter.h"
 
 class Intake {
 public:
@@ -20,13 +23,19 @@ public:
 
   States intake_state = STOP_STATE;
 
+  const int intakeWheelSpark = 22;
+
+  const float IDLE_WHEEL_SPEED = 0.05;
+  const float IN_WHEEL_SPEED = 0.6069;
+  const float OUT_WHEEL_SPEED = -0.6069;
+
     Intake();
 
     void Stop();
     void In();
     void Out();
 
-    void IntakeStateMachine(Arm *arm, bool stop, bool in, bool out);
+    void IntakeStateMachine();
 
 
 

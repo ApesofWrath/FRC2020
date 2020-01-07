@@ -1,4 +1,4 @@
- /*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 /* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
 /* Open Source Software - may be modified and shared by FRC teams. The code   */
 /* must be accompanied by the FIRST BSD license file in the root directory of */
@@ -9,10 +9,7 @@
 
 #include <iostream>
 
-
 #include <frc/smartdashboard/SmartDashboard.h>
-
-
 
 void Robot::RobotInit() {
   m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);
@@ -33,43 +30,54 @@ void Robot::RobotInit() {
 
 
 
-
+*/
   controlpanel = new ControlPanel();
-
+/*d
   Falcon_T = new TalonFX(0);
   Falcon_T2 = new TalonFX(1);
 
   T46 = new TalonSRX(46);
   T46->SetInverted(InvertType::InvertMotorOutput);
 */
-  joyT = new frc::Joystick(0);
-  joyW = new frc::Joystick(1);
+  JoyThrottle = new frc::Joystick(0);
+  JoyWheel = new frc::Joystick(1);
+
+
   drive = new DriveController();
 
-  joy = new frc::Joystick(0);
-  talon1 = new TalonSRX(36);
 
-  neo_1 = new rev::CANSparkMax(1, rev::CANSparkMax::MotorType::kBrushless);
-  neo_2 = new rev::CANSparkMax(2, rev::CANSparkMax::MotorType::kBrushless);
-  neo_3 = new rev::CANSparkMax(3, rev::CANSparkMax::MotorType::kBrushless);
-  neo_4 = new rev::CANSparkMax(4, rev::CANSparkMax::MotorType::kBrushless);
+  // neo_1 = new rev::CANSparkMax(1, rev::CANSparkMax::MotorType::kBrushless);
+  // neo_2 = new rev::CANSparkMax(2, rev::CANSparkMax::MotorType::kBrushless);
+  // neo_3 = new rev::CANSparkMax(3, rev::CANSparkMax::MotorType::kBrushless);
+  // neo_4 = new rev::CANSparkMax(4, rev::CANSparkMax::MotorType::kBrushless);
 
 
-  arm = new Arm();
+  arm = new Arm(drive);
   intake = new Intake();
+
+  m_descolor_chooser.AddDefault("None",  Colors::WHITE);
+  m_descolor_chooser.AddObject("Red",    Colors::RED);
+  m_descolor_chooser.AddObject("Blue",   Colors::BLUE);
+  m_descolor_chooser.AddObject("Green",  Colors::GREEN);
+  m_descolor_chooser.AddObject("Yellow", Colors::YELLOW);
+
+  frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
+  // talon0 = new TalonSRX(0);
+
+  cs::UsbCamera camera = frc::CameraServer::GetInstance()->StartAutomaticCapture("coolmethgames.gov", 0);
+
+	camera.SetResolution(1280, 720);
+	camera.SetExposureManual(0);
+	camera.SetBrightness(100);
+
+  shooter = new Shooter();
+
+  tsm = new TeleopStateMachine(shooter, intake, controlpanel, arm);
+  
+  JoyOp = new frc::Joystick(2);
 }
 
-/**
- * This function is called every robot packet, no matter the mode. Use
- * this for items like diagnostics that you want ran during disabled,
- * autonomous, teleoperated and test.
- *
- * <p> This runs after the mode specific periodic functions, but before
- * LiveWindow and SmartDashboard integrated updating.
- */
-void Robot::RobotPeriodic() {
-  
-}
+void Robot::RobotPeriodic() {}
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
@@ -119,7 +127,7 @@ void Robot::TeleopPeriodic() {
   //   controlpanel->RotationMode();
   // }
 
-  frc::SmartDashboard::PutNumber("speed", joyT->GetThrottle());
+  // frc::SmartDashboard::PutNumber("speed", joyT->GetThrottle());
 
   // if (joyT->GetRawButton(1)) {
   //   Falcon_T->Set(ControlMode::PercentOutput, joyT->GetThrottle());
@@ -129,8 +137,9 @@ void Robot::TeleopPeriodic() {
   //   Falcon_T2->Set(ControlMode::PercentOutput, 0);
   // }
 
-  drive->RunTeleopDrive(joyT, joyW, true, false, false);
-
+  drive->RunTeleopDrive(JoyThrottle, JoyWheel, true, false, false);
+  tsm->StateMachine(tsm->GatherButtonDataFromJoysticks(
+    JoyThrottle, JoyWheel, JoyOp)); //joyOp maybe???
   // drive->ManualOpenLoopDrive(joyT, joyW);
   // drive->TeleopWCDrive(joyT,joyW,false,false);
 
@@ -147,12 +156,10 @@ void Robot::TeleopPeriodic() {
   //   talon0->Set(ControlMode::PercentOutput, 0);
   // } else {
   //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
-  UpdateButtons();
 
-  intake->IntakeStateMachine(arm, stop, in, out);
-
-  frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
-
+  // frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
+  frc::SmartDashboard::PutString("Last State", TeleopStateMachine::StateName(tsm->last_state));
+  frc::SmartDashboard::PutString("Current State", TeleopStateMachine::StateName(tsm->state));
 }
 
 void Robot::UpdateButtons(){
@@ -161,10 +168,7 @@ void Robot::UpdateButtons(){
   // down = joy->GetRawButton(8);
   // up = joy->GetRawButton(7);
   
-  stop = joyT->GetRawButton(7);
-  in = joyT->GetRawButton(8);
-  out = joyT->GetRawButton(9);
-
+  
 }
 
 void Robot::TestPeriodic() {}
