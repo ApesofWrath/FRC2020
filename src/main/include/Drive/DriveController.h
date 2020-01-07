@@ -1,5 +1,4 @@
-#ifndef SRC_DRIVECONTROLLER_H_
-#define SRC_DRIVECONTROLLER_H_
+#pragma once
 
 #include "DriveBase.h"
 
@@ -16,5 +15,3 @@ public:
 	}
 
 };
-
-#endif

@@ -39,7 +39,6 @@ void Intake::Out() {
 }
 
 void Intake::IntakeStateMachine() {
-
   frc::SmartDashboard::PutNumber("INTAKE STATE", intake_state);
 
   switch(intake_state) {

@@ -15,7 +15,7 @@
 double kP = 0.8, kI = 0, kD = 0.0, kIz = 0, kFF = 0, kMaxOutput = 0.3, kMinOutput = -0.3;
 
 
-Arm::Arm(DriveBase* drive) {
+Arm::Arm() {
 
 //  talonArm = new TalonSRX(1); uh maybe talon for intake not arm?
   armSparkM0 = new rev::CANSparkMax(21, rev::CANSparkMax::MotorType::kBrushless); //RIGHT SIDE Leader
@@ -57,7 +57,6 @@ Arm::Arm(DriveBase* drive) {
   
   //armPID->SetSmartMotionAccelStrategy(rev::CANPIDController::AccelStrategy::kSCurve);
 
-  m_drive = drive;
 
 }
 
@@ -192,3 +191,4 @@ void Arm::IntakeArmStateMachine() {
   last_intake_arm_state = intake_arm_state;
 
 }
+  

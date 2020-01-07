@@ -1,5 +1,7 @@
 #include <Shooter.h>
 
+#define MOTOR_ROTATION_PER_HALF_BELT_ROTATION 26.1799387799
+
     const int INIT_STATE = 0;
     const int INTAKE_STATE = 1;
     const int STOP_STATE = 2;
