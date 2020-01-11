@@ -20,6 +20,18 @@
 #include "Arm.h"
 #include "Intake.h"
 
+
+#include "rev/ColorSensorV3.h"
+
+namespace apesofwrath {
+
+enum Colors {
+  RED = 0,
+  BLUE = 1,
+  YELLOW = 2,
+  GREEN = 3,
+  WHITE = 4
+};
 class Robot : public frc::TimedRobot {
  public: 
 
@@ -56,10 +68,19 @@ class Robot : public frc::TimedRobot {
 
   bool rest, up, down, stop, in , out;
 
+  static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
+  rev::ColorSensorV3 m_colorSensor{i2cPort};
+  frc::Color detectedColor;
+  
  private:
   frc::SendableChooser<std::string> m_chooser;
 
+  frc::SendableChooser<Colors> m_descolor_chooser;
+  
   const std::string kAutoNameDefault = "Default";
   const std::string kAutoNameCustom = "My Auto";
+  const Colors kDesColorDefault = Colors::WHITE;
   std::string m_autoSelected;
 };
+
+}
