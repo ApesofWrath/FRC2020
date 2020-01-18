@@ -62,6 +62,9 @@ void Robot::RobotInit() {
   m_descolor_chooser.AddObject("Yellow", apesofwrath::Colors::YELLOW);
 
   frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
+  talon0 = new TalonSRX(0);
+
+  shooter = new Shooter();
 }
 
 /**
@@ -185,7 +188,20 @@ void apesofwrath::Robot::TeleopPeriodic() {
 
   // intake->IntakeStateMachine(arm, stop, in, out);
 
-  // frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
+  shooter->ShooterStateMachine(stop, intake, shoot);
+  frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
+
+}
+
+void Robot::UpdateButtons(){
+
+  // rest = joy->GetRawButton(9);
+  // down = joy->GetRawButton(8);
+  // up = joy->GetRawButton(7);
+  
+  stop = joyT->GetRawButton(7);
+  in = joyT->GetRawButton(8);
+  out = joyT->GetRawButton(9);
 
 }
 
@@ -212,3 +228,9 @@ std::string Robot::getColor(Colors c) {
 #ifndef RUNNING_FRC_TESTS
 int main() { return frc::StartRobot<apesofwrath::Robot>(); }
 #endif
+
+void apesofwrath::Robot::UpdateButtons(){
+  stop = joy->GetRawButton(9);
+  intake = joy->GetRawButton(8);
+  shoot = joy->GetRawButton(7);
+}
