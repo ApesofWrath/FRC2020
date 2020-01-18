@@ -13,6 +13,8 @@ enum Colors {
   WHITE  = 4
 };
 
+
+
 Colors ColorFromFRCColor(frc::Color);
 
 class ControlPanel {
@@ -52,5 +54,5 @@ public:
 
     States state;
     States last_state;
-    //poopy//
+    
 };
