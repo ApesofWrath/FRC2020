@@ -12,26 +12,21 @@
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
 
-#include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 
-#include "rev/ColorSensorV3.h"
+#include "ControlPanel.h"
 
-namespace apesofwrath {
 
-enum Colors {
-  RED = 0,
-  BLUE = 1,
-  YELLOW = 2,
-  GREEN = 3,
-  WHITE = 4
-};
 class Robot : public frc::TimedRobot {
- public:
+ public: 
+
+  ControlPanel* controlpanel; 
+
+//Temporary Button ids
+  const int BUTTON_STOP = 2, POSITION_BUTTON = 3, ROTATION_BUTTON = 4;
 
   Colors currentColor, desiredColor;
   frc::Joystick* joy;
-  TalonSRX* talon0;
 
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
   const float CONTROL_WHEEL_SPEED_OFF = 0;
@@ -43,7 +38,7 @@ class Robot : public frc::TimedRobot {
   void TeleopInit() override;
   void TeleopPeriodic() override;
   void TestPeriodic() override;
-  std::string getColor(apesofwrath::Colors c);
+  std::string getColor(Colors c);
 
 
   static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
@@ -59,5 +54,3 @@ class Robot : public frc::TimedRobot {
   const Colors kDesColorDefault = Colors::WHITE;
   std::string m_autoSelected;
 };
-
-}
