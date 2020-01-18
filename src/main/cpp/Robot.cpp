@@ -7,6 +7,7 @@
 
 #include "Robot.h"
 
+
 #include <iostream>
 
 
@@ -21,6 +22,8 @@ void apesofwrath::Robot::RobotInit() {
 
   joy = new frc::Joystick(0);
   talon0 = new TalonSRX(0);
+
+  shooter = new Shooter();
 }
 
 /**
@@ -74,9 +77,13 @@ void apesofwrath::Robot::TeleopPeriodic() {
   if (joy->GetTrigger()) {
     talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON * joy->GetThrottle());
   } else {
-    talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_OFF);
+    
   }
 
+
+
+  shooter->ShooterStateMachine(stop, intake, shoot);
+  UpdateButtons();
 }
 
 void apesofwrath::Robot::TestPeriodic() {}
@@ -84,3 +91,9 @@ void apesofwrath::Robot::TestPeriodic() {}
 #ifndef RUNNING_FRC_TESTS
 int main() { return frc::StartRobot<apesofwrath::Robot>(); }
 #endif
+
+void apesofwrath::Robot::UpdateButtons(){
+  stop = joy->GetRawButton(9);
+  intake = joy->GetRawButton(8);
+  shoot = joy->GetRawButton(7);
+}

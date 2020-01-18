@@ -15,6 +15,7 @@
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 
+#include "Shooter.h"
 namespace apesofwrath {
 
 class Robot : public frc::TimedRobot {
@@ -22,6 +23,7 @@ class Robot : public frc::TimedRobot {
 
   frc::Joystick* joy;
   TalonSRX* talon0;
+  Shooter* shooter;
 
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
   const float CONTROL_WHEEL_SPEED_OFF = 0;
@@ -33,8 +35,10 @@ class Robot : public frc::TimedRobot {
   void TeleopInit() override;
   void TeleopPeriodic() override;
   void TestPeriodic() override;
-
+  void UpdateButtons();
   
+  bool shoot, intake, stop;
+
  private:
   frc::SendableChooser<std::string> m_chooser;
   
