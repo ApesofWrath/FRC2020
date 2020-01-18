@@ -11,23 +11,15 @@
 
 #include "Robot.h"
 
+
 #include <iostream>
 
-<<<<<<< HEAD
-
 #include <frc/smartdashboard/SmartDashboard.h>
 
-
-
-=======
-#include <frc/smartdashboard/SmartDashboard.h>
-
->>>>>>> Init
 void Robot::RobotInit() {
   m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
-<<<<<<< HEAD
 
 /*   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
   m_descolor_chooser.AddObject("Red",    Colors::RED);
@@ -67,8 +59,9 @@ void Robot::RobotInit() {
 
   arm = new Arm();
   intake = new Intake();
-=======
->>>>>>> Init
+  talon0 = new TalonSRX(0);
+
+  shooter = new Shooter();
 }
 
 /**
@@ -79,13 +72,9 @@ void Robot::RobotInit() {
  * <p> This runs after the mode specific periodic functions, but before
  * LiveWindow and SmartDashboard integrated updating.
  */
-<<<<<<< HEAD
 void Robot::RobotPeriodic() {
   
 }
-=======
-void Robot::RobotPeriodic() {}
->>>>>>> Init
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
@@ -167,6 +156,7 @@ void Robot::TeleopPeriodic() {
 
   intake->IntakeStateMachine(arm, stop, in, out);
 
+  shooter->ShooterStateMachine(stop, intake, shoot);
   frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
 
 }
@@ -206,3 +196,9 @@ std::string Robot::getColor(Colors c) {
 #ifndef RUNNING_FRC_TESTS
 int main() { return frc::StartRobot<Robot>(); }
 #endif
+
+void apesofwrath::Robot::UpdateButtons(){
+  stop = joy->GetRawButton(9);
+  intake = joy->GetRawButton(8);
+  shoot = joy->GetRawButton(7);
+}

@@ -17,8 +17,13 @@
 #include "ControlPanel.h"
 #include "Drive/DriveController.h"
 
+<<<<<<< HEAD
 #include "Arm.h"
 #include "Intake.h"
+=======
+#include "Shooter.h"
+namespace apesofwrath {
+>>>>>>> Added statemachine, motor control, builds
 
 class Robot : public frc::TimedRobot {
  public: 
@@ -37,6 +42,8 @@ class Robot : public frc::TimedRobot {
   TalonSRX* talon1;
   Arm* arm;
   Intake* intake;
+  TalonSRX* talon0;
+  Shooter* shooter;
 
 
   rev::CANSparkMax *neo_1, *neo_2, *neo_3, *neo_4;
@@ -55,6 +62,7 @@ class Robot : public frc::TimedRobot {
   void UpdateButtons();
 
   bool rest, up, down, stop, in , out;
+  bool shoot, intake, stop;
 
  private:
   frc::SendableChooser<std::string> m_chooser;
