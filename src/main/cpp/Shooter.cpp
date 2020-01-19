@@ -51,9 +51,9 @@
                 break;
                 case SHOOT_STATE:
                 frc::SmartDashboard::PutString("Shooter ", "shoot");
-                canTalonBelt->Set(ControlMode::PercentOutput, .4);
-                canTalonTopW->Set(ControlMode::PercentOutput, .4);
-                canTalonBottomW->Set(ControlMode::PercentOutput, .4);
+                canTalonBelt->Set(ControlMode::PercentOutput, .1);
+                canTalonTopW->Set(ControlMode::PercentOutput, 1);
+                canTalonBottomW->Set(ControlMode::PercentOutput, 1);
                 last_shooter_state = SHOOT_STATE;
                 break;
             }
