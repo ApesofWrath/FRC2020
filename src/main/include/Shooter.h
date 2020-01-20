@@ -18,14 +18,22 @@ class Shooter {
     const int INTAKE_STATE_H = 1;
     const int STOP_STATE_H = 2;
     const int SHOOT_STATE_H = 3;
+    const int WAITING_STATE_H = 4;
 
     int last_shooter_state = INIT_STATE_H;
     int shooter_state = INIT_STATE_H;
 
+    float speed = 0;
+
     TalonSRX *canTalonBelt, *canTalonTopW, *canTalonBottomW;
+    frc::Joystick* joy;
 
     Shooter();
+    void Shoot();
+    void Intake();
+    void Stop();
+    void Waiting();
 
-    void ShooterStateMachine(bool shoot, bool intake, bool stop);
+    void ShooterStateMachine(bool shoot, bool intake, bool stop, bool waiting);
 };
 

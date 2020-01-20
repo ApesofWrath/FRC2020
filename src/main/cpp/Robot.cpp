@@ -81,8 +81,7 @@ void apesofwrath::Robot::TeleopPeriodic() {
   }
 
 
-
-  shooter->ShooterStateMachine(stop, intake, shoot);
+  shooter->ShooterStateMachine(stop, intake, shoot, waiting);
   UpdateButtons();
 }
 
@@ -96,4 +95,8 @@ void apesofwrath::Robot::UpdateButtons(){
   stop = joy->GetRawButton(9);
   intake = joy->GetRawButton(8);
   shoot = joy->GetRawButton(7);
+  waiting = joy->GetRawButton(10);
+  
+  
+  // speed = joy->GetRawAxis(1);
 }
