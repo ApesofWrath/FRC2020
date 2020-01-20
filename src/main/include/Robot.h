@@ -18,6 +18,8 @@
 #include "Drive/DriveController.h"
 
 #include "Shooter.h"
+#include "Arm.h"
+#include "Intake.h"
 
 #include "rev/ColorSensorV3.h"
 
@@ -49,7 +51,7 @@ class Robot : public frc::TimedRobot {
   Arm* arm;
   Intake* intake;
   TalonSRX* talon0;
-  Shooter* shooter;
+  Shooter* shooter, speed;
 
   TeleopStateMachine *tsm;
 
@@ -70,6 +72,8 @@ class Robot : public frc::TimedRobot {
 
   bool rest, up, down, stop, in , out;
   bool shoot, intake, stop;
+  
+  bool shoot, intake, stop, waiting;
 
  private:
   frc::SendableChooser<std::string> m_chooser;
