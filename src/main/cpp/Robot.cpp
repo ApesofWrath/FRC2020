@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- /*----------------------------------------------------------------------------*/
-=======
 /*----------------------------------------------------------------------------*/
->>>>>>> Init
 /* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
 /* Open Source Software - may be modified and shared by FRC teams. The code   */
 /* must be accompanied by the FIRST BSD license file in the root directory of */
@@ -152,6 +148,7 @@ void Robot::TeleopPeriodic() {
   //   talon0->Set(ControlMode::PercentOutput, 0);
   // } else {
   //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
+  shooter->ShooterStateMachine(stop, intake, shoot, waiting);
   UpdateButtons();
 
   intake->IntakeStateMachine(arm, stop, in, out);
@@ -201,4 +198,8 @@ void apesofwrath::Robot::UpdateButtons(){
   stop = joy->GetRawButton(9);
   intake = joy->GetRawButton(8);
   shoot = joy->GetRawButton(7);
+  waiting = joy->GetRawButton(10);
+  
+  
+  // speed = joy->GetRawAxis(1);
 }
