@@ -25,6 +25,10 @@ class Robot : public frc::TimedRobot {
 //Temporary Button ids
   const int BUTTON_STOP = 2, POSITION_BUTTON = 3, ROTATION_BUTTON = 4;
 
+  TalonSRX *T16, *T49, *T14, *T2;
+
+  VictorSPX *V4, *V7, *V10;
+
   Colors currentColor, desiredColor;
   frc::Joystick* joy;
 
@@ -39,12 +43,7 @@ class Robot : public frc::TimedRobot {
   void TeleopPeriodic() override;
   void TestPeriodic() override;
   std::string getColor(Colors c);
-
-
-  static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
-  rev::ColorSensorV3 m_colorSensor{i2cPort};
-  frc::Color detectedColor;
-  
+    
  private:
   frc::SendableChooser<std::string> m_chooser;
   frc::SendableChooser<Colors> m_descolor_chooser;

@@ -5,8 +5,29 @@ ControlPanel::ControlPanel() {
     talon = new TalonSRX(CONTROL_PANEL_TALON);
 }
 
+std::string ControlPanel::getColor(Colors c) {
+  switch (c) {
+    case Colors::RED:
+      return "Red";
+    case Colors::YELLOW:
+      return "Yellow";
+    case Colors::BLUE:
+      return "Blue";
+    case Colors::GREEN:
+      return "Green";
+    case Colors::WHITE:
+      return "None";
+    default:
+      return "None";
+  }
+}
+
 
 Colors ColorFromFRCColor(frc::Color detectedColor) {
+    frc::SmartDashboard::PutNumber("Red", detectedColor.red);
+    frc::SmartDashboard::PutNumber("Green", detectedColor.green);
+    frc::SmartDashboard::PutNumber("Blue", detectedColor.blue);
+
     if (detectedColor.red > 0.3 && detectedColor.green > 0.5 && detectedColor.blue < 0.2) {
       frc::SmartDashboard::PutString("Color", "Yellow");
       return Colors::YELLOW;
@@ -34,18 +55,35 @@ void ControlPanel::Stop() {
     state = IDLE;
 }
 
-void ControlPanel::StateMachine(Colors detectedColor) {
+void ControlPanel::StateMachine() {
+
+    detectedColor = m_colorSensor.GetColor();
+
     switch(state) {
         case IDLE:
+            last_state = States::IDLE;
             break;
         case POSITION_MODE:
-            if (!HasReachedPosition(detectedColor)) {
+            if (!HasReachedPosition(ColorFromFRCColor(detectedColor))) {
                 Rotate();
             } else {
                 Stop();
             }
+            last_state = States::POSITION_MODE;
             break;
         case ROTATION_MODE:
+            // if (ColorFromFRCColor(detectedColor) == rotationModeStartingColor) {
+            //   rotations++;
+            // }
+
+
+
+            // if (rotations == neededRotations) {
+            //   Stop();
+            // } else {
+            //   Rotate();
+            // }
+            last_state = States::ROTATION_MODE;
             break;
     }
 }

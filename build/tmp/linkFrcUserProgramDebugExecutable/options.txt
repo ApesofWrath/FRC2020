@@ -1,6 +1,8 @@
 -o
 C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\build\\exe\\frcUserProgram\\debug\\frcUserProgram
 C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\build\\objs\\frcUserProgram\\debug\\frcUserProgramCpp\\3bg5a77l7vd4edmrxq5jco6ri\\Robot.o
+C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\build\\objs\\frcUserProgram\\debug\\frcUserProgramCpp\\6gykgm0c62sbxhttbce9x4e4p\\ControlPanel.o
+C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\build\\objs\\frcUserProgram\\debug\\frcUserProgramCpp\\ac4x23x1rofvtlhckv68q6kpd\\DriveBase.o
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\1c2795dcb38a2c3544fd3e4816cee391\\wpilibc-cpp-2020.1.2-linuxathenadebug\\linux\\athena\\shared\\libwpilibcd.so
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\1f5c28ff6f362f96081f5973349db223\\ntcore-cpp-2020.1.2-linuxathenadebug\\linux\\athena\\shared\\libntcored.so
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d98ff82e8c3f2fe61b3dc283fa945dd6\\hal-cpp-2020.1.2-linuxathenadebug\\linux\\athena\\shared\\libwpiHald.so
@@ -34,6 +36,7 @@ C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8b8270a5b35cf1e4d13e1
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8b8270a5b35cf1e4d13e1762d0743031\\opencv-cpp-3.4.7-2-linuxathenadebug\\linux\\athena\\shared\\libopencv_videod.so.3.4
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8b8270a5b35cf1e4d13e1762d0743031\\opencv-cpp-3.4.7-2-linuxathenadebug\\linux\\athena\\shared\\libopencv_videoiod.so.3.4
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8b8270a5b35cf1e4d13e1762d0743031\\opencv-cpp-3.4.7-2-linuxathenadebug\\linux\\athena\\shared\\libopencv_videostabd.so.3.4
+C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\35afe19f25dd5e4a0a1cdba050200503\\navx-cpp-3.1.400-linuxathenastaticdebug\\linux\\athena\\static\\libnavx_frcd.a
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\add725d3d249d7163d0693b99d6bceff\\wpiapi-cpp-5.17.3-linuxathenastaticdebug\\linux\\athena\\static\\libCTRE_Phoenix_WPI.a
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\434664895c27489ab4f5b55a6398e0d7\\api-cpp-5.17.3-linuxathenastaticdebug\\linux\\athena\\static\\libCTRE_Phoenix.a
 C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b297ba1fc502e924672e706fd77672d1\\cci-5.17.3-linuxathenastaticdebug\\linux\\athena\\static\\libCTRE_PhoenixCCI.a

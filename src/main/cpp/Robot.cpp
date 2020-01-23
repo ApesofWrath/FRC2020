@@ -30,6 +30,23 @@ void Robot::RobotInit() {
 
   joy = new frc::Joystick(0);
   controlpanel = new ControlPanel();
+
+  T16 = new TalonSRX(16);
+  T49 = new TalonSRX(49);
+  T14 = new TalonSRX(14);
+  T2 = new TalonSRX(2);
+
+  V4 = new VictorSPX(4);
+  V7 = new VictorSPX(7);
+  V10 = new VictorSPX(10);
+
+  V4->Follow(*T16);
+  V7->Follow(*T16);
+
+  V10->Follow(*T49);
+  T14->Follow(*T49);
+
+
 }
 
 /**
@@ -77,22 +94,41 @@ void Robot::AutonomousPeriodic() {
 }
 void Robot::TeleopInit() {
 }
-
+bool toggle = false;
 void Robot::TeleopPeriodic() {
   
-  detectedColor = m_colorSensor.GetColor();
   
-  frc::SmartDashboard::PutNumber("Red", detectedColor.red);
-  frc::SmartDashboard::PutNumber("Green", detectedColor.green);
-  frc::SmartDashboard::PutNumber("Blue", detectedColor.blue);
   frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
 
-  desiredColor = m_descolor_chooser.GetSelected();
+  controlpanel->DesireColor(m_descolor_chooser.GetSelected());
+
+  if (joy->GetRawButton(1)) {
+    T2->Set(ControlMode::PercentOutput, -1.0f);
+  } else {
+    T2->Set(ControlMode::PercentOutput, 0.0f);
+  }
+
+
+  T49->Set(ControlMode::PercentOutput, joy->GetY());
+  T16->Set(ControlMode::PercentOutput, -joy->GetY());
+
+
+  
 
 
   if (joy->GetRawButton(BUTTON_STOP)) {
     controlpanel->Stop();
   }
+  if (joy->GetRawButton(POSITION_BUTTON)) {
+    controlpanel->PositionMode();
+  }
+  if (joy->GetRawButton(ROTATION_BUTTON)) {
+    controlpanel->RotationMode();
+  }
+
+
+
+  controlpanel->StateMachine();
 
   // if (((currentColor == desiredColor || desiredColor == Colors::WHITE) && !joy->GetTrigger()) || joy->GetRawButton(2)) {
   //   talon0->Set(ControlMode::PercentOutput, 0);
@@ -104,22 +140,7 @@ void Robot::TeleopPeriodic() {
 
 void Robot::TestPeriodic() {}
 
-std::string Robot::getColor(Colors c) {
-  switch (c) {
-    case Colors::RED:
-      return "Red";
-    case Colors::YELLOW:
-      return "Yellow";
-    case Colors::BLUE:
-      return "Blue";
-    case Colors::GREEN:
-      return "Green";
-    case Colors::WHITE:
-      return "None";
-    default:
-      return "None";
-  }
-}
+
 
 #ifndef RUNNING_FRC_TESTS
 int main() { return frc::StartRobot<Robot>(); }
