@@ -119,7 +119,7 @@ DriveBase::DriveBase(int l1, int l2, int l3, int l4,
   canTalonRight2->Follow(*canTalonRight1);
 	canTalonRight3 = new VictorSPX(R3);
   canTalonRight3->Follow(*canTalonRight1);
-
+//edi-gay
   //talon settings
 
 	canTalonLeft1->ConfigPeakCurrentLimit(30, 0);

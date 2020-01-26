@@ -15,6 +15,7 @@
 #include <frc/Joystick.h>
 
 #include "ControlPanel.h"
+#include "Drive/DriveController.h"
 
 
 class Robot : public frc::TimedRobot {
@@ -22,15 +23,15 @@ class Robot : public frc::TimedRobot {
 
   ControlPanel* controlpanel; 
 
+  DriveController* drive;
+
 //Temporary Button ids
-  const int BUTTON_STOP = 2, POSITION_BUTTON = 3, ROTATION_BUTTON = 4;
+  const int BUTTON_STOP = 2, POSITION_BUTTON = 5, ROTATION_BUTTON = 4, INTAKE = 3;
 
-  TalonSRX *T16, *T49, *T14, *T2;
-
-  VictorSPX *V4, *V7, *V10;
+  TalonSRX *T46;
 
   Colors currentColor, desiredColor;
-  frc::Joystick* joy;
+  frc::Joystick  *joyT, *joyW;
 
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
   const float CONTROL_WHEEL_SPEED_OFF = 0;

@@ -28,24 +28,14 @@ void Robot::RobotInit() {
 
   frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
 
-  joy = new frc::Joystick(0);
+  joyT = new frc::Joystick(0);
+  joyW = new frc::Joystick(1);
   controlpanel = new ControlPanel();
 
-  T16 = new TalonSRX(16);
-  T49 = new TalonSRX(49);
-  T14 = new TalonSRX(14);
-  T2 = new TalonSRX(2);
+  T46 = new TalonSRX(46);
+  T46->SetInverted(InvertType::InvertMotorOutput);
 
-  V4 = new VictorSPX(4);
-  V7 = new VictorSPX(7);
-  V10 = new VictorSPX(10);
-
-  V4->Follow(*T16);
-  V7->Follow(*T16);
-
-  V10->Follow(*T49);
-  T14->Follow(*T49);
-
+  drive = new DriveController();
 
 }
 
@@ -101,33 +91,28 @@ void Robot::TeleopPeriodic() {
   frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
 
   controlpanel->DesireColor(m_descolor_chooser.GetSelected());
-
-  if (joy->GetRawButton(1)) {
-    T2->Set(ControlMode::PercentOutput, -1.0f);
-  } else {
-    T2->Set(ControlMode::PercentOutput, 0.0f);
-  }
-
-
-  T49->Set(ControlMode::PercentOutput, joy->GetY());
-  T16->Set(ControlMode::PercentOutput, -joy->GetY());
-
-
   
 
 
-  if (joy->GetRawButton(BUTTON_STOP)) {
+  if (joyT->GetRawButton(BUTTON_STOP)) {
     controlpanel->Stop();
   }
-  if (joy->GetRawButton(POSITION_BUTTON)) {
+  if (joyT->GetRawButton(POSITION_BUTTON)) {
     controlpanel->PositionMode();
   }
-  if (joy->GetRawButton(ROTATION_BUTTON)) {
+  if (joyT->GetRawButton(ROTATION_BUTTON)) {
     controlpanel->RotationMode();
   }
 
+  drive->RunTeleopDrive(joyT, joyW, true, false, false);
 
+  T46->Set(ControlMode::PercentOutput, 1.0f);
 
+  // if (joyT->GetRawButton(1)) {
+
+  // } else {
+  //   T46->Set(ControlMode::PercentOutput, 0.0f);
+  // }
   controlpanel->StateMachine();
 
   // if (((currentColor == desiredColor || desiredColor == Colors::WHITE) && !joy->GetTrigger()) || joy->GetRawButton(2)) {
