@@ -29,6 +29,7 @@ class Robot : public frc::TimedRobot {
   const int BUTTON_STOP = 2, POSITION_BUTTON = 5, ROTATION_BUTTON = 4, INTAKE = 3;
 
   TalonSRX *T46;
+  TalonFX *Falcon_T, *Falcon_T2;
 
   Colors currentColor, desiredColor;
   frc::Joystick  *joyT, *joyW;

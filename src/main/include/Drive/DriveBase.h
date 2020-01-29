@@ -78,7 +78,7 @@ public:
 		void SetMaxRpm(double rpm);
 		double GetMaxRpm();
 
-		//Funstion to fill the profile points vector for autonomous
+		//Function to fill the profile points vector for autonomous
 
 		void SetZeroingIndex(std::vector<int> zero_index);
 

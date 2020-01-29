@@ -32,6 +32,9 @@ void Robot::RobotInit() {
   joyW = new frc::Joystick(1);
   controlpanel = new ControlPanel();
 
+  Falcon_T = new TalonFX(0);
+  Falcon_T2 = new TalonFX(1);
+
   T46 = new TalonSRX(46);
   T46->SetInverted(InvertType::InvertMotorOutput);
 
@@ -88,32 +91,42 @@ bool toggle = false;
 void Robot::TeleopPeriodic() {
   
   
-  frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
+  // frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
 
-  controlpanel->DesireColor(m_descolor_chooser.GetSelected());
+  // controlpanel->DesireColor(m_descolor_chooser.GetSelected());
   
 
 
-  if (joyT->GetRawButton(BUTTON_STOP)) {
-    controlpanel->Stop();
-  }
-  if (joyT->GetRawButton(POSITION_BUTTON)) {
-    controlpanel->PositionMode();
-  }
-  if (joyT->GetRawButton(ROTATION_BUTTON)) {
-    controlpanel->RotationMode();
+  // if (joyT->GetRawButton(BUTTON_STOP)) {
+  //   controlpanel->Stop();
+  // }
+  // if (joyT->GetRawButton(POSITION_BUTTON)) {
+  //   controlpanel->PositionMode();
+  // }
+  // if (joyT->GetRawButton(ROTATION_BUTTON)) {
+  //   controlpanel->RotationMode();
+  // }
+
+  frc::SmartDashboard::PutNumber("speed", joyT->GetThrottle());
+
+  if (joyT->GetRawButton(1)) {
+    Falcon_T->Set(ControlMode::PercentOutput, joyT->GetThrottle());
+    Falcon_T2->Set(ControlMode::PercentOutput, joyT->GetThrottle());
+  } else {
+    Falcon_T->Set(ControlMode::PercentOutput, 0);
+    Falcon_T2->Set(ControlMode::PercentOutput, 0);
   }
 
-  drive->RunTeleopDrive(joyT, joyW, true, false, false);
+  // drive->RunTeleopDrive(joyT, joyW, true, false, false);
 
-  T46->Set(ControlMode::PercentOutput, 1.0f);
+  // T46->Set(ControlMode::PercentOutput, 1.0f);
 
   // if (joyT->GetRawButton(1)) {
 
   // } else {
   //   T46->Set(ControlMode::PercentOutput, 0.0f);
   // }
-  controlpanel->StateMachine();
+  // controlpanel->StateMachine();
 
   // if (((currentColor == desiredColor || desiredColor == Colors::WHITE) && !joy->GetTrigger()) || joy->GetRawButton(2)) {
   //   talon0->Set(ControlMode::PercentOutput, 0);
