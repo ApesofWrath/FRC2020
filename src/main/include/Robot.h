@@ -27,10 +27,6 @@ class Robot : public frc::TimedRobot {
 
   Colors currentColor, desiredColor;
   frc::Joystick* joy;
-
-  const float CONTROL_WHEEL_SPEED_ON = 1.0f;
-  const float CONTROL_WHEEL_SPEED_OFF = 0;
-
   void RobotInit() override;
   void RobotPeriodic() override;
   void AutonomousInit() override;

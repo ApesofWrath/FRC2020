@@ -3,7 +3,8 @@
 #include "rev/ColorSensorV3.h"
 #include <ctre/Phoenix.h>
 
-#include "Constants.h"
+#include <frc/DriverStation.h>
+
 
 enum Colors {
   RED    = 0,
@@ -32,8 +33,8 @@ public:
         ROTATION_MODE
     };
 
-    int rotationsCompleted = 0;
     Colors desiredColor = Colors::WHITE;
+    int requiredRotations = 3;
 
     void StateMachine(Colors detectedColor);
     inline void PositionMode() { state = States::POSITION_MODE; };
@@ -47,10 +48,16 @@ public:
 
 
 
-    inline void ResetRotations() { rotationsCompleted = 0; };
+    inline void ResetRotations() { rotations = 0; };
     inline void DesireColor(Colors color) { desiredColor = color; };
 
-    
+    bool passed_starting_color;
+
+    Colors OffsetColor(Colors color);
+
+    Colors rmode_starting_color;
+
+    int rotations;
 
     States state;
     States last_state;

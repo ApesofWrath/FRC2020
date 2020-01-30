@@ -1,8 +1,23 @@
 #include "ControlPanel.h"
 #include <frc/smartdashboard/SmartDashboard.h>
 
+#ifndef OFFSET
+#define OFFSET 0
+#endif
+
 ControlPanel::ControlPanel() {
     talon = new TalonSRX(CONTROL_PANEL_TALON);
+}
+
+Colors ControlPanel::OffsetColor(Colors color) {
+  int cn = color;
+  if (cn + OFFSET > 3) {
+    cn = (cn + OFFSET) - 3;
+  } else {
+    cn = cn + OFFSET;
+  }
+
+  return Colors(cn); 
 }
 
 
@@ -35,17 +50,61 @@ void ControlPanel::Stop() {
 }
 
 void ControlPanel::StateMachine(Colors detectedColor) {
-    switch(state) {
-        case IDLE:
-            break;
-        case POSITION_MODE:
-            if (!HasReachedPosition(detectedColor)) {
-                Rotate();
-            } else {
-                Stop();
-            }
-            break;
-        case ROTATION_MODE:
-            break;
+  std::string gameData;
+  gameData = frc::DriverStation::GetInstance().GetGameSpecificMessage();
+  if(gameData.length() > 0 && state == States::POSITION_MODE) {
+    switch (gameData[0])
+    {
+      case 'B' :
+        DesireColor(Colors::BLUE);
+        break;
+      case 'G' :
+        DesireColor(Colors::GREEN);
+        break;
+      case 'R' :
+        DesireColor(Colors::RED);
+        break;
+      case 'Y' :
+        DesireColor(Colors::YELLOW);
+        break;
+      default:
+        DesireColor(Colors::WHITE);
+        break;
     }
+  }
+
+  switch(state) {
+    case IDLE:
+      last_state = IDLE;
+      break;
+    case POSITION_MODE:
+      if (!HasReachedPosition(detectedColor)) {
+        Rotate();
+      } else {
+        Stop();
+      }
+      last_state = POSITION_MODE;;
+      break;
+    case ROTATION_MODE:
+      if (last_state != ROTATION_MODE) {
+        rmode_starting_color = OffsetColor(desiredColor);
+      } else if (detectedColor != rmode_starting_color && rmode_starting_color != WHITE) {
+        passed_starting_color = true;
+      }
+
+      if (passed_starting_color && detectedColor == rmode_starting_color) {
+        rotations++;
+        passed_starting_color = false;
+      }
+
+      if (rotations == requiredRotations) {
+        rotations = 0;
+        passed_starting_color = false;
+        rmode_starting_color = WHITE;
+        Stop();
+      }
+
+      last_state = ROTATION_MODE;
+      break;
+  }
 }

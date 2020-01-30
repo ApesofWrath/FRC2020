@@ -89,6 +89,18 @@ void Robot::TeleopPeriodic() {
 
   desiredColor = m_descolor_chooser.GetSelected();
 
+  if (desiredColor != controlpanel->desiredColor) {
+    controlpanel->DesireColor(desiredColor);
+  }
+
+  if (joy->GetRawButton(POSITION_BUTTON)) {
+    controlpanel->PositionMode();
+  }
+
+  if (joy->GetRawButton(ROTATION_BUTTON)) {
+    controlpanel->RotationMode();
+  }
+
 
   if (joy->GetRawButton(BUTTON_STOP)) {
     controlpanel->Stop();
