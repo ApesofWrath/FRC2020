@@ -30,8 +30,8 @@ double last_target_heading = 0.0;
 double last_yaw_angle = 0.0;
 
 //WestCoast, 2-speed transmission option
-DriveBase::DriveBase(int l1, int l2, int l3, int l4,
-		int r1, int r2, int r3, int r4, int pcm, int f_channel, int r_channel, bool two_speed) {
+DriveBase::DriveBase(int l1, int l2,
+		int r1, int r2, int pcm, int f_channel, int r_channel, bool two_speed) {
 
 	k_p_yaw_au = K_P_YAW_AU; //these get sent from AutonDrive to Controller, not used in AutonDrive
 	k_d_yaw_au = K_D_YAW_AU;
@@ -70,7 +70,7 @@ DriveBase::DriveBase(int l1, int l2, int l3, int l4,
 		//
 		// is_low_gear = true;
 
-	} else { //regular constants
+	} else { // set drive variables to constants for regular drive controller
 
 		max_y_rpm = MAX_Y_RPM;
 		max_yaw_rate = MAX_YAW_RATE;
@@ -90,53 +90,47 @@ DriveBase::DriveBase(int l1, int l2, int l3, int l4,
 
 	}
 
-  actual_max_y_rpm_auton = ACTUAL_MAX_Y_RPM_AUTON;
-  actual_max_y_rpm_l_f = ACTUAL_MAX_Y_RPM_L_F;
-  actual_max_y_rpm_l_b = ACTUAL_MAX_Y_RPM_L_B;
-  actual_max_y_rpm_r_f = ACTUAL_MAX_Y_RPM_R_F;
-  actual_max_y_rpm_r_b = ACTUAL_MAX_Y_RPM_R_B;
+	// Place ACTUAL_MAX_RPM constants into local scope variables
+  	actual_max_y_rpm_auton = ACTUAL_MAX_Y_RPM_AUTON;
+  	actual_max_y_rpm_l_f = ACTUAL_MAX_Y_RPM_L_F;
+  	actual_max_y_rpm_l_b = ACTUAL_MAX_Y_RPM_L_B;
+  	actual_max_y_rpm_r_f = ACTUAL_MAX_Y_RPM_R_F;
+  	actual_max_y_rpm_r_b = ACTUAL_MAX_Y_RPM_R_B;
 
+	// Renames TalonFX Ids
 	LF = l1;
 	L2 = l2;
-	L3 = l3;
-	LR = l4;
 	RF = r1;
 	R2 = r2;
-	R3 = r3;
-	RR = r4;
 
-	canTalonLeft1 = new TalonSRX(LF);
-	canTalonLeft1->ConfigSelectedFeedbackSensor(FeedbackDevice::QuadEncoder, 0, 0);
-	canTalonLeft2 = new VictorSPX(L2);
-  canTalonLeft2->Follow(*canTalonLeft1);
-	canTalonLeft3 = new VictorSPX(L3);
-  canTalonLeft3->Follow(*canTalonLeft1);
 
-	canTalonRight1 = new TalonSRX(RF);
-	canTalonRight1->SetInverted(true);
-	canTalonRight1->ConfigSelectedFeedbackSensor(FeedbackDevice::QuadEncoder, 0, 0);
-	canTalonRight2 = new VictorSPX(R2);
-  canTalonRight2->Follow(*canTalonRight1);
-	canTalonRight3 = new VictorSPX(R3);
-  canTalonRight3->Follow(*canTalonRight1);
-//edi-gay
-  //talon settings
+	// Create TalonFXs
+	canTalonLeft1 = new TalonFX(LF);
+	canTalonLeft2 = new TalonFX(L2);
+	canTalonRight1 = new TalonFX(RF);
+	canTalonRight2 = new TalonFX(R2);
+	
+	// Configure front TalonFXs to use Integrated Encoders
+	canTalonLeft1->ConfigSelectedFeedbackSensor(TalonFXFeedbackDevice::IntegratedSensor);
+	canTalonRight1->ConfigSelectedFeedbackSensor(TalonFXFeedbackDevice::IntegratedSensor);
 
-	canTalonLeft1->ConfigPeakCurrentLimit(30, 0);
-	canTalonRight1->ConfigPeakCurrentLimit(30, 0);
+	canTalonRight1->SetInverted(true); // Invert Right Side TalonFX front
 
-	 canTalonLeft1->ConfigContinuousCurrentLimit(30, 0);
-	 canTalonRight1->ConfigContinuousCurrentLimit(30, 0);
-
-	 canTalonLeft1->ConfigPeakCurrentDuration(10, 0);
-	 canTalonRight1->ConfigPeakCurrentDuration(10, 0);
-
+	// Configure back TalonFXs to follow their side's front TalonFX
+ 	canTalonLeft2->Follow(*canTalonLeft1);
+  	canTalonRight2->Follow(*canTalonRight1);
+	
+	
+	// Configure Current Limits
+	canTalonLeft1->ConfigSupplyCurrentLimit(SupplyCurrentLimitConfiguration(true, 30, 30, 10));
+	canTalonRight1->ConfigSupplyCurrentLimit(SupplyCurrentLimitConfiguration(true, 30, 30, 10));
+ 
+	// Configure Ramp time to go from stop to full speed (in seconds)
 	canTalonLeft1->ConfigOpenloopRamp(0.15, 0);
 	canTalonLeft2->ConfigOpenloopRamp(0.15, 0);
-	canTalonLeft3->ConfigOpenloopRamp(0.15, 0);
+
 	canTalonRight1->ConfigOpenloopRamp(0.15, 0);
 	canTalonRight2->ConfigOpenloopRamp(0.15, 0);
-	canTalonRight3->ConfigOpenloopRamp(0.15, 0);
 
 	canTalonLeft1->ConfigVelocityMeasurementPeriod(
 			VelocityMeasPeriod::Period_10Ms, 0);
@@ -164,21 +158,21 @@ DriveBase::DriveBase(int l1, int l2, int l3, int l4,
   canTalonRight2->ConfigVoltageCompSaturation(12.0);
   canTalonRight2->EnableVoltageCompensation(true);
 
-  canTalonLeft3->ConfigVoltageCompSaturation(12.0);
-  canTalonLeft3->EnableVoltageCompensation(true);
-  canTalonRight3->ConfigVoltageCompSaturation(12.0);
-  canTalonRight3->EnableVoltageCompensation(true);
+  ahrs = new AHRS(SerialPort::kUSB);
+}
 
-  canTalonLeft1->EnableCurrentLimit(true); //still not true from tuner
-  canTalonRight1->EnableCurrentLimit(true);
 
-	ahrs = new AHRS(SerialPort::kUSB);
+void DriveBase::ManualOpenLoopDrive(Joystick* throttle, Joystick* wheel) {
+	float throttle_val = throttle->GetY();
+	float wheel_val = wheel->GetX();
 
-  //shifter
-	// if (pcm != -1) {
-	// 	solenoid = new DoubleSolenoid(PCM, F_CHANNEL, R_CHANNEL);
-	// 	led_solenoid = new Solenoid(PCM, 3);
-	// }
+	float left_out, right_out;
+
+	left_out = throttle_val - wheel_val / 2.0f;
+	right_out = throttle_val + wheel_val / 2.0f;
+
+	canTalonLeft1->Set(ControlMode::PercentOutput, left_out);
+	canTalonRight1->Set(ControlMode::PercentOutput, left_out);
 
 }
 
@@ -668,19 +662,6 @@ void DriveBase::RunTeleopDrive(Joystick *JoyThrottle,
 			TeleopWCDrive(JoyThrottle, JoyWheel, false, false);
 			last_drive_state = REGULAR;
 			break;
-
-			case VISION_DRIVE: //just press button, do not have wheel turned
-			frc::SmartDashboard::PutString("DRIVE", "vis");
-			if (last_drive_state != VISION_DRIVE) {
-				 init_heading = -1.0 * ahrs->GetYaw() * 3.14 / 180.0; //stamp, not used
-			}
-			TeleopWCDrive(JoyThrottle, JoyWheel, false, true);
-			last_drive_state = VISION_DRIVE;
-			if (!is_vision) {
-				teleop_drive_state = REGULAR;
-			}
-			break;
-
 			case ROTATION_CONTROLLER:
 			frc::SmartDashboard::PutString("DRIVE", "rot");
       if (last_drive_state != ROTATION_CONTROLLER) {

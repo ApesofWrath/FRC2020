@@ -109,15 +109,17 @@ void Robot::TeleopPeriodic() {
 
   frc::SmartDashboard::PutNumber("speed", joyT->GetThrottle());
 
-  if (joyT->GetRawButton(1)) {
-    Falcon_T->Set(ControlMode::PercentOutput, joyT->GetThrottle());
-    Falcon_T2->Set(ControlMode::PercentOutput, joyT->GetThrottle());
-  } else {
-    Falcon_T->Set(ControlMode::PercentOutput, 0);
-    Falcon_T2->Set(ControlMode::PercentOutput, 0);
-  }
+  // if (joyT->GetRawButton(1)) {
+  //   Falcon_T->Set(ControlMode::PercentOutput, joyT->GetThrottle());
+  //   Falcon_T2->Set(ControlMode::PercentOutput, joyT->GetThrottle());
+  // } else {
+  //   Falcon_T->Set(ControlMode::PercentOutput, 0);
+  //   Falcon_T2->Set(ControlMode::PercentOutput, 0);
+  // }
 
   // drive->RunTeleopDrive(joyT, joyW, true, false, false);
+
+  drive->ManualOpenLoopDrive(joyT, joyW);
 
   // T46->Set(ControlMode::PercentOutput, 1.0f);
 

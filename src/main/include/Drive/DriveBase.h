@@ -24,31 +24,31 @@ using namespace frc;
 class DriveBase {
 public:
 
-	TalonSRX *canTalonLeft1, *canTalonRight1, *canTalonKicker; //for 4 talons: 1 is front right, 2 is back right, 3 is front left, 4 is back left
-	VictorSPX *canTalonLeft2, *canTalonLeft3,  *canTalonRight2,
-			*canTalonRight3;
 
-///	DoubleSolenoid *solenoid;
-//	frc::Solenoid *led_solenoid;
+	TalonFX *canTalonLeft1, *canTalonLeft2, *canTalonRight1, *canTalonRight2;
 
 	AHRS *ahrs;
 
 
 	//HDrive
-	DriveBase(int fl, int fr, int rl, int rr, int k, int pcm, int f_channel, int r_channel);
+	// DriveBase(int fl, int fr, int rl, int rr, int k, int pcm, int f_channel, int r_channel);
+
 	//WestCoast, 2-speed transmission option
-	DriveBase(int l1, int l2, int l3, int l4, int r1, int r2, int r3, int r4, int pcm, int f_channel, int r_channel, bool two_speed);
+	DriveBase(int l1, int l2, int r1, int r2, int pcm, int f_channel, int r_channel, bool two_speed);
 
 	void ShiftUp();
 	void ShiftDown();
 	void SetGainsHigh();
 	void SetGainsLow();
 	
+
+	void ManualOpenLoopDrive(Joystick* throttle, Joystick* wheel);
+
 	void AutoShift(bool auto_shift);
 
 	void RunTeleopDrive(Joystick *JoyThrottle, Joystick *JoyWheel, bool is_regular, bool is_vision, bool is_rotation);
 	void InitDriveProf();
-//	void SelectAutonProfile();
+	//void SelectAutonProfile();
 
 	//Driving Operators
 	void TeleopHDrive(Joystick *JoyThrottle, Joystick *JoyWheel, bool *is_fc); //creates velocity references set by joysticks, for HDrive Train
