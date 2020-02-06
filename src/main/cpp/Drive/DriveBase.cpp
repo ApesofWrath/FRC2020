@@ -1,4 +1,5 @@
 #include "../../include/Drive/DriveBase.h"
+#include "frc/smartdashboard/SmartDashboard.h"
 
 using namespace std::chrono;
 
@@ -8,7 +9,7 @@ const int VISION_DRIVE = 1;
 const int ROTATION_CONTROLLER = 2;
 int teleop_drive_state = REGULAR;
 int last_drive_state = REGULAR;
-float PI = 3.1415926535897932;
+// float PI = 3.1415926535897932;
 
 //vision drive sm
 const int CREATE_VIS_PROF = 0;
@@ -28,6 +29,12 @@ std::vector<std::vector<double> > auton_profile(1500, std::vector<double>(5)); /
 
 double last_target_heading = 0.0;
 double last_yaw_angle = 0.0;
+
+const double TICKS_TO_DISTANCE=1.0/(2048.0*(84.0/8.0)*(1/(2*PI*3))*(1/0.0254)) * 10;
+
+double getSpeedFromTicksPerSecond(int ticks_per_second) {
+	return TICKS_TO_DISTANCE * ticks_per_second;
+}
 
 //WestCoast, 2-speed transmission option
 DriveBase::DriveBase(int l1, int l2,
@@ -115,6 +122,7 @@ DriveBase::DriveBase(int l1, int l2,
 	canTalonRight1->ConfigSelectedFeedbackSensor(TalonFXFeedbackDevice::IntegratedSensor);
 
 	canTalonRight1->SetInverted(true); // Invert Right Side TalonFX front
+	canTalonRight2->SetInverted(true);
 
 	// Configure back TalonFXs to follow their side's front TalonFX
  	canTalonLeft2->Follow(*canTalonLeft1);
@@ -162,6 +170,11 @@ DriveBase::DriveBase(int l1, int l2,
 }
 
 
+
+double max_fwd_speed_l = 0;
+double max_fwd_speed_r = 0;
+double max_yaw_rate_ = 0;
+
 void DriveBase::ManualOpenLoopDrive(Joystick* throttle, Joystick* wheel) {
 	float throttle_val = throttle->GetY();
 	float wheel_val = wheel->GetX();
@@ -174,7 +187,34 @@ void DriveBase::ManualOpenLoopDrive(Joystick* throttle, Joystick* wheel) {
 	canTalonLeft1->Set(ControlMode::PercentOutput, left_out);
 	canTalonRight1->Set(ControlMode::PercentOutput, left_out);
 
+	double cspeed_l = getSpeedFromTicksPerSecond(canTalonLeft1->GetSelectedSensorVelocity());
+	double cspeed_r = getSpeedFromTicksPerSecond(canTalonRight1->GetSelectedSensorVelocity());
+
+	if (cspeed_l > max_fwd_speed_l) {
+		max_fwd_speed_l = cspeed_l;
+	}
+
+	if (cspeed_r > max_fwd_speed_r) {
+		max_fwd_speed_r = cspeed_r;
+	}
+
+	double cyawrate = ahrs->GetRate();
+
+	if (cyawrate > max_yaw_rate) {
+		max_yaw_rate = cyawrate;
+	}
+
+
+	frc::SmartDashboard::PutNumber("max fwd speed left", max_fwd_speed_l);
+	frc::SmartDashboard::PutNumber("max fwd speed right", max_fwd_speed_r);
+	frc::SmartDashboard::PutNumber("fwd speed left", cspeed_l);
+	frc::SmartDashboard::PutNumber("fwd speed right", cspeed_r);
+
+	frc::SmartDashboard::PutNumber("yaw rate", cyawrate);
+	frc::SmartDashboard::PutNumber("max yaw rate", max_yaw_rate);
+
 }
+
 
 
 //PD on left and right
@@ -268,8 +308,8 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 
 	target_yaw_rate = -1.0 * (joy_wheel_val) * max_yaw_rate; //Left will be positive
 
-	k_p_left_vel = K_P_RIGHT_VEL;
-	k_p_right_vel = K_P_LEFT_VEL;
+	k_p_left_vel = K_P_LEFT_VEL;
+	k_p_right_vel = K_P_RIGHT_VEL;
 	k_p_yaw_vel = K_P_YAW_VEL;
 
 }
@@ -285,6 +325,18 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 	} else if (target_r < -max_y_rpm) {
 		target_r = -max_y_rpm;
 	}
+
+	frc::SmartDashboard::PutNumber("target_r", target_r);
+	frc::SmartDashboard::PutNumber("target_l", target_l);
+	
+	double cyawrate = ahrs->GetRate();
+
+	if (cyawrate > max_yaw_rate_) {
+		max_yaw_rate_ = cyawrate;
+	}
+
+		frc::SmartDashboard::PutNumber("yaw rate", cyawrate);
+	frc::SmartDashboard::PutNumber("max yaw rate", max_yaw_rate_);
 
 	Controller(0.0, target_r, target_l, target_yaw_rate, k_p_right_vel,
 			k_p_left_vel, 0.0, k_p_yaw_vel, 0.0, k_d_left_vel, k_d_right_vel, 0.0,
@@ -497,8 +549,17 @@ void DriveBase::Controller(double ref_kick,
 	frc::SmartDashboard::PutNumber("% OUT LEFT", total_left);
 	frc::SmartDashboard::PutNumber("% OUT RIGHT", total_right);
 
-  canTalonLeft1->Set(ControlMode::PercentOutput, reverse_output * total_left);
-	canTalonRight1->Set(ControlMode::PercentOutput, -total_right);
+  canTalonLeft1->Set(ControlMode::PercentOutput, total_left);
+	canTalonRight1->Set(ControlMode::PercentOutput, total_right);
+
+
+	
+
+	double cspeed_l = getSpeedFromTicksPerSecond(canTalonLeft1->GetSelectedSensorVelocity());
+	double cspeed_r = getSpeedFromTicksPerSecond(canTalonRight1->GetSelectedSensorVelocity());
+	frc::SmartDashboard::PutNumber("fwd speed left", cspeed_l);
+	frc::SmartDashboard::PutNumber("fwd speed right", cspeed_r);
+
 
 	// canTalonRight2->Set(ControlMode::PercentOutput, -total_right);
 
