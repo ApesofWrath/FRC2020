@@ -15,13 +15,16 @@
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 
+#include "TeleopStateMachine.h"
+
 namespace apesofwrath {
 
 class Robot : public frc::TimedRobot {
  public:
 
-  frc::Joystick* joy;
-  TalonSRX* talon0;
+  frc::Joystick *joyThrottle, *joyWheel, *joyOp;
+
+  TeleopStateMachine *tsm;
 
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
   const float CONTROL_WHEEL_SPEED_OFF = 0;
@@ -33,6 +36,8 @@ class Robot : public frc::TimedRobot {
   void TeleopInit() override;
   void TeleopPeriodic() override;
   void TestPeriodic() override;
+
+
 
   
  private:

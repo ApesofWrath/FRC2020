@@ -19,8 +19,11 @@ void apesofwrath::Robot::RobotInit() {
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 
-  joy = new frc::Joystick(0);
-  talon0 = new TalonSRX(0);
+  joyThrottle = new Joystick(0);
+  joyWheel = new Joystick(1);
+  joyOp = new Joystick(2);
+
+  tsm = new TeleopStateMachine();
 }
 
 /**
@@ -70,12 +73,9 @@ void apesofwrath::Robot::TeleopInit() {
 }
 
 void apesofwrath::Robot::TeleopPeriodic() {
-  
-  if (joy->GetTrigger()) {
-    talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON * joy->GetThrottle());
-  } else {
-    talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_OFF);
-  }
+
+  tsm->StateMachine(tsm->GatherButtonDataFromJoysticks(
+    joyThrottle, joyWheel, joyOp));
 
 }
 

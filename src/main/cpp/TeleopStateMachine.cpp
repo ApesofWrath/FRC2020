@@ -1,11 +1,32 @@
 #include "TeleopStateMachine.h"
 
+using namespace frc;
+
 TeleopStateMachine::TeleopStateMachine(/* args */)
 {
+    state = WAIT_FOR_BUTTON;
+    last_state = WAIT_FOR_BUTTON;
 }
 
 TeleopStateMachine::~TeleopStateMachine()
 {
+}
+
+ButtonData TeleopStateMachine::GatherButtonDataFromJoysticks(Joystick* joyThrottle, Joystick* joyWheel, Joystick* joyOp) {
+    return ButtonData {
+        joyOp->GetRawButton(ButtonIDs::WAIT_FOR_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::LOWER_INTAKE_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::RAISE_INTAKE_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::RUN_INTAKE_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::STOP_INTAKE_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::STOP_CONTROL_PANEL_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::MANUAL_CONTROL_PANEL_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::ROTATION_MODE_CONTROL_PANEL_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::POSITION_MODE_CONTROL_PANEL_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::SHOOTER_SHOOT_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::SHOOTER_STOP_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::SHOOTER_INTAKE_BUTTON)
+    };
 }
 
 void TeleopStateMachine::ProcessButtonData(ButtonData data) {
@@ -66,6 +87,39 @@ void TeleopStateMachine::StateMachine(ButtonData data) {
             break;
     }
 
+    SmartDashboard::PutString("State", TeleopStateMachine::StateName(state));
+
     last_state = state;
 
+}
+
+std::string TeleopStateMachine::StateName(TeleopStateMachine::States state) {
+    switch (state) {
+        case WAIT_FOR_BUTTON:
+            return "Robot::Wait For Button";
+        case LOWER_INTAKE:
+            return "Intake::Lower";
+        case RAISE_INTAKE:
+            return "Intake::Raise";
+        case RUN_INTAKE:
+            return "Intake::Run";
+        case IDLE_INTAKE:
+            return "Intake::Idle";
+        case IDLE_CONTROL_PANEL:
+            return "Control Panel::Idle";
+        case ROTATION_MODE_CONTROL_PANEL:
+            return "Control Panel::Rotation Mode";
+        case POSITION_MODE_CONTROL_PANEL:
+            return "Control Panel::Position Mode";
+        case MANUAL_CONTROL_PANEL:
+            return "Control Panel::Manual Mode";
+        case SHOOTER_SHOOT:
+            return "Shooter::Shoot";
+        case SHOOTER_INTAKE:
+            return "Shooter::Intake";
+        case SHOOTER_IDLE:
+            return "Shooter::Idle";
+        default:
+            return "Robot::Null State";
+    }
 }
