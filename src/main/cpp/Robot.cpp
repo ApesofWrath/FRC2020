@@ -1,4 +1,4 @@
- /*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 /* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
 /* Open Source Software - may be modified and shared by FRC teams. The code   */
 /* must be accompanied by the FIRST BSD license file in the root directory of */
@@ -15,12 +15,9 @@
 
 
 void apesofwrath::Robot::RobotInit() {
-  m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);
-  m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
-  frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 
-  joy = new frc::Joystick(0);
-  talon0 = new TalonSRX(0);
+  joyOp = new frc::Joystick(0);
+  talon1 = new TalonSRX(36);
 }
 
 /**
@@ -32,7 +29,7 @@ void apesofwrath::Robot::RobotInit() {
  * LiveWindow and SmartDashboard integrated updating.
  */
 void apesofwrath::Robot::RobotPeriodic() {
-    
+
 }
 
 /**
@@ -67,15 +64,17 @@ void apesofwrath::Robot::AutonomousPeriodic() {
   }
 }
 void apesofwrath::Robot::TeleopInit() {
+  spin = joyOp->GetRawButton(1);
 }
 
 void apesofwrath::Robot::TeleopPeriodic() {
-  
-  if (joy->GetTrigger()) {
-    talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON * joy->GetThrottle());
+
+  if (spin) {
+    talon1->Set(ControlMode::PercentOutput, .3);
   } else {
-    talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_OFF);
+    talon1->Set(ControlMode::PercentOutput, 0);
   }
+
 
 }
 
