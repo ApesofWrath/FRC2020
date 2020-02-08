@@ -166,7 +166,8 @@ void Robot::TeleopPeriodic() {
   // }
 
   drive->RunTeleopDrive(joyT, joyW, true, false, false);
-
+  tsm->StateMachine(tsm->GatherButtonDataFromJoysticks(
+    joyThrottle, joyWheel, joyOp));
   // drive->ManualOpenLoopDrive(joyT, joyW);
   // drive->TeleopWCDrive(joyT,joyW,false,false);
 
@@ -191,42 +192,7 @@ void Robot::TeleopPeriodic() {
 
 }
 
-void Robot::UpdateButtons(){
-
-  // rest = joy->GetRawButton(9);
-  // down = joy->GetRawButton(8);
-  // up = joy->GetRawButton(7);
-  
-  stop = joyT->GetRawButton(7);
-  in = joyT->GetRawButton(8);
-  out = joyT->GetRawButton(9);
-
-  // if (detectedColor.red >= 50)
-  // {
-  //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
-  // } else {
-  //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_OFF);
-  // }
-}
-
 void apesofwrath::Robot::TestPeriodic() {}
-
-std::string apesofwrath::Robot::getColor(apesofwrath::Colors c) {
-  switch (c) {
-    case apesofwrath::Colors::RED:
-      return "Red";
-    case apesofwrath::Colors::YELLOW:
-      return "Yellow";
-    case apesofwrath::Colors::BLUE:
-      return "Blue";
-    case apesofwrath::Colors::GREEN:
-      return "Green";
-    case apesofwrath::Colors::WHITE:
-      return "None";
-    default:
-      return "None";
-  }
-}
 
 std::string Robot::getColor(Colors c) {
   switch (c) {

@@ -23,6 +23,8 @@
 
 #include "rev/ColorSensorV3.h"
 
+#include "TeleopStateMachine.h"
+
 namespace apesofwrath {
 
 enum Colors {
@@ -45,11 +47,10 @@ class Robot : public frc::TimedRobot {
   Colors currentColor, desiredColor;
   frc::Joystick  *joyT, *joyW;
 
-  frc::Joystick* joy;
-  TalonSRX* talon1;
   Arm* arm;
   Intake* intake;
 
+  TeleopStateMachine *tsm;
 
   rev::CANSparkMax *neo_1, *neo_2, *neo_3, *neo_4;
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
@@ -65,12 +66,6 @@ class Robot : public frc::TimedRobot {
   std::string getColor(Colors c);
     
   void UpdateButtons();
-
-  bool rest, up, down, stop, in , out;
-
-  static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
-  rev::ColorSensorV3 m_colorSensor{i2cPort};
-  frc::Color detectedColor;
   
  private:
   frc::SendableChooser<std::string> m_chooser;
