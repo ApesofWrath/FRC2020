@@ -11,51 +11,58 @@
 
 #include <frc/smartdashboard/SmartDashboard.h>
 
-const int REST_STATE = 0;
-const int UP_STATE = 1;
-const int DOWN_STATE = 2;
-
 Arm::Arm() {
 
- talonArm = new TalonSRX(1);
-
+//  talonArm = new TalonSRX(1); uh maybe talon for intake not arm?
+  armSparkM0 = new rev::CANSparkMax(1, rev::CANSparkMax::MotorType::kBrushless);
+  // rev::CANSparkMax armSpark0{1, rev::CANSparkMax::MotorType::kBrushless};
+  armSparkM0->RestoreFactoryDefaults();
+  joy = new frc::Joystick(0);
 }
 
 void Arm::Up() {
 
-  talonArm->Set(ControlMode::PercentOutput, 0.3);
+  // talonArm->Set(ControlMode::PercentOutput, 0.3);
 
 }
 
 void Arm::Down() {
 
-  talonArm->Set(ControlMode::PercentOutput, -0.3);
+  // talonArm->Set(ControlMode::PercentOutput, -0.3);
 
 }
 
 void Arm::Rest() {
 
-  talonArm->Set(ControlMode::PercentOutput, 0.0);
+  // talonArm->Set(ControlMode::PercentOutput, 0.0);
 
 }
 
-void Arm::IntakeArmStateMachine() {
+void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
 
-  frc::SmartDashboard::PutString("INTAKE ARM STATE", "yes");
+  frc::SmartDashboard::PutString("INTAKE ARM STATE", "bruh");
+
+  if(rest){
+    intake_arm_state = REST;
+  } else if(up) {
+    intake_arm_state = UP;
+  } else if (down) {
+    intake_arm_state = DOWN;
+  }
 
   switch(intake_arm_state){
 
-    case REST_STATE:
+    case REST:
     Rest();
     frc::SmartDashboard::PutString("INTAKE ARM", "rest");
     break;
 
-    case UP_STATE:
+    case UP:
     Up();
     frc::SmartDashboard::PutString("INTAKE ARM", "up");
     break;
 
-    case DOWN_STATE:
+    case DOWN:
     Down();
     frc::SmartDashboard::PutString("INTAKE ARM", "down");
     break;
@@ -65,8 +72,3 @@ void Arm::IntakeArmStateMachine() {
 }
 
 
-
-
-#ifndef RUNNING_FRC_TESTS
-int main() { return frc::StartRobot<Robot>(); }
-#endif

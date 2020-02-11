@@ -2,28 +2,34 @@
 #define SRC_ARM_H_
 
 #include <ctre/Phoenix.h>
-#include <frc/WPILib.h>
+// #include <frc/WPILib.h>
+#include "rev/CANSparkMax.h"
+#include <frc/Joystick.h>
 
 class Arm {
 public:
 
-  TalonSRX *talonArm;
+  // TalonSRX *talonArm;
+  rev::CANSparkMax *armSparkM0;
+  frc::Joystick* joy;
 
-  const int REST_STATE_H = 1;
-  const int UP_STATE_H = 2;
-  const int DOWN_STATE_H = 3;
-  int intake_arm_state = REST_STATE;
+
+  enum States {
+    REST, UP, DOWN
+  };
+
+  States intake_arm_state = REST;
 
     Arm();
 
-    void Arm::Up();
-    void Arm::Down();
-    void Arm::Rest();
+    void Up();
+    void Down();
+    void Rest();
 
-    void Arm::IntakeArmStateMachine();
+    void IntakeArmStateMachine(bool up, bool down, bool rest);
 
-    void Arm::UpperSoftLimit();
-    void Arm::LowerSoftLimit();
+    void UpperSoftLimit();
+    void LowerSoftLimit();
 
 
 };

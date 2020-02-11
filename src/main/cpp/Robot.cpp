@@ -16,8 +16,10 @@
 
 void apesofwrath::Robot::RobotInit() {
 
-  joyOp = new frc::Joystick(0);
+  joy = new frc::Joystick(0);
   talon1 = new TalonSRX(36);
+
+  arm = new Arm();
 }
 
 /**
@@ -64,17 +66,18 @@ void apesofwrath::Robot::AutonomousPeriodic() {
   }
 }
 void apesofwrath::Robot::TeleopInit() {
-  spin = joyOp->GetRawButton(1);
 }
 
 void apesofwrath::Robot::TeleopPeriodic() {
+  arm->IntakeArmStateMachine(up, down, rest);
+  UpdateButtons();
+}
 
-  if (spin) {
-    talon1->Set(ControlMode::PercentOutput, .3);
-  } else {
-    talon1->Set(ControlMode::PercentOutput, 0);
-  }
+void apesofwrath::Robot::UpdateButtons(){
 
+  rest = joy->GetRawButton(9);
+  down = joy->GetRawButton(8);
+  up = joy->GetRawButton(7);
 
 }
 
