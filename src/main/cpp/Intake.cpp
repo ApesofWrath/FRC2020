@@ -21,51 +21,50 @@ intakeSparkM0 = new rev::CANSparkMax(2, rev::CANSparkMax::MotorType::kBrushless)
 void Intake::Stop() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.0);
-
+  intakeSparkM0->Set(0);
 }
 
 void Intake::In() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.3);
+  intakeSparkM0->Set(0.5);
 
 }
 
 void Intake::Out() {
 
   // talonIntake->Set(ControlMode::PercentOutput, -0.3);
+  intakeSparkM0->Set(-0.5);
 
 }
 
 void Intake::IntakeStateMachine(bool stop, bool in, bool out) {
 
   if (stop) {
-    intake_state = STOP;
+    intake_state = STOP_STATE;
   } else if(in) {
-    intake_state = IN;
+    intake_state = IN_STATE;
   } else if(out) {
-    intake_state = OUT;  
+    intake_state = OUT_STATE;  
   }
   
   frc::SmartDashboard::PutNumber("INTAKE STATE", intake_state);
 
   switch(intake_state) {
 
-    case STOP:
+    case STOP_STATE:
     Stop();
     frc::SmartDashboard::PutString("INTAKE", "stop");
-    intakeSparkM0->Set(0);
     break;
 
-    case IN:
+    case IN_STATE:
     In();
     frc::SmartDashboard::PutString("INTAKE", "in");
-    intakeSparkM0->Set(0.5);
     break;
 
-    case OUT:
+    case OUT_STATE:
     Out();
     frc::SmartDashboard::PutString("INTAKE", "out");
-    intakeSparkM0->Set(-0.5);
     break;
 
   }

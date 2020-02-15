@@ -121,31 +121,31 @@ void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
 
 
   if(rest){
-    intake_arm_state = REST;
+    intake_arm_state = REST_STATE;
   } else if(up) {
-    intake_arm_state = UP;
+    intake_arm_state = UP_STATE;
   } else if (down) {
-    intake_arm_state = DOWN;
+    intake_arm_state = DOWN_STATE;
   }
 
   switch(intake_arm_state){
 
-    case REST:
-      if (last_intake_arm_state != REST) {
+    case REST_STATE:
+      if (last_intake_arm_state != REST_STATE) {
         Rest();
       }
       frc::SmartDashboard::PutString("INTAKE ARM", "rest");
     break;
 
-    case UP:
-      if (last_intake_arm_state != UP) {
+    case UP_STATE:
+      if (last_intake_arm_state != UP_STATE) {
         Up();
       }
       frc::SmartDashboard::PutString("INTAKE ARM", "up");
     break;
 
-    case DOWN:
-      if (last_intake_arm_state != DOWN) {
+    case DOWN_STATE:
+      if (last_intake_arm_state != DOWN_STATE) {
         Down();
       }
       frc::SmartDashboard::PutString("INTAKE ARM", "down");

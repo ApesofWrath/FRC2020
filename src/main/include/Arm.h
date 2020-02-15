@@ -19,10 +19,10 @@ public:
   float armCurrPos;
 
   enum States {
-    REST, UP, DOWN
+    REST_STATE, UP_STATE, DOWN_STATE
   };
 
-  States intake_arm_state = REST, last_intake_arm_state = REST;
+  States intake_arm_state = REST_STATE, last_intake_arm_state = REST_STATE;
 
     Arm();
 

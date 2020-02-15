@@ -14,10 +14,10 @@ public:
 
 
   enum States {
-    STOP, IN, OUT
+    STOP_STATE, IN_STATE, OUT_STATE 
   };
 
-  States intake_state = STOP;
+  States intake_state = STOP_STATE;
 
     Intake();
 
