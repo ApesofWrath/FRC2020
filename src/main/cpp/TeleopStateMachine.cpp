@@ -8,8 +8,7 @@ TeleopStateMachine::TeleopStateMachine(/* args */)
     last_state = WAIT_FOR_BUTTON;
 }
 
-TeleopStateMachine::~TeleopStateMachine()
-{
+TeleopStateMachine::~TeleopStateMachine(){
 }
 
 ButtonData TeleopStateMachine::GatherButtonDataFromJoysticks(Joystick* joyThrottle, Joystick* joyWheel, Joystick* joyOp) {
@@ -17,43 +16,24 @@ ButtonData TeleopStateMachine::GatherButtonDataFromJoysticks(Joystick* joyThrott
         joyOp->GetRawButton(ButtonIDs::WAIT_FOR_BUTTON),
         joyOp->GetRawButton(ButtonIDs::LOWER_INTAKE_BUTTON),
         joyOp->GetRawButton(ButtonIDs::RAISE_INTAKE_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::RUN_INTAKE_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::STOP_INTAKE_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::STOP_CONTROL_PANEL_BUTTON),
+        joyOp->GetRawButton(ButtonIDs::INTAKE_BUTTON),
         joyOp->GetRawButton(ButtonIDs::MANUAL_CONTROL_PANEL_BUTTON),
         joyOp->GetRawButton(ButtonIDs::ROTATION_MODE_CONTROL_PANEL_BUTTON),
         joyOp->GetRawButton(ButtonIDs::POSITION_MODE_CONTROL_PANEL_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::SHOOTER_SHOOT_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::SHOOTER_STOP_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::SHOOTER_INTAKE_BUTTON)
-    };
+     };
 }
 
 void TeleopStateMachine::ProcessButtonData(ButtonData data) {
     if (data.wait_for_button) {
-        state = WAIT_FOR_BUTTON;
-    } else if (data.stop_intake_button) {
-        state = IDLE_INTAKE;
-    } else if (data.stop_control_panel_button) {
-        state = IDLE_CONTROL_PANEL;
-    } else if (data.shooter_stop_button) {
-        state = SHOOTER_IDLE;
+        state = WAIT_FOR_BUTTON_STATE;
+    } else if (data.intake_button) {
+        state = INTAKE_STATE;
     } else if (data.shooter_shoot_button) {
-        state = SHOOTER_SHOOT;
-    } else if (data.shooter_intake_button) {
-        state = SHOOTER_INTAKE;
-    } else if (data.run_intake_button) {
-        state = RUN_INTAKE;
+        state = SHOOT_STATE;
     } else if (data.rotation_mode_control_panel_button) {
         state = ROTATION_MODE_CONTROL_PANEL;
-    } else if (data.raise_intake_button) {
-        state = RAISE_INTAKE;
     } else if (data.position_mode_control_panel_button) {
         state = POSITION_MODE_CONTROL_PANEL;
-    } else if (data.manual_control_panel_button) {
-        state = MANUAL_CONTROL_PANEL;
-    } else if (data.lower_intake_button) {
-        state = LOWER_INTAKE;
     }
 }
 
@@ -61,30 +41,22 @@ void TeleopStateMachine::StateMachine(ButtonData data) {
     ProcessButtonData(data);
 
     switch (state) {
-        case WAIT_FOR_BUTTON:
-            break;
-        case LOWER_INTAKE:
-            break;
-        case RAISE_INTAKE:
-            break;
-        case RUN_INTAKE:
-            break;
-        case IDLE_INTAKE:
-            break;
-        case IDLE_CONTROL_PANEL:
-            break;
-        case ROTATION_MODE_CONTROL_PANEL:
-            break;
-        case POSITION_MODE_CONTROL_PANEL:
-            break;
-        case MANUAL_CONTROL_PANEL:
-            break;
-        case SHOOTER_SHOOT:
-            break;
-        case SHOOTER_INTAKE:
-            break;
-        case SHOOTER_IDLE:
-            break;
+        case INIT_STATE:
+          arm->intake_arm_state = arm->REST_STATE;
+          intake->intake_state = intake->STOP_STATE;
+          shooter->shooter_state = shooter->STOP_STATE;
+          control_panel->control_panel_state = control_panel->IDLE;
+        break;
+        case WAIT_FOR_BUTTON_STATE:
+        break;
+        case INTAKE_STATE:
+        break;
+        case SHOOT_STATE:
+        break;
+        case ROTATION_MODE_CONTROL_PANEL_STATE:
+        break;
+        case POSITION_MODE_CONTROL_PANEL_STATE:
+        break;
     }
 
     SmartDashboard::PutString("State", TeleopStateMachine::StateName(state));
@@ -95,30 +67,18 @@ void TeleopStateMachine::StateMachine(ButtonData data) {
 
 std::string TeleopStateMachine::StateName(TeleopStateMachine::States state) {
     switch (state) {
-        case WAIT_FOR_BUTTON:
+        case INIT_STATE:
+            return "Robot::Init";
+        case WAIT_FOR_BUTTON_STATE:
             return "Robot::Wait For Button";
-        case LOWER_INTAKE:
-            return "Intake::Lower";
-        case RAISE_INTAKE:
-            return "Intake::Raise";
-        case RUN_INTAKE:
-            return "Intake::Run";
-        case IDLE_INTAKE:
-            return "Intake::Idle";
-        case IDLE_CONTROL_PANEL:
-            return "Control Panel::Idle";
+        case INTAKE_STATE:
+            return "Intake::";
+        case SHOOT_STATE:
+            return "Shooter::Shoot";
         case ROTATION_MODE_CONTROL_PANEL:
             return "Control Panel::Rotation Mode";
         case POSITION_MODE_CONTROL_PANEL:
             return "Control Panel::Position Mode";
-        case MANUAL_CONTROL_PANEL:
-            return "Control Panel::Manual Mode";
-        case SHOOTER_SHOOT:
-            return "Shooter::Shoot";
-        case SHOOTER_INTAKE:
-            return "Shooter::Intake";
-        case SHOOTER_IDLE:
-            return "Shooter::Idle";
         default:
             return "Robot::Null State";
     }
