@@ -20,6 +20,7 @@ void apesofwrath::Robot::RobotInit() {
   talon1 = new TalonSRX(36);
 
   arm = new Arm();
+  intake = new Intake();
 }
 
 /**
@@ -70,6 +71,7 @@ void apesofwrath::Robot::TeleopInit() {
 
 void apesofwrath::Robot::TeleopPeriodic() {
   arm->IntakeArmStateMachine(up, down, rest);
+  intake->IntakeStateMachine(stop, in , out);
   UpdateButtons();
 }
 
@@ -78,6 +80,9 @@ void apesofwrath::Robot::UpdateButtons(){
   rest = joy->GetRawButton(9);
   down = joy->GetRawButton(8);
   up = joy->GetRawButton(7);
+  stop = joy->GetRawButton(2);
+  in = joy->GetRawButton(5);
+  out = joy->GetRawButton(6);
 
 }
 

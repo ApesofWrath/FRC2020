@@ -26,6 +26,7 @@ class Robot : public frc::TimedRobot {
   frc::Joystick* joy;
   TalonSRX* talon1;
   Arm* arm;
+  Intake* intake;
 
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
   const float CONTROL_WHEEL_SPEED_OFF = 0;
@@ -39,7 +40,7 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic() override;
   void UpdateButtons();
 
-  bool rest, up, down;
+  bool rest, up, down, stop, in , out;
 
  private:
   frc::SendableChooser<std::string> m_chooser;

@@ -9,7 +9,8 @@
 class Intake {
 public:
 
-  TalonSRX *talonIntake;
+  // TalonSRX *talonIntake;
+  rev::CANSparkMax *intakeSparkM0;
 
 
   enum States {
@@ -24,7 +25,7 @@ public:
     void In();
     void Out();
 
-    void IntakeStateMachine();
+    void IntakeStateMachine(bool stop, bool in, bool out);
 
 
 
