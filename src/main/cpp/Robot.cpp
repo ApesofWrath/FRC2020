@@ -19,8 +19,21 @@ void apesofwrath::Robot::RobotInit() {
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 
-  joy = new frc::Joystick(0);
-  talon0 = new TalonSRX(0);
+  talon = new TalonFX(10);
+  talon2 = new TalonFX(12);
+  talon3 = new TalonFX(11);
+  talon4 = new TalonFX(13);
+
+  talon2->Follow(*talon);
+  // talon3->Follow(*talon3);
+  talon4->Follow(*talon3);
+  
+
+  talon3->SetInverted(true);
+  talon4->SetInverted(true);
+
+  ef = new ExampleFunction(talon, talon3, 1);
+
 }
 
 /**
@@ -57,6 +70,7 @@ void apesofwrath::Robot::AutonomousInit() {
   } else {
     // Default Auto goes here
   }
+  ef->BeginTask(); 
 }
 
 void apesofwrath::Robot::AutonomousPeriodic() {
@@ -65,17 +79,13 @@ void apesofwrath::Robot::AutonomousPeriodic() {
   } else {
     // Default Auto goes here
   }
+
+  ef->UpdateTask();
 }
 void apesofwrath::Robot::TeleopInit() {
 }
 
 void apesofwrath::Robot::TeleopPeriodic() {
-  
-  if (joy->GetTrigger()) {
-    talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON * joy->GetThrottle());
-  } else {
-    talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_OFF);
-  }
 
 }
 

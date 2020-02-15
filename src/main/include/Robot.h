@@ -15,16 +15,12 @@
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 
+#include "Auton/ExampleFunction.h"
+
 namespace apesofwrath {
 
 class Robot : public frc::TimedRobot {
  public:
-
-  frc::Joystick* joy;
-  TalonSRX* talon0;
-
-  const float CONTROL_WHEEL_SPEED_ON = 1.0f;
-  const float CONTROL_WHEEL_SPEED_OFF = 0;
 
   void RobotInit() override;
   void RobotPeriodic() override;
@@ -33,11 +29,13 @@ class Robot : public frc::TimedRobot {
   void TeleopInit() override;
   void TeleopPeriodic() override;
   void TestPeriodic() override;
-
-  
+ 
  private:
   frc::SendableChooser<std::string> m_chooser;
   
+  ExampleFunction* ef;
+  TalonFX *talon,*talon2,*talon3,*talon4;
+
   const std::string kAutoNameDefault = "Default";
   const std::string kAutoNameCustom = "My Auto";
   std::string m_autoSelected;

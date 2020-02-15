@@ -1,52 +1,57 @@
 See file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling BaseFunction.cpp successful.
+
 compiling Robot.cpp failed.
 C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp: In member function 'virtual void apesofwrath::Robot::RobotInit()':
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:23:67: warning: 'void frc::SendableChooser<T>::AddDefault(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use SetDefaultOption() instead [-Wdeprecated-declarations]
-   m_descolor_chooser.AddDefault("None", apesofwrath::Colors::WHITE);
-                                                                   ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:27:24: error: no matching function for call to 'ctre::phoenix::motorcontrol::can::TalonFX::Follow(ctre::phoenix::motorcontrol::can::TalonFX**)'
+   talon2->Follow(&talon);
+                        ^
+In file included from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseTalon.h:7:0,
+                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/TalonFX.h:7,
+                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/Phoenix.h:20,
+                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:15,
                  from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:57:8: note: declared here
-   void AddDefault(wpi::StringRef name, T object) {
-        ^~~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:24:66: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
-   m_descolor_chooser.AddObject("Red",    apesofwrath::Colors::RED);
-                                                                  ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2210:11: note: candidate: void ctre::phoenix::motorcontrol::can::BaseMotorController::Follow(ctre::phoenix::motorcontrol::IMotorController&, ctre::phoenix::motorcontrol::FollowerType)
+      void Follow(IMotorController& masterToFollow, ctre::phoenix::motorcontrol::FollowerType followerType);
+           ^~~~~~
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2210:11: note:   candidate expects 2 arguments, 1 provided
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2216:19: note: candidate: virtual void ctre::phoenix::motorcontrol::can::BaseMotorController::Follow(ctre::phoenix::motorcontrol::IMotorController&)
+      virtual void Follow(IMotorController& masterToFollow);
+                   ^~~~~~
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2216:19: note:   no known conversion for argument 1 from 'ctre::phoenix::motorcontrol::can::TalonFX**' to 'ctre::phoenix::motorcontrol::IMotorController&'
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:28:24: error: no matching function for call to 'ctre::phoenix::motorcontrol::can::TalonFX::Follow(ctre::phoenix::motorcontrol::can::TalonFX**)'
+   talon3->Follow(&talon);
+                        ^
+In file included from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseTalon.h:7:0,
+                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/TalonFX.h:7,
+                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/Phoenix.h:20,
+                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:15,
                  from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
-   void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
-        ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:25:67: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
-   m_descolor_chooser.AddObject("Blue",   apesofwrath::Colors::BLUE);
-                                                                   ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2210:11: note: candidate: void ctre::phoenix::motorcontrol::can::BaseMotorController::Follow(ctre::phoenix::motorcontrol::IMotorController&, ctre::phoenix::motorcontrol::FollowerType)
+      void Follow(IMotorController& masterToFollow, ctre::phoenix::motorcontrol::FollowerType followerType);
+           ^~~~~~
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2210:11: note:   candidate expects 2 arguments, 1 provided
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2216:19: note: candidate: virtual void ctre::phoenix::motorcontrol::can::BaseMotorController::Follow(ctre::phoenix::motorcontrol::IMotorController&)
+      virtual void Follow(IMotorController& masterToFollow);
+                   ^~~~~~
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2216:19: note:   no known conversion for argument 1 from 'ctre::phoenix::motorcontrol::can::TalonFX**' to 'ctre::phoenix::motorcontrol::IMotorController&'
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:29:24: error: no matching function for call to 'ctre::phoenix::motorcontrol::can::TalonFX::Follow(ctre::phoenix::motorcontrol::can::TalonFX**)'
+   talon4->Follow(&talon);
+                        ^
+In file included from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseTalon.h:7:0,
+                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/TalonFX.h:7,
+                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/Phoenix.h:20,
+                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:15,
                  from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
-   void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
-        ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:26:68: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
-   m_descolor_chooser.AddObject("Green",  apesofwrath::Colors::GREEN);
-                                                                    ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
-   void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
-        ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:27:69: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
-   m_descolor_chooser.AddObject("Yellow", apesofwrath::Colors::YELLOW);
-                                                                     ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
-   void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
-        ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp: In member function 'virtual void apesofwrath::Robot::TeleopPeriodic()':
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:118:85: error: expected ')' before '{' token
-   if ((currentColor == desiredColor || desiredColor == apesofwrath::Colors::WHITE ) {
-                                                                                     ^
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:132:1: error: expected primary-expression before '}' token
- }
- ^
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2210:11: note: candidate: void ctre::phoenix::motorcontrol::can::BaseMotorController::Follow(ctre::phoenix::motorcontrol::IMotorController&, ctre::phoenix::motorcontrol::FollowerType)
+      void Follow(IMotorController& masterToFollow, ctre::phoenix::motorcontrol::FollowerType followerType);
+           ^~~~~~
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2210:11: note:   candidate expects 2 arguments, 1 provided
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2216:19: note: candidate: virtual void ctre::phoenix::motorcontrol::can::BaseMotorController::Follow(ctre::phoenix::motorcontrol::IMotorController&)
+      virtual void Follow(IMotorController& masterToFollow);
+                   ^~~~~~
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\0aaf3cf917244c0ac32ba6be7873ad12\api-cpp-5.17.3-headers/ctre/phoenix/motorcontrol/can/BaseMotorController.h:2216:19: note:   no known conversion for argument 1 from 'ctre::phoenix::motorcontrol::can::TalonFX**' to 'ctre::phoenix::motorcontrol::IMotorController&'
+
+compiling ExampleFunction.cpp successful.
 
 Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.
