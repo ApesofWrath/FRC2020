@@ -388,7 +388,7 @@ void DriveBase::Controller(double ref_kick,
 		//	* (double) ((PI) / 180.0); //left should be positive
 
 	 // frc::SmartDashboard::PutNumber("yaw vel", yaw_rate_current);
-	 // frc::SmartDashboard::PutNumber("yaw pos", ahrs->GetYaw());
+	 frc::SmartDashboard::PutNumber("yaw pos", ahrs->GetYaw());
 	/// frc::SmartDashboard::PutNumber("max_y_rpm", max_y_rpm);
 	// frc::SmartDashboard::PutNumber("max_yaw_rate", max_yaw_rate);
 
@@ -475,8 +475,8 @@ void DriveBase::Controller(double ref_kick,
 //	double kick_current = ((double) canTalonKicker->GetSelectedSensorVelocity(0) //will timeout, taking too much time
 //			 (double) TICKS_PER_ROT) * MINUTE_CONVERSION; //going right is positive
 
-// frc::SmartDashboard::PutNumber("l position", GetLeftPosition());
-// frc::SmartDashboard::PutNumber("r position", GetRightPosition());
+frc::SmartDashboard::PutNumber("l position", GetLeftPosition());
+frc::SmartDashboard::PutNumber("r position", GetRightPosition());
 
 	l_error_vel_t = ref_left - l_current;
 	r_error_vel_t = ref_right - r_current;

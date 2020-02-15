@@ -68,13 +68,13 @@ const double FF_SCALE = 0.7; //auton
 
 const double reverse_output = 1.0;
 
-const double K_P_RIGHT_VEL = 0.001145;//0.003;//0.0001; //no gear shift
+const double K_P_RIGHT_VEL = 0.0011458;//0.003;//0.0001; //no gear shift
 const double K_D_RIGHT_VEL = 0.0;// 0.0005;
 
-const double K_P_LEFT_VEL = 0.00115;//0.003; //voltage compensation //ff //p
+const double K_P_LEFT_VEL = 0.00113;//0.003; //voltage compensation //ff //p
 const double K_D_LEFT_VEL = 0.0;
 
-const double K_P_YAW_VEL = 0.5;//13.0;
+const double K_P_YAW_VEL = 0.8;//13.0;
 const double K_D_YAW_VEL = 0.0;
 
 const double K_P_YAW_HEADING_POS = 0.0; //special controllers - yaw vision
