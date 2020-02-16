@@ -86,7 +86,6 @@ void Robot::TeleopPeriodic() {
   frc::SmartDashboard::PutNumber("Green", detectedColor.green);
   frc::SmartDashboard::PutNumber("Blue", detectedColor.blue);
   frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
-
   desiredColor = m_descolor_chooser.GetSelected();
 
   if (desiredColor != controlpanel->desiredColor) {
@@ -111,6 +110,8 @@ void Robot::TeleopPeriodic() {
   // } else {
   //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
   // }
+
+  controlpanel->StateMachine(ControlPanel::ColorFromFRCColor(detectedColor));
 
 }
 

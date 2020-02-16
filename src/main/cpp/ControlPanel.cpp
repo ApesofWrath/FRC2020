@@ -21,7 +21,7 @@ Colors ControlPanel::OffsetColor(Colors color) {
 }
 
 
-Colors ColorFromFRCColor(frc::Color detectedColor) {
+Colors ControlPanel::ColorFromFRCColor(frc::Color detectedColor) {
     if (detectedColor.red > 0.3 && detectedColor.green > 0.5 && detectedColor.blue < 0.2) {
       frc::SmartDashboard::PutString("Color", "Yellow");
       return Colors::YELLOW;

@@ -16,11 +16,13 @@ enum Colors {
 
 
 
-Colors ColorFromFRCColor(frc::Color);
 
 class ControlPanel {
 
 public:
+
+    static Colors ColorFromFRCColor(frc::Color);
+
     TalonSRX* talon;
 
     ControlPanel();
