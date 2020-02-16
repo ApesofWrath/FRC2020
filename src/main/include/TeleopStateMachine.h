@@ -1,9 +1,9 @@
 #pragma once
 
-#include <Intake.h>
-#include <Arm.h>
-#include <Shooter.h>
-#include <ControlPanel.h>
+#include "Intake.h"
+#include "Arm.h"
+#include "Shooter.h"
+#include "ControlPanel.h"
 
 #include <frc/Joystick.h>
 
@@ -48,9 +48,9 @@ public:
 
     enum States {
         INIT_STATE, WAIT_FOR_BUTTON_STATE,
-        INTAKE_STATE,
+        INTAKE_STATE, POST_INTAKE_STATE,
+        SHOOT_STATE, POST_SHOOT_STATE,
         ROTATION_MODE_CONTROL_PANEL, POSITION_MODE_CONTROL_PANEL,
-        SHOOT_STATE
     };
 
     static std::string StateName(States state);
