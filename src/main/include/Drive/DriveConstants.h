@@ -68,10 +68,10 @@ const double FF_SCALE = 0.7; //auton
 
 const double reverse_output = 1.0;
 
-const double K_P_RIGHT_VEL = 0.0011458;//0.003;//0.0001; //no gear shift
+const double K_P_RIGHT_VEL = 0.001558;//0.003;//0.0001; //no gear shift
 const double K_D_RIGHT_VEL = 0.0;// 0.0005;
 
-const double K_P_LEFT_VEL = 0.00113;//0.003; //voltage compensation //ff //p
+const double K_P_LEFT_VEL = 0.00103;//0.003; //voltage compensation //ff //p
 const double K_D_LEFT_VEL = 0.0;
 
 const double K_P_YAW_VEL = 0.8;//13.0;
@@ -104,7 +104,7 @@ const double MAX_JERK_VIS = 10000.0;
 //Drive maxes
 
 
-const double MAX_FORWARD_MPS = 4.6934;
+const double MAX_FORWARD_MPS = 4.89154;
 
 const double MAX_Y_RPM = MAX_FORWARD_MPS / ((2*PI * 3) * 0.0254) * 60;
 const double ACTUAL_MAX_Y_RPM = MAX_Y_RPM;
@@ -116,7 +116,7 @@ const double ACTUAL_MAX_Y_RPM_R_F = ACTUAL_MAX_Y_RPM;
 const double ACTUAL_MAX_Y_RPM_R_B = ACTUAL_MAX_Y_RPM;
 
 
-const double MAX_YAW_RATE = 11.08;
+const double MAX_YAW_RATE = 10.54;
 const double MAX_FPS = 10.0;//; //used in auton pathfinder
 
 const double FF_SCALE = 0.7; //auton

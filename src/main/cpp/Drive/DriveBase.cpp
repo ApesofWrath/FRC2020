@@ -187,8 +187,8 @@ void DriveBase::ManualOpenLoopDrive(Joystick* throttle, Joystick* wheel) {
 	canTalonLeft1->Set(ControlMode::PercentOutput, left_out);
 	canTalonRight1->Set(ControlMode::PercentOutput, left_out);
 
-	double cspeed_l = getSpeedFromTicksPerSecond(canTalonLeft1->GetSelectedSensorVelocity());
-	double cspeed_r = getSpeedFromTicksPerSecond(canTalonRight1->GetSelectedSensorVelocity());
+	double cspeed_l = abs(getSpeedFromTicksPerSecond(canTalonLeft1->GetSelectedSensorVelocity())) ;
+	double cspeed_r = abs(getSpeedFromTicksPerSecond(canTalonRight1->GetSelectedSensorVelocity()));
 
 	if (cspeed_l > max_fwd_speed_l) {
 		max_fwd_speed_l = cspeed_l;
@@ -339,7 +339,7 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 	frc::SmartDashboard::PutNumber("max yaw rate", max_yaw_rate_);
 
 	Controller(0.0, target_r, target_l, target_yaw_rate, k_p_right_vel,
-			k_p_left_vel, 0.0, k_p_yaw_vel, 0.0, k_d_left_vel, k_d_right_vel, 0.0,
+			k_p_left_vel, 0.0, k_p_yaw_vel, 0.0, k_d_right_vel, k_d_left_vel, 0.0,
 			0.0, 0.0, 0.0);
 
 }
@@ -402,7 +402,9 @@ void DriveBase::Controller(double ref_kick,
 
 	double yaw_error = target_yaw_rate - yaw_rate_current;
 
-//	frc::SmartDashboard::PutNumber("yaw vel error", yaw_error);
+	frc::SmartDashboard::PutNumber("yaw vel error", yaw_error);
+	frc::SmartDashboard::PutNumber("yaw raet target", target_yaw_rate);
+	frc::SmartDashboard::PutNumber("yaw currant", yaw_rate_current);
 
 //	if(yaw_rate_current == 0.0) {
 //		k_p_yaw = 0.0;
@@ -475,16 +477,16 @@ void DriveBase::Controller(double ref_kick,
 //	double kick_current = ((double) canTalonKicker->GetSelectedSensorVelocity(0) //will timeout, taking too much time
 //			 (double) TICKS_PER_ROT) * MINUTE_CONVERSION; //going right is positive
 
-frc::SmartDashboard::PutNumber("l position", GetLeftPosition());
-frc::SmartDashboard::PutNumber("r position", GetRightPosition());
+// frc::SmartDashboard::PutNumber("l position", GetLeftPosition());
+// frc::SmartDashboard::PutNumber("r position", GetRightPosition());
 
 	l_error_vel_t = ref_left - l_current;
 	r_error_vel_t = ref_right - r_current;
 	//kick_error_vel = ref_kick - kick_current;
 
 
-  // frc::SmartDashboard::PutNumber("l current", l_current);
-  // frc::SmartDashboard::PutNumber("r current", r_current);
+  frc::SmartDashboard::PutNumber("l current", l_current);
+  frc::SmartDashboard::PutNumber("r current", r_current);
 	//
   // 	frc::SmartDashboard::PutNumber("l vel targ", ref_left);
   // 	frc::SmartDashboard::PutNumber("r vel targ", ref_right);
@@ -493,8 +495,8 @@ frc::SmartDashboard::PutNumber("r position", GetRightPosition());
 	d_right_vel = (r_error_vel_t - r_last_error_vel);
 	d_kick_vel = (kick_error_vel - kick_last_error_vel);
 
-  // frc::SmartDashboard::PutNumber("l vel error", l_error_vel_t);
-  // frc::SmartDashboard::PutNumber("r vel error", r_error_vel_t);
+  frc::SmartDashboard::PutNumber("l vel error", l_error_vel_t);
+  frc::SmartDashboard::PutNumber("r vel error", r_error_vel_t);
 	//
   // frc::SmartDashboard::PutNumber("l vel k", k_p_left);
   // frc::SmartDashboard::PutNumber("r vel k", k_p_right);
@@ -527,6 +529,9 @@ frc::SmartDashboard::PutNumber("r position", GetRightPosition());
   // frc::SmartDashboard::PutNumber("D l Vel", D_LEFT_VEL*550.0);
   // frc::SmartDashboard::PutNumber("P l Vel", P_LEFT_VEL*550.0);
 
+	frc::SmartDashboard::PutNumber("D_RIGHT_VEL", D_RIGHT_VEL);
+	frc::SmartDashboard::PutNumber("P_RIGHT_VEL", P_RIGHT_VEL);
+	frc::SmartDashboard::PutNumber("feed_forward_r", feed_forward_r);
 
 	double total_right = D_RIGHT_VEL + P_RIGHT_VEL + feed_forward_r
 			+ (Kv * target_vel_right * ff_scale); //Kv only in auton, straight from motion profile
@@ -610,7 +615,7 @@ void DriveBase::ZeroYaw() {
 
 double DriveBase::GetLeftVel() { //550 left back //590 left forward
 
-	double l_current = -1.0 * ((double) canTalonLeft1->GetSelectedSensorVelocity(0)
+	double l_current = ((double) canTalonLeft1->GetSelectedSensorVelocity(0)
 			/ (double) TICKS_PER_ROT) * MINUTE_CONVERSION;
 
 	return l_current;
@@ -618,7 +623,7 @@ double DriveBase::GetLeftVel() { //550 left back //590 left forward
 
 double DriveBase::GetRightVel() { //580 right back //580 right forward
 
-	double r_current = -1.0 * ((double) canTalonRight1->GetSelectedSensorVelocity(0)
+	double r_current = ((double) canTalonRight1->GetSelectedSensorVelocity(0)
 			/ (double) TICKS_PER_ROT) * MINUTE_CONVERSION;
 
 	return r_current;
