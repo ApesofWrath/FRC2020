@@ -64,6 +64,12 @@ void Robot::RobotInit() {
   frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
   talon0 = new TalonSRX(0);
 
+ cs::UsbCamera camera = frc::CameraServer::GetInstance()->StartAutomaticCapture("coolmethgames.gov", 0);
+
+	camera.SetResolution(1280, 720);
+	camera.SetExposureManual(0);
+	camera.SetBrightness(100);
+
   shooter = new Shooter();
 }
 

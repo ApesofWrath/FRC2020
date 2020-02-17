@@ -2,10 +2,11 @@
 
 #include <string>
 
-#include <frc/WPILib.h>
+//#include <frc/WPILib.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
+#include "rev/CANSparkMax.h"
 
 class Shooter {
     public:
@@ -25,7 +26,8 @@ class Shooter {
 
     float speed = 0;
 
-    TalonSRX *canTalonBelt, *canTalonTopW, *canTalonBottomW;
+    // TalonSRX *canTalonBelt, *canTalonTopW, *canTalonBottomW;
+    rev::CANSparkMax *beltNEO, *topWNEO, *botWNEO;
     frc::Joystick* joy;
 
     Shooter();

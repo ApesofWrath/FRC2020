@@ -11,6 +11,7 @@
 
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
+#include <frc/WPILib.h>
 
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
