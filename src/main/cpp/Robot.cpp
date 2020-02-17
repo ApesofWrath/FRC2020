@@ -57,6 +57,12 @@ void Robot::RobotInit() {
   intake = new Intake();
   talon0 = new TalonSRX(0);
 
+ cs::UsbCamera camera = frc::CameraServer::GetInstance()->StartAutomaticCapture("coolmethgames.gov", 0);
+
+	camera.SetResolution(1280, 720);
+	camera.SetExposureManual(0);
+	camera.SetBrightness(100);
+
   shooter = new Shooter();
 }
 
