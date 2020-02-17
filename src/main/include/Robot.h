@@ -11,10 +11,12 @@
 
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
+#include <frc/WPILib.h>
 
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
-
+#include <cameraserver/CameraServer.h>
+// #include <frc/WPILib.h>
 #include "Shooter.h"
 namespace apesofwrath {
 

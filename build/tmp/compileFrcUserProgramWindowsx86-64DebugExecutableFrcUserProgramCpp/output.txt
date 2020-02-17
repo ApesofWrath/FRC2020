@@ -1,0 +1,9 @@
+See file:///C:/Users/osgoo/Desktop/Robotics/2020/FRC2020-OUTTAKESKELE/FRC2020/build/tmp/compileFrcUserProgramWindowsx86-64DebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramWindowsx86-64DebugExecutableFrcUserProgramCpp.
+compiling Shooter.cpp successful.
+Shooter.cpp
+
+compiling Robot.cpp successful.
+Robot.cpp
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers\frc/WPILib.h(12): warning C4081: expected '('; found 'string'
+
+Finished compileFrcUserProgramWindowsx86-64DebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/osgoo/Desktop/Robotics/2020/FRC2020-OUTTAKESKELE/FRC2020/build/tmp/compileFrcUserProgramWindowsx86-64DebugExecutableFrcUserProgramCpp/output.txt.
