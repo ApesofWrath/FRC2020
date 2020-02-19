@@ -50,3 +50,8 @@ void AutonDrive::ResetOdometry(frc::Pose2d pose) {
   m_odometry.ResetPosition(pose,
                            frc::Rotation2d(units::degree_t(GetHeading())));
 }
+
+void AutonDrive::ResetEncoders() {
+    t_left1.SetPosition(0);
+    t_right1.SetPosition(0);
+}

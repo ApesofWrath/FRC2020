@@ -20,9 +20,9 @@ constexpr double kRamseteZeta = 0.7;
 
 
 void Robot::RobotInit() {
-  m_chooser.SetDefaultOption(kAutoNameDefault, "default_auto");
-  m_chooser.AddOption(kAutoNameCustom, "custom_auto");
-  frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
+  m_container.m_chooser.SetDefaultOption(kAutoNameDefault, "default_auto");
+  m_container.m_chooser.AddOption(kAutoNameCustom, "custom_auto");
+  frc::SmartDashboard::PutData("Auto Modes", &m_container.m_chooser);
 
 
   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
@@ -65,10 +65,10 @@ void Robot::RobotPeriodic() {
  * make sure to add them to the chooser code above as well.
  */
 void Robot::AutonomousInit() {
-  m_autoSelected = m_chooser.GetSelected();
+  m_container.m_autoSelected = m_container.m_chooser.GetSelected();
   // m_autoSelected = SmartDashboard::GetString("Auto Selector",
   //     kAutoNameDefault);
-  std::cout << "Auto selected: " << m_autoSelected << std::endl;
+  std::cout << "Auto selected: " << m_container.m_autoSelected << std::endl;
 
   m_autonomousCommand = m_container.GetAutonomousCommand();
 
@@ -79,7 +79,7 @@ void Robot::AutonomousInit() {
 }
 
 void Robot::AutonomousPeriodic() {
-  if (m_autoSelected == kAutoNameCustom) {
+  if (m_container.m_autoSelected == kAutoNameCustom) {
     // Custom Auto goes here
   } else {
     // Default Auto goes here

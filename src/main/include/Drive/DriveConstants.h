@@ -127,7 +127,7 @@ constexpr auto K_R_SQUARED = 0.999_m;
 constexpr auto K_TRACK_WIDTH = 0.7101365226646625;
 constexpr auto K_P_AUTON_FB = 2.79;
 constexpr auto K_D_AUTON_FB = 1.24;
-constexpr auto K_MAX_ACCEL = 10.77 * 1_m * 1_s * 1_s;
+constexpr auto K_MAX_ACCEL = 10.77;
 
 #endif //both bots
 

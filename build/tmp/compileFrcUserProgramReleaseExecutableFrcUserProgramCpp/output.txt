@@ -33,7 +33,7 @@ C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Drive\DriveBase.cpp
   float left_out, right_out;
                   ^~~~~~~~~
 
-compiling RobotContainer.cpp failed.
+compiling RobotContainer.cpp successful.
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Drive/DriveBase.h:4:0,
                  from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/RobotContainer.h:14,
                  from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:1:
@@ -41,79 +41,6 @@ C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e
  #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
   ^~~~~~~
 C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp: In member function 'frc2::Command* RobotContainer::GetAutonomousCommand()':
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:10:44: error: no matching function for call to 'frc::DifferentialDriveVoltageConstraint::DifferentialDriveVoltageConstraint(frc::SimpleMotorFeedforward<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >, const frc::DifferentialDriveKinematics (&)(units::length::meter_t), units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<2>, std::ratio<1>, std::ratio<-3>, std::ratio<0, 1>, std::ratio<-1> > > >)'
-       K_DRIVE_KINEMATICS, units::volt_t(10));
-                                            ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/RobotContainer.h:9:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:1:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/constraint/DifferentialDriveVoltageConstraint.h:35:3: note: candidate: frc::DifferentialDriveVoltageConstraint::DifferentialDriveVoltageConstraint(frc::SimpleMotorFeedforward<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >, frc::DifferentialDriveKinematics, units::voltage::volt_t)
-   DifferentialDriveVoltageConstraint(
-   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/constraint/DifferentialDriveVoltageConstraint.h:35:3: note:   no known conversion for argument 2 from 'const frc::DifferentialDriveKinematics(units::length::meter_t) {aka const frc::DifferentialDriveKinematics(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >)}' to 'frc::DifferentialDriveKinematics'
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/constraint/DifferentialDriveVoltageConstraint.h:23:7: note: candidate: constexpr frc::DifferentialDriveVoltageConstraint::DifferentialDriveVoltageConstraint(const frc::DifferentialDriveVoltageConstraint&)
- class DifferentialDriveVoltageConstraint : public TrajectoryConstraint {
-       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/constraint/DifferentialDriveVoltageConstraint.h:23:7: note:   candidate expects 1 argument, 3 provided
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/constraint/DifferentialDriveVoltageConstraint.h:23:7: note: candidate: constexpr frc::DifferentialDriveVoltageConstraint::DifferentialDriveVoltageConstraint(frc::DifferentialDriveVoltageConstraint&&)
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/constraint/DifferentialDriveVoltageConstraint.h:23:7: note:   candidate expects 1 argument, 3 provided
-In file included from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/Command.h:16:0,
-                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/CommandBase.h:19,
-                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/CommandGroupBase.h:16,
-                 from C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/SequentialCommandGroup.h:25,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/RobotContainer.h:6,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:1:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\10201cdb49da2a3b0e9aa4aa1244aaf4\wpiutil-cpp-2020.2.2-headers/units/units.h: In instantiation of 'constexpr T units::convert(const T&) [with UnitFrom = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<2>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1> >, std::ratio<0, 1>, std::ratio<0, 1> >; UnitTo = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-2> > >; T = double]':
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\10201cdb49da2a3b0e9aa4aa1244aaf4\wpiutil-cpp-2020.2.2-headers/units/units.h:1956:41:   required from 'constexpr units::unit_t<Units, T, NonLinearScale>::unit_t(const units::unit_t<UnitsRhs, Ty, NlsRhs>&) [with UnitsRhs = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<2>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1>, std::ratio<0, 1> >, std::ratio<0, 1>, std::ratio<0, 1> >; Ty = double; NlsRhs = units::linear_scale; Units = units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-2> > >; T = double; NonLinearScale = units::linear_scale]'
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:14:79:   required from here
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\10201cdb49da2a3b0e9aa4aa1244aaf4\wpiutil-cpp-2020.2.2-headers/units/units.h:1620:3: error: static assertion failed: Units are not compatible.
-   static_assert(traits::is_convertible_unit<UnitFrom, UnitTo>::value, "Units are not compatible.");
-   ^~~~~~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:16:43: error: no matching function for call to 'frc::TrajectoryConfig::SetKinematics(const frc::DifferentialDriveKinematics (&)(units::length::meter_t))'
-   config->SetKinematics(K_DRIVE_KINEMATICS);
-                                           ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/RobotContainer.h:10:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:1:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/TrajectoryConfig.h:90:8: note: candidate: void frc::TrajectoryConfig::SetKinematics(const frc::DifferentialDriveKinematics&)
-   void SetKinematics(const DifferentialDriveKinematics& kinematics) {
-        ^~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/TrajectoryConfig.h:90:8: note:   no known conversion for argument 1 from 'const frc::DifferentialDriveKinematics(units::length::meter_t) {aka const frc::DifferentialDriveKinematics(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >)}' to 'const frc::DifferentialDriveKinematics&'
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/TrajectoryConfig.h:101:8: note: candidate: void frc::TrajectoryConfig::SetKinematics(frc::MecanumDriveKinematics)
-   void SetKinematics(MecanumDriveKinematics kinematics) {
-        ^~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/TrajectoryConfig.h:101:8: note:   no known conversion for argument 1 from 'const frc::DifferentialDriveKinematics(units::length::meter_t) {aka const frc::DifferentialDriveKinematics(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >)}' to 'frc::MecanumDriveKinematics'
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/TrajectoryConfig.h:112:8: note: candidate: template<unsigned int NumModules> void frc::TrajectoryConfig::SetKinematics(frc::SwerveDriveKinematics<NumModules>&)
-   void SetKinematics(SwerveDriveKinematics<NumModules>& kinematics) {
-        ^~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/trajectory/TrajectoryConfig.h:112:8: note:   template argument deduction/substitution failed:
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:16:43: note:   mismatched types 'frc::SwerveDriveKinematics<NumModules>' and 'const frc::DifferentialDriveKinematics(units::length::meter_t) {aka const frc::DifferentialDriveKinematics(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >)}'
-   config->SetKinematics(K_DRIVE_KINEMATICS);
-                                           ^
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:39:17: error: no matching function for call to 'frc2::RamseteCommand::RamseteCommand(frc::Trajectory&, RobotContainer::GetAutonomousCommand()::<lambda()>, frc::RamseteController, frc::SimpleMotorFeedforward<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >, const frc::DifferentialDriveKinematics (&)(units::length::meter_t), RobotContainer::GetAutonomousCommand()::<lambda()>, frc2::PIDController, frc2::PIDController, RobotContainer::GetAutonomousCommand()::<lambda(auto:3, auto:4)>, <brace-enclosed initializer list>)'
-       {&m_drive});
-                 ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/RobotContainer.h:12:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:1:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:161:3: note: candidate: frc2::RamseteCommand::RamseteCommand(frc::Trajectory, std::function<frc::Pose2d()>, frc::RamseteController, frc::DifferentialDriveKinematics, std::function<void(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >, units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >)>, wpi::ArrayRef<frc2::Subsystem*>)
-   RamseteCommand(frc::Trajectory trajectory, std::function<frc::Pose2d()> pose,
-   ^~~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:161:3: note:   candidate expects 6 arguments, 10 provided
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:137:3: note: candidate: frc2::RamseteCommand::RamseteCommand(frc::Trajectory, std::function<frc::Pose2d()>, frc::RamseteController, frc::DifferentialDriveKinematics, std::function<void(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >, units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1>, std::ratio<0, 1>, std::ratio<-1> > > >)>, std::initializer_list<frc2::Subsystem*>)
-   RamseteCommand(frc::Trajectory trajectory, std::function<frc::Pose2d()> pose,
-   ^~~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:137:3: note:   candidate expects 6 arguments, 10 provided
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:111:3: note: candidate: frc2::RamseteCommand::RamseteCommand(frc::Trajectory, std::function<frc::Pose2d()>, frc::RamseteController, frc::SimpleMotorFeedforward<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >, frc::DifferentialDriveKinematics, std::function<frc::DifferentialDriveWheelSpeeds()>, frc2::PIDController, frc2::PIDController, std::function<void(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<2>, std::ratio<1>, std::ratio<-3>, std::ratio<0, 1>, std::ratio<-1> > > >, units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<2>, std::ratio<1>, std::ratio<-3>, std::ratio<0, 1>, std::ratio<-1> > > >)>, wpi::ArrayRef<frc2::Subsystem*>)
-   RamseteCommand(frc::Trajectory trajectory, std::function<frc::Pose2d()> pose,
-   ^~~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:111:3: note:   no known conversion for argument 5 from 'const frc::DifferentialDriveKinematics(units::length::meter_t) {aka const frc::DifferentialDriveKinematics(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >)}' to 'frc::DifferentialDriveKinematics'
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:74:3: note: candidate: frc2::RamseteCommand::RamseteCommand(frc::Trajectory, std::function<frc::Pose2d()>, frc::RamseteController, frc::SimpleMotorFeedforward<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >, frc::DifferentialDriveKinematics, std::function<frc::DifferentialDriveWheelSpeeds()>, frc2::PIDController, frc2::PIDController, std::function<void(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<2>, std::ratio<1>, std::ratio<-3>, std::ratio<0, 1>, std::ratio<-1> > > >, units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<2>, std::ratio<1>, std::ratio<-3>, std::ratio<0, 1>, std::ratio<-1> > > >)>, std::initializer_list<frc2::Subsystem*>)
-   RamseteCommand(frc::Trajectory trajectory, std::function<frc::Pose2d()> pose,
-   ^~~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:74:3: note:   no known conversion for argument 5 from 'const frc::DifferentialDriveKinematics(units::length::meter_t) {aka const frc::DifferentialDriveKinematics(units::unit_t<units::unit<std::ratio<1>, units::base_unit<std::ratio<1> > > >)}' to 'frc::DifferentialDriveKinematics'
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:45:7: note: candidate: frc2::RamseteCommand::RamseteCommand(frc2::RamseteCommand&&)
- class RamseteCommand : public CommandHelper<CommandBase, RamseteCommand> {
-       ^~~~~~~~~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\6108fcd67ff6aafa051dfe7a25351dc8\wpilibNewCommands-cpp-2020.2.2-headers/frc2/command/RamseteCommand.h:45:7: note:   candidate expects 1 argument, 10 provided
 
 compiling Robot.cpp successful.
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Drive/DriveBase.h:4:0,

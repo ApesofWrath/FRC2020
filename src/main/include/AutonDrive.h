@@ -47,8 +47,7 @@ public:
 
 };
 
-const frc::DifferentialDriveKinematics K_DRIVE_KINEMATICS(
-    units::meter_t(K_TRACK_WIDTH));
+// extern const frc::DifferentialDriveKinematics K_DRIVE_KINEMATICS;
 
 const double K_RAMSETE_B = 2;
 const double K_RAMSETE_ZETA = 0.7;

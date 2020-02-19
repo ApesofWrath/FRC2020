@@ -1,6 +1,8 @@
 #include "RobotContainer.h"
+#include <units/units.h>
 
-
+const frc::DifferentialDriveKinematics K_DRIVE_KINEMATICS{
+    units::meter_t(K_TRACK_WIDTH)};
 
 frc2::Command* RobotContainer::GetAutonomousCommand() {
   // Create a voltage constraint to ensure we don't accelerate too fast
@@ -36,7 +38,7 @@ frc2::Command* RobotContainer::GetAutonomousCommand() {
       frc2::PIDController(K_P_LEFT_VEL, 0, 0),
       frc2::PIDController(K_P_RIGHT_VEL, 0, 0),
       [this](auto left, auto right) { m_drive->TankDriveVolts(left, right); },
-      {&m_drive});
+      {});
 
   // no auto
   return new frc2::SequentialCommandGroup(

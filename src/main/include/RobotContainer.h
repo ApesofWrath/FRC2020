@@ -20,12 +20,9 @@
 #include "AutonDrive.h"
 
 
-
-frc::SendableChooser<std::string> m_chooser;
 const std::string kAutoNameDefault = "Default";
 const std::string kAutoNameCustom = "My Auto";
 
-std::string m_autoSelected;
 
 /**
  * This class is where the bulk of the robot should be declared.  Since
@@ -41,7 +38,12 @@ class RobotContainer {
   AutonDrive* m_drive;
 
   frc2::Command* GetAutonomousCommand();
-
+  frc::SendableChooser<std::string> m_chooser;
+  
+  std::string m_autoSelected;
  private:
   void ConfigureButtonBindings();
+
+
+
 };
