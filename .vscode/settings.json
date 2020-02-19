@@ -1,6 +1,13 @@
 {
     "C_Cpp.default.configurationProvider": "vscode-wpilib",
     "files.associations": {
-        "*.inc": "cpp"
-    }
+        "*.inc": "cpp",
+        "xlocale": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "functional": "cpp",
+        "ios": "cpp",
+        "xiosbase": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }

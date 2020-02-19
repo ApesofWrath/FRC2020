@@ -13,10 +13,15 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 
 
+constexpr double kRamseteB = 2;
+constexpr double kRamseteZeta = 0.7;
+
+
+
 
 void Robot::RobotInit() {
-  m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);
-  m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
+  m_chooser.SetDefaultOption(kAutoNameDefault, "default_auto");
+  m_chooser.AddOption(kAutoNameCustom, "custom_auto");
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 
 
@@ -32,12 +37,6 @@ void Robot::RobotInit() {
   joyW = new frc::Joystick(1);
   controlpanel = new ControlPanel();
 
-  Falcon_T = new TalonFX(0);
-  Falcon_T2 = new TalonFX(1);
-
-  T46 = new TalonSRX(46);
-  T46->SetInverted(InvertType::InvertMotorOutput);
-
   drive = new DriveController();
 
 }
@@ -51,7 +50,7 @@ void Robot::RobotInit() {
  * LiveWindow and SmartDashboard integrated updating.
  */
 void Robot::RobotPeriodic() {
-  
+  frc2::CommandScheduler::GetInstance().Run();
 }
 
 /**
@@ -71,11 +70,12 @@ void Robot::AutonomousInit() {
   //     kAutoNameDefault);
   std::cout << "Auto selected: " << m_autoSelected << std::endl;
 
-  if (m_autoSelected == kAutoNameCustom) {
-    // Custom Auto goes here
-  } else {
-    // Default Auto goes here
+  m_autonomousCommand = m_container.GetAutonomousCommand();
+
+  if (m_autonomousCommand != nullptr) {
+    m_autonomousCommand->Schedule();
   }
+
 }
 
 void Robot::AutonomousPeriodic() {
