@@ -47,6 +47,60 @@ void TeleopStateMachine::ProcessButtonData(ButtonData data) {
 void TeleopStateMachine::StateMachine(ButtonData data) {
     ProcessButtonData(data);
 
+    if (data.wait_for_button) {
+      state = WAIT_FOR_BUTTON_STATE;
+    } else {
+
+    }
+
+    //arm
+    if (data.arm_up) {
+      state_arm = false;
+      arm->intake_arm_state = arm->UP_STATE_H;
+    } else if (data.arm_down) {
+      state_arm = false;
+      arm->intake_arm_state = arm->DOWN_STATE_H;
+    } else if (data.arm_rest) {
+      state_arm = false;
+      arm->intake_arm_state = arm->REST_STATE_H;
+    } else {
+      state_arm = true;
+    }
+
+    //intake
+    if (data.intake_in) {
+      state_intake = false;
+      intake->intake_state = intake->IN_STATE_H;
+    } else if (data.intake_out)\ {
+      state_intake = false;
+      intake->intake_state = intake->OUT_STATE_H;
+    } else if (data.intake_stop) {
+      state_intake = false;
+      intake->intake_state = intake->STOP_STATE_H;
+    } else {
+      state_intake = true;
+    }
+
+    //shooter
+    if (data.shooter_intake) {
+      state_shooter = false;
+      shooter->shooter_state = shooter->INTAKE_STATE_H;
+    } else if (data.shooter_shoot) {
+      state_shooter = false;
+      shooter->shooter_state = shooter->SHOOT_STATE_H;
+    } else if (data.shooter_wait) {
+      state_shooter = false;
+      shooter->shooter_state = shooter->WAITING_STATE_H;
+    } else if (data.shooter_stop) {
+      state_shooter = false;
+      shooter->shooter_state = shooter->STOP_STATE_H;
+    } else {
+      state_shooter = true;
+    }
+
+    //control panel
+    if ()
+
     switch (state) {
 
 
