@@ -1,7 +1,4 @@
-#ifndef SRC_CONSTANTS_H_
-#define SRC_CONSTANTS_H_
+#pragma once
 
 const int COMP_BOT = 0;
 const double TIME_STEP = 0.02; //ms
-
-#endif

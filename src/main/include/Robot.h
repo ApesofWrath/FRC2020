@@ -16,6 +16,7 @@
 
 #include "ControlPanel.h"
 #include "Drive/DriveController.h"
+#include "RobotContainer.h"
 
 
 class Robot : public frc::TimedRobot {
@@ -27,9 +28,6 @@ class Robot : public frc::TimedRobot {
 
 //Temporary Button ids
   const int BUTTON_STOP = 2, POSITION_BUTTON = 5, ROTATION_BUTTON = 4, INTAKE = 3;
-
-  TalonSRX *T46;
-  TalonFX *Falcon_T, *Falcon_T2;
 
   Colors currentColor, desiredColor;
   frc::Joystick  *joyT, *joyW;
@@ -46,12 +44,12 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic() override;
   std::string getColor(Colors c);
     
+  AutonDrive *a_drive;
+
  private:
-  frc::SendableChooser<std::string> m_chooser;
   frc::SendableChooser<Colors> m_descolor_chooser;
   
-  const std::string kAutoNameDefault = "Default";
-  const std::string kAutoNameCustom = "My Auto";
+  frc2::Command* m_autonomousCommand = nullptr;
+  RobotContainer m_container = RobotContainer(a_drive);
   const Colors kDesColorDefault = Colors::WHITE;
-  std::string m_autoSelected;
 };
