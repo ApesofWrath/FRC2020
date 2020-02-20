@@ -1,5 +1,15 @@
 See file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
-compiling ControlPanel.cpp successful.
+compiling DriveBase.cpp successful.
+In file included from c:\users\andy\onedrive\desktop\frc20\frc20\test\src\main\include\drive\drivebase.h:4:0,
+                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Drive\DriveBase.cpp:1:
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning is a GCC extension
+ #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
+  ^~~~~~~
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Drive\DriveBase.cpp: In member function 'void DriveBase::ManualOpenLoopDrive(frc::Joystick*, frc::Joystick*)':
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Drive\DriveBase.cpp:181:18: warning: variable 'right_out' set but not used [-Wunused-but-set-variable]
+  float left_out, right_out;
+                  ^~~~~~~~~
 
 compiling AutonDrive.cpp successful.
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Drive/DriveBase.h:4:0,
@@ -9,29 +19,6 @@ C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e
  #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
   ^~~~~~~
 C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\AutonDrive.cpp:1:0:
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/AutonDrive.h: In constructor 'AutonDrive::AutonDrive(int, int, int, int)':
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/AutonDrive.h:25:36: warning: 'AutonDrive::m_odometry' will be initialized after [-Wreorder]
-     frc::DifferentialDriveOdometry m_odometry;
-                                    ^~~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/AutonDrive.h:20:21: warning:   'frc::PWMTalonFX AutonDrive::t_left1' [-Wreorder]
-     frc::PWMTalonFX t_left1, t_left2, t_right1, t_right2;
-                     ^~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\AutonDrive.cpp:4:1: warning:   when initialized here [-Wreorder]
- AutonDrive::AutonDrive(int left1, int left2, int right1, int right2) : m_odometry{frc::Rotation2d(units::degree_t(GetHeading()))},
- ^~~~~~~~~~
-
-compiling DriveBase.cpp successful.
-In file included from c:\users\andy\onedrive\desktop\frc20\frc20\test\src\main\include\drive\drivebase.h:4:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Drive\DriveBase.cpp:1:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning is a GCC extension
- #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
-  ^~~~~~~
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Drive\DriveBase.cpp: In member function 'void DriveBase::ManualOpenLoopDrive(frc::Joystick*, frc::Joystick*)':
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Drive\DriveBase.cpp:182:18: warning: variable 'right_out' set but not used [-Wunused-but-set-variable]
-  float left_out, right_out;
-                  ^~~~~~~~~
 
 compiling RobotContainer.cpp successful.
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Drive/DriveBase.h:4:0,
@@ -41,6 +28,23 @@ C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e
  #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
   ^~~~~~~
 C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp: In member function 'void RobotContainer::InitAutoChoices()':
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:64:61: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = std::__cxx11::basic_string<char>]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+     m_chooser.AddObject(kAutoName_UnnamedPath, "UnnamedPath");
+                                                             ^
+In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/RobotContainer.h:4:0,
+                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:1:
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
+   void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
+        ^~~~~~~~~
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:65:53: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = std::__cxx11::basic_string<char>]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+     m_chooser.AddObject(kAutoName_Unnamed, "Unnamed");
+                                                     ^
+In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/RobotContainer.h:4:0,
+                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\RobotContainer.cpp:1:
+C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
+   void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
+        ^~~~~~~~~
 
 compiling Robot.cpp successful.
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Drive/DriveBase.h:4:0,
@@ -52,7 +56,7 @@ C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e
   ^~~~~~~
 C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
 C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp: In member function 'virtual void Robot::RobotInit()':
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:28:55: warning: 'void frc::SendableChooser<T>::AddDefault(wpi::StringRef, T) [with T = Colors]' is deprecated: use SetDefaultOption() instead [-Wdeprecated-declarations]
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:34:55: warning: 'void frc::SendableChooser<T>::AddDefault(wpi::StringRef, T) [with T = Colors]' is deprecated: use SetDefaultOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddDefault("None",  Colors::WHITE);
                                                        ^
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
@@ -60,7 +64,7 @@ In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\i
 C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:57:8: note: declared here
    void AddDefault(wpi::StringRef name, T object) {
         ^~~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:29:53: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:35:53: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddObject("Red",    Colors::RED);
                                                      ^
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
@@ -68,7 +72,7 @@ In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\i
 C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
    void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
         ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:30:54: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:36:54: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddObject("Blue",   Colors::BLUE);
                                                       ^
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
@@ -76,7 +80,7 @@ In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\i
 C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
    void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
         ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:31:55: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:37:55: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddObject("Green",  Colors::GREEN);
                                                        ^
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
@@ -84,7 +88,7 @@ In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\i
 C:\Users\andy\.gradle\caches\transforms-2\files-2.1\d4e0f09c45bbaa95e9510fd9966e1d69\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
    void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
         ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:32:56: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:38:56: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddObject("Yellow", Colors::YELLOW);
                                                         ^
 In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,

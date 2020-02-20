@@ -1,32 +1,43 @@
 #include "RobotContainer.h"
 #include <units/units.h>
 
+#include <iostream>
+
 const frc::DifferentialDriveKinematics K_DRIVE_KINEMATICS{
     units::meter_t(K_TRACK_WIDTH)};
-
 frc2::Command* RobotContainer::GetAutonomousCommand() {
-  // Create a voltage constraint to ensure we don't accelerate too fast
+
+  std::cout << "start\n";
   frc::DifferentialDriveVoltageConstraint *autoVoltageConstraint = new frc::DifferentialDriveVoltageConstraint(
       frc::SimpleMotorFeedforward<units::meter>(
           K_S, K_V, K_A),
       K_DRIVE_KINEMATICS, units::volt_t(10));
 
+  std::cout << "step 2\n";
   // Set up config for trajectory
   frc::TrajectoryConfig *config = new frc::TrajectoryConfig(units::meters_per_second_t(MAX_FORWARD_MPS),
                                units::meters_per_second_squared_t(K_MAX_ACCEL));
   // Add kinematics to ensure max speed is actually obeyed
+  std::cout << "step 3\n";
   config->SetKinematics(K_DRIVE_KINEMATICS);
   // Apply the voltage constraint
+  std::cout << "step 4\n";
   config->AddConstraint(*autoVoltageConstraint);
 
 
+  std::cout << "step 5\n";
   wpi::SmallString<64> deployDirectory;
+  std::cout << "step 6\n";
   frc::filesystem::GetDeployDirectory(deployDirectory);
+  std::cout << "step 7\n";
   wpi::sys::path::append(deployDirectory, "paths");
+  std::cout << "step 8\n";
   wpi::sys::path::append(deployDirectory, m_autoSelected + ".wpilib.json");
 
+  std::cout << "step 9\n";
   frc::Trajectory trajectory = frc::TrajectoryUtil::FromPathweaverJson(deployDirectory);
 
+  std::cout << "step 10\n";
   frc2::RamseteCommand ramseteCommand(
       trajectory, [this]() { return m_drive->GetPose(); },
       frc::RamseteController(K_RAMSETE_B,
@@ -41,7 +52,15 @@ frc2::Command* RobotContainer::GetAutonomousCommand() {
       {});
 
   // no auto
+  std::cout << "step 11\n";
   return new frc2::SequentialCommandGroup(
       std::move(ramseteCommand),
       frc2::InstantCommand([this] { m_drive->TankDriveVolts(0_V, 0_V); }, {}));
+}
+
+void RobotContainer::InitAutoChoices() {
+    std::cout << "initauto: step1\n";
+    m_chooser.SetDefaultOption(kAutoName_TestPath, "TestPath");    
+    m_chooser.AddObject(kAutoName_UnnamedPath, "UnnamedPath");
+    m_chooser.AddObject(kAutoName_Unnamed, "Unnamed");
 }

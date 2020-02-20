@@ -225,3 +225,6 @@ private:
 	int LF = 0, L2 = 0, L3 = 0, LR = 0, RF = 0, R2 = 0, R3 = 0, RR = 0, KICKER = 0, PCM = 0, F_CHANNEL = 0, R_CHANNEL;
 
 };
+
+const double TICKS_TO_DISTANCE=1.0/(2048.0*(84.0/8.0)*(1/(2*PI*3))*(1/0.0254)) * 10;
+double getSpeedFromTicksPerSecond(int ticks_per_second);

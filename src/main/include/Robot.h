@@ -17,6 +17,7 @@
 #include "ControlPanel.h"
 #include "Drive/DriveController.h"
 #include "RobotContainer.h"
+#include "AutonDrive.h"
 
 
 class Robot : public frc::TimedRobot {
@@ -50,6 +51,6 @@ class Robot : public frc::TimedRobot {
   frc::SendableChooser<Colors> m_descolor_chooser;
   
   frc2::Command* m_autonomousCommand = nullptr;
-  RobotContainer m_container = RobotContainer(a_drive);
+  RobotContainer *m_container;
   const Colors kDesColorDefault = Colors::WHITE;
 };

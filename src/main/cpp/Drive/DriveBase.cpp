@@ -30,7 +30,6 @@ std::vector<std::vector<double> > auton_profile(1500, std::vector<double>(5)); /
 double last_target_heading = 0.0;
 double last_yaw_angle = 0.0;
 
-const double TICKS_TO_DISTANCE=1.0/(2048.0*(84.0/8.0)*(1/(2*PI*3))*(1/0.0254)) * 10;
 
 double getSpeedFromTicksPerSecond(int ticks_per_second) {
 	return TICKS_TO_DISTANCE * ticks_per_second;

@@ -20,10 +20,16 @@ constexpr double kRamseteZeta = 0.7;
 
 
 void Robot::RobotInit() {
-  m_container.m_chooser.SetDefaultOption(kAutoNameDefault, "default_auto");
-  m_container.m_chooser.AddOption(kAutoNameCustom, "custom_auto");
-  frc::SmartDashboard::PutData("Auto Modes", &m_container.m_chooser);
+  std::cout << "dc\n";
+  drive = new DriveController();
 
+  std::cout << "robo_init\n";
+  a_drive = new AutonDrive(10,12,11,13, drive->ahrs);
+  m_container = new RobotContainer(a_drive);
+
+  m_container->InitAutoChoices();
+  std::cout << "sd:pd am\n";
+  frc::SmartDashboard::PutData("Auto Modes", &(m_container->m_chooser));
 
   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
   m_descolor_chooser.AddObject("Red",    Colors::RED);
@@ -33,12 +39,13 @@ void Robot::RobotInit() {
 
   frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
 
+
+  std::cout << "joys\n";
   joyT = new frc::Joystick(0);
   joyW = new frc::Joystick(1);
+
+  std::cout << "cp\n";
   controlpanel = new ControlPanel();
-
-  drive = new DriveController();
-
 }
 
 /**
@@ -50,7 +57,7 @@ void Robot::RobotInit() {
  * LiveWindow and SmartDashboard integrated updating.
  */
 void Robot::RobotPeriodic() {
-  frc2::CommandScheduler::GetInstance().Run();
+  // std::cout << "rp\n";
 }
 
 /**
@@ -65,29 +72,36 @@ void Robot::RobotPeriodic() {
  * make sure to add them to the chooser code above as well.
  */
 void Robot::AutonomousInit() {
-  m_container.m_autoSelected = m_container.m_chooser.GetSelected();
+  std::cout << "as get\n";
+  m_container->m_autoSelected = m_container->m_chooser.GetSelected();
   // m_autoSelected = SmartDashboard::GetString("Auto Selector",
   //     kAutoNameDefault);
-  std::cout << "Auto selected: " << m_container.m_autoSelected << std::endl;
+  std::cout << "Auto selected: " << m_container->m_autoSelected << std::endl;
 
-  m_autonomousCommand = m_container.GetAutonomousCommand();
+  m_autonomousCommand = m_container->GetAutonomousCommand();
+  std::cout << "ac gotten\n";
 
   if (m_autonomousCommand != nullptr) {
     m_autonomousCommand->Schedule();
+    std::cout << "ac schedule\n";
   }
 
+  a_drive->ResetEncoders();
 }
 
 void Robot::AutonomousPeriodic() {
-  if (m_container.m_autoSelected == kAutoNameCustom) {
-    // Custom Auto goes here
-  } else {
-    // Default Auto goes here
-  }
+  // if (m_container->m_autoSelected == kAutoNameCustom) {
+  //   // Custom Auto goes here
+  // } else {
+  //   // Default Auto goes here
+  // }
+  frc2::CommandScheduler::GetInstance().Run();
+
+  a_drive->Update();
 }
 void Robot::TeleopInit() {
 }
-bool toggle = false;
+// bool toggle = false;
 void Robot::TeleopPeriodic() {
   
   
