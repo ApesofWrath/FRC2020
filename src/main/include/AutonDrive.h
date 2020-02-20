@@ -9,20 +9,23 @@
 #include <frc/SpeedController.h>
 #include "Drive/DriveBase.h"
 #include "Drive/DriveConstants.h"
+#include <ctre/Phoenix.h>
 
 class AutonDrive {
 public:
-    AutonDrive(int left1, int left2, int right1, int right2);
+    AutonDrive(int left1, int left2, int right1, int right2, AHRS* ahrs_);
 
     AHRS* ahrs;
-    frc::PowerDistributionPanel pdp;
+    frc::PowerDistributionPanel *pdp;
 
-    frc::PWMTalonFX t_left1, t_left2, t_right1, t_right2;
+    WPI_TalonFX t_left1, t_left2, t_right1, t_right2;
+
+    TalonFX *fx_left1, *fx_left2, *fx_right1, *fx_right2;
 
     frc::SpeedControllerGroup m_leftMotors{t_left1, t_left2};
     frc::SpeedControllerGroup m_rightMotors{t_right1, t_right2};
 
-    frc::DifferentialDriveOdometry m_odometry;
+    frc::DifferentialDriveOdometry *m_odometry;
 
     double GetHeading();
 

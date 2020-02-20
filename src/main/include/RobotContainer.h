@@ -22,7 +22,9 @@
 
 const std::string kAutoNameDefault = "Default";
 const std::string kAutoNameCustom = "My Auto";
-
+const std::string kAutoName_TestPath = "TestPath";
+const std::string kAutoName_UnnamedPath = "UnnamedPath";
+const std::string kAutoName_Unnamed = "Unnamed";
 
 /**
  * This class is where the bulk of the robot should be declared.  Since
@@ -36,6 +38,8 @@ class RobotContainer {
   RobotContainer(AutonDrive* drive) : m_drive(drive) {};
 
   AutonDrive* m_drive;
+
+  void InitAutoChoices();
 
   frc2::Command* GetAutonomousCommand();
   frc::SendableChooser<std::string> m_chooser;
