@@ -12,7 +12,10 @@ public:
   // TalonSRX *talonArm;
   rev::CANEncoder *armEncoder;
   rev::CANPIDController *armPID;
+  rev::CANAnalog *analog;
   rev::CANSparkMax *armSparkM0;
+  rev::CANSparkMax *armSparkM1;
+
   frc::Joystick* joy;
 
   float armStartPos;
