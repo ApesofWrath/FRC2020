@@ -29,6 +29,7 @@ public:
     void Up();
     void Down();
     void Rest();
+    void MoveToPosition(double desiredPosition);
 
     void IntakeArmStateMachine(bool up, bool down, bool rest);
 

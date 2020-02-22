@@ -12,7 +12,7 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <math.h>
 
-double kP = 0.8, kI = 0, kD = 0.0, kIz = 0, kFF = 0, kMaxOutput = 0.015, kMinOutput = -0.015;
+double kP = 0.8, kI = 0, kD = 0.0, kIz = 0, kFF = 0, kMaxOutput = 0.3, kMinOutput = -0.3;
 
 
 Arm::Arm() {
@@ -55,15 +55,16 @@ void Arm::Up() {
 
   //   // if(armCurrPos <= armStartPos + 0.2){
   //     armSparkM0->Set(-0.025);
-  //   // } else { 
+  //   // } else {
   //   //   armSparkM0->Set(0);
   //   // }
 
   // } else {
   //   armSparkM0->Set(0);
   // }
-  armPID->SetReference(armStartPos, rev::ControlType::kPosition);
-  
+   //armPID->SetReference(armStartPos, rev::ControlType::kPosition);
+  MoveToPosition(armStartPos);
+  //  armSparkM0->Set(1.0f);
 }
 
 void Arm::Down() {
@@ -71,7 +72,7 @@ void Arm::Down() {
   // talonArm->Set(ControlMode::PercentOutput, -0.3);
   // armSparkM0->Set(-0.1);
   // if(armStartPos + 0.25 >= armCurrPos){
-    
+
   //   if(armCurrPos >= armStartPos - .0625){
   //     armSparkM0->Set(0.025);
   //   } else {
@@ -81,8 +82,9 @@ void Arm::Down() {
   // } else {
   //   armSparkM0 ->Set(0);
   // }
-  armPID->SetReference(armStartPos+.25, rev::ControlType::kPosition);
-
+  //armPID->SetReference(armStartPos+5, rev::ControlType::kPosition);
+  MoveToPosition(armStartPos+5);
+  //armSparkM0->Set(-1.0f);
 }
 
 void Arm::Rest() {
@@ -91,14 +93,21 @@ void Arm::Rest() {
   armSparkM0->Set(0);
 }
 
+void Arm::MoveToPosition(double desiredPosition){
+  frc::SmartDashboard::PutNumber("intake desired position", desiredPosition);
+  frc::SmartDashboard::PutNumber("intake position error", desiredPosition - (armEncoder->GetPosition()));
+  armPID->SetReference(desiredPosition, rev::ControlType::kPosition);
+}
+
 void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
   armCurrPos = armEncoder->GetPosition();
 
   frc::SmartDashboard::PutNumber("INTAKE ARM STATE", intake_arm_state);
   frc::SmartDashboard::PutNumber("Rotation", armEncoder->GetPosition()); //in rot'n
   frc::SmartDashboard::PutNumber("start", armStartPos);
+  frc::SmartDashboard::PutNumber("arm output", armSparkM0->GetAppliedOutput());
   // frc::SmartDashboard::PutNumber("Degrees", modf(armEncoder->GetPosition(), nullptr) * 360);// in degrees
-  
+/* 
   double p = frc::SmartDashboard::GetNumber("P Gain", 0);
   double i = frc::SmartDashboard::GetNumber("I Gain", 0);
   double d = frc::SmartDashboard::GetNumber("D Gain", 0);
@@ -114,10 +123,10 @@ void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
   if((d != kD)) { armPID->SetD(d); kD = d; }
   if((iz != kIz)) { armPID->SetIZone(iz); kIz = iz; }
   if((ff != kFF)) { armPID->SetFF(ff); kFF = ff; }
-  if((max != kMaxOutput) || (min != kMinOutput)) { 
-    armPID->SetOutputRange(min, max); 
-    kMinOutput = min; kMaxOutput = max; 
-  }
+  if((max != kMaxOutput) || (min != kMinOutput)) {
+    armPID->SetOutputRange(min, max);
+    kMinOutput = min; kMaxOutput = max;
+  } */
 
 
   if(rest){
@@ -156,5 +165,3 @@ void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
   last_intake_arm_state = intake_arm_state;
 
 }
-
-

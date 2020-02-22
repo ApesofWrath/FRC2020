@@ -28,6 +28,8 @@ class Robot : public frc::TimedRobot {
   Arm* arm;
   Intake* intake;
 
+
+  rev::CANSparkMax *neo_1, *neo_2, *neo_3, *neo_4;
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
   const float CONTROL_WHEEL_SPEED_OFF = 0;
 
@@ -44,7 +46,7 @@ class Robot : public frc::TimedRobot {
 
  private:
   frc::SendableChooser<std::string> m_chooser;
-  
+
   const std::string kAutoNameDefault = "Default";
   const std::string kAutoNameCustom = "My Auto";
   std::string m_autoSelected;
