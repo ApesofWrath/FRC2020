@@ -12,16 +12,36 @@
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
 
-#include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 
-namespace apesofwrath {
+#include "ControlPanel.h"
+#include "Drive/DriveController.h"
+
 
 class Robot : public frc::TimedRobot {
- public:
+ public: 
 
-  frc::Joystick* joy;
-  TalonSRX* talon0;
+  ControlPanel* controlpanel; 
+
+  DriveController* drive;
+
+<<<<<<< HEAD
+
+  TalonSRX *T16, *T49, *T14, *T2;
+=======
+>>>>>>> 71a6b2bf792c7f3faed3fe74d6410f67bacb297d
+//Temporary Button ids
+  const int BUTTON_STOP = 2, POSITION_BUTTON = 5, ROTATION_BUTTON = 4, INTAKE = 3;
+
+  TalonSRX *T46;
+  TalonFX *Falcon_T, *Falcon_T2;
+
+  Colors currentColor, desiredColor;
+  frc::Joystick  *joyT, *joyW;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 71a6b2bf792c7f3faed3fe74d6410f67bacb297d
 
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
   const float CONTROL_WHEEL_SPEED_OFF = 0;
@@ -33,8 +53,13 @@ class Robot : public frc::TimedRobot {
   void TeleopInit() override;
   void TeleopPeriodic() override;
   void TestPeriodic() override;
+  std::string getColor(Colors c);
+<<<<<<< HEAD
 
   
+=======
+>>>>>>> 71a6b2bf792c7f3faed3fe74d6410f67bacb297d
+    
  private:
   frc::SendableChooser<std::string> m_chooser;
   
@@ -42,5 +67,3 @@ class Robot : public frc::TimedRobot {
   const std::string kAutoNameCustom = "My Auto";
   std::string m_autoSelected;
 };
-
-}
