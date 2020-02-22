@@ -142,6 +142,7 @@ void apesofwrath::Robot::TeleopPeriodic() {
 
   UpdateButtons();
   arm->IntakeArmStateMachine(up,down,rest);
+  intake->IntakeStateMachine(stop,in,out);
 
   frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
 

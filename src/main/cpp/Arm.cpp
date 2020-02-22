@@ -28,12 +28,12 @@ Arm::Arm() {
   armSparkM1->RestoreFactoryDefaults();
   armSparkM0->SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
   armSparkM1->SetIdleMode(rev::CANSparkMax::IdleMode::kCoast);
-  armSparkM0->BurnFlash();
-  armSparkM1->BurnFlash();
-
+  
   armSparkM1->Follow(*armSparkM0, true); //, true
 
   armStartPos = armEncoder->GetPosition();
+  targetPos = armStartPos;
+
   joy = new frc::Joystick(0);
 
   armPID->SetP(kP);
@@ -42,6 +42,9 @@ Arm::Arm() {
   armPID->SetIZone(kIz);
   armPID->SetFF(kFF);
   armPID->SetOutputRange(kMinOutput, kMaxOutput);
+
+  armSparkM0->BurnFlash();
+  armSparkM1->BurnFlash();
 
   // display PID coefficients on SmartDashboard
   frc::SmartDashboard::PutNumber("P Gain", kP);
@@ -54,7 +57,7 @@ Arm::Arm() {
   frc::SmartDashboard::PutNumber("s", analog->GetVoltage());
   // frc::SmartDashboard::PutNumber(armSparkM1->getv, 0);
   
-  armPID->SetSmartMotionAccelStrategy(rev::CANPIDController::AccelStrategy::kSCurve);
+  //armPID->SetSmartMotionAccelStrategy(rev::CANPIDController::AccelStrategy::kSCurve);
 
 
 }
@@ -95,7 +98,7 @@ void Arm::Down() {
   //   armSparkM0 ->Set(0);
   // }
   //armPID->SetReference(armStartPos+5, rev::ControlType::kPosition);
-  MoveToPosition(armStartPos+5);
+  MoveToPosition(armStartPos+15);
   //armSparkM0->Set(-1.0f);
 }
 
@@ -159,14 +162,20 @@ void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
 
     case UP_STATE:
       if (last_intake_arm_state != UP_STATE) {
-        Up();
+        targetPos = armStartPos;
+        MoveToPosition(armStartPos);
       }
       frc::SmartDashboard::PutString("INTAKE ARM", "up");
     break;
 
     case DOWN_STATE:
       if (last_intake_arm_state != DOWN_STATE) {
-        Down();
+        targetPos = armStartPos + 15;
+      }
+      if (abs(targetPos - armCurrPos) > 5){
+         MoveToPosition(targetPos);
+      } else {
+        Rest();
       }
       frc::SmartDashboard::PutString("INTAKE ARM", "down");
     break;

@@ -20,6 +20,7 @@ public:
 
   float armStartPos;
   float armCurrPos;
+  float targetPos;
 
   enum States {
     REST_STATE, UP_STATE, DOWN_STATE
