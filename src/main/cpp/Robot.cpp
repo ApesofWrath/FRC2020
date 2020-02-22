@@ -236,7 +236,7 @@ std::string Robot::getColor(Colors c) {
 int main() { return frc::StartRobot<apesofwrath::Robot>(); }
 #endif
 
-void apesofwrath::Robot::UpdateButtons(){
+void Robot::UpdateButtons(){
   stop = joy->GetRawButton(9);
   intake = joy->GetRawButton(8);
   shoot = joy->GetRawButton(7);

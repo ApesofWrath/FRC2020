@@ -86,5 +86,3 @@ class Robot : public frc::TimedRobot {
   const Colors kDesColorDefault = Colors::WHITE;
   std::string m_autoSelected;
 };
-
-}
