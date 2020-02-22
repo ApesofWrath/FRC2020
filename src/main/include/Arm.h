@@ -35,7 +35,7 @@ public:
     void Rest();
     void MoveToPosition(double desiredPosition);
 
-    void IntakeArmStateMachine(bool up, bool down, bool rest);
+    void IntakeArmStateMachine();
 
     void UpperSoftLimit();
     void LowerSoftLimit();

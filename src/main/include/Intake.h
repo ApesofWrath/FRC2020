@@ -5,6 +5,7 @@
 #include <frc/WPILib.h>
 // #include "Robot.h"
 #include "rev/CANSparkMax.h"
+#include "Arm.h"
 
 class Intake {
 public:
@@ -25,7 +26,7 @@ public:
     void In();
     void Out();
 
-    void IntakeStateMachine(bool stop, bool in, bool out);
+    void IntakeStateMachine(Arm *arm, bool stop, bool in, bool out);
 
 
 

@@ -38,16 +38,19 @@ void Intake::Out() {
 
 }
 
-void Intake::IntakeStateMachine(bool stop, bool in, bool out) {
+void Intake::IntakeStateMachine(Arm *arm, bool stop, bool in, bool out) {
 
   if (stop) {
     intake_state = STOP_STATE;
+    arm->intake_arm_state = Arm::States::UP_STATE;
   } else if(in) {
     intake_state = IN_STATE;
+    arm->intake_arm_state = Arm::States::DOWN_STATE;
   } else if(out) {
     intake_state = OUT_STATE;  
   }
   
+  arm->IntakeArmStateMachine();
   frc::SmartDashboard::PutNumber("INTAKE STATE", intake_state);
 
   switch(intake_state) {

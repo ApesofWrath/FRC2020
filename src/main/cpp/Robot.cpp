@@ -141,8 +141,8 @@ void apesofwrath::Robot::TeleopPeriodic() {
   }
 
   UpdateButtons();
-  arm->IntakeArmStateMachine(up,down,rest);
-  intake->IntakeStateMachine(stop,in,out);
+
+  intake->IntakeStateMachine(arm, stop, in, out);
 
   frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
 
@@ -150,13 +150,13 @@ void apesofwrath::Robot::TeleopPeriodic() {
 
 void apesofwrath::Robot::UpdateButtons(){
 
-  rest = joy->GetRawButton(9);
-  down = joy->GetRawButton(8);
-  up = joy->GetRawButton(7);
+  // rest = joy->GetRawButton(9);
+  // down = joy->GetRawButton(8);
+  // up = joy->GetRawButton(7);
   
-  stop = joy->GetRawButton(2);
-  in = joy->GetRawButton(5);
-  out = joy->GetRawButton(6);
+  stop = joy->GetRawButton(7);
+  in = joy->GetRawButton(8);
+  out = joy->GetRawButton(9);
 
 }
 

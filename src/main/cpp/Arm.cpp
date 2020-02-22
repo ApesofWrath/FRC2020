@@ -114,7 +114,7 @@ void Arm::MoveToPosition(double desiredPosition){
   armPID->SetReference(desiredPosition, rev::ControlType::kPosition);
 }
 
-void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
+void Arm::IntakeArmStateMachine() {
   armCurrPos = armEncoder->GetPosition();
   frc::SmartDashboard::PutNumber("INTAKE ARM STATE", intake_arm_state);
   frc::SmartDashboard::PutNumber("Rotation", armEncoder->GetPosition()); //in rot'n
@@ -141,15 +141,6 @@ void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
     armPID->SetOutputRange(min, max);
     kMinOutput = min; kMaxOutput = max;
   } */
-
-
-  if(rest){
-    intake_arm_state = REST_STATE;
-  } else if(up) {
-    intake_arm_state = UP_STATE;
-  } else if (down) {
-    intake_arm_state = DOWN_STATE;
-  }
 
   switch(intake_arm_state){
 
