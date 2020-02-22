@@ -152,6 +152,7 @@ void apesofwrath::Robot::UpdateButtons(){
   rest = joy->GetRawButton(9);
   down = joy->GetRawButton(8);
   up = joy->GetRawButton(7);
+  
   stop = joy->GetRawButton(2);
   in = joy->GetRawButton(5);
   out = joy->GetRawButton(6);
