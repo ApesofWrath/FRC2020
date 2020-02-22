@@ -1,5 +1,6 @@
 #include "RobotContainer.h"
 #include <units/units.h>
+#include <frc/trajectory/TrajectoryGenerator.h>
 
 #include <iostream>
 
@@ -37,9 +38,19 @@ frc2::Command* RobotContainer::GetAutonomousCommand() {
   std::cout << "step 9\n";
   frc::Trajectory trajectory = frc::TrajectoryUtil::FromPathweaverJson(deployDirectory);
 
+  auto exampleTrajectory = frc::TrajectoryGenerator::GenerateTrajectory(
+      // Start at the origin facing the +X direction
+      frc::Pose2d(0_m, 0_m, frc::Rotation2d(0_deg)),
+      // Pass through these two interior waypoints, making an 's' curve path
+      {frc::Translation2d(3_m, 0_m)},
+      // End 3 meters straight ahead of where we started, facing forward
+      frc::Pose2d(3_m, 0_m, frc::Rotation2d(0_deg)),
+      // Pass the config
+      *config);
+
   std::cout << "step 10\n";
   frc2::RamseteCommand ramseteCommand(
-      trajectory, [this]() { return m_drive->GetPose(); },
+      exampleTrajectory, [this]() { return m_drive->GetPose(); },
       frc::RamseteController(K_RAMSETE_B,
                              K_RAMSETE_ZETA),
       frc::SimpleMotorFeedforward<units::meters>(

@@ -65,6 +65,9 @@ void AutonDrive::TankDriveVolts(units::volt_t left, units::volt_t right) {
     // fx_right1->Set(ControlMode::PercentOutput, -1.0f);
     // fx_right2->Set(ControlMode::PercentOutput, -1.0f);
 
+    frc::SmartDashboard::PutNumber("m_ left", left.value());
+    frc::SmartDashboard::PutNumber("m_ right", right.value());
+
     // m_rightMotors.SetVoltage(right);
     // t_right2.Set(right / units::volt_t(pdp->GetVoltage()));
     // fx_right1->Set(ControlMode::PercentOutput, right / units::volt_t(pdp->GetVoltage()))
@@ -96,7 +99,9 @@ frc::Pose2d AutonDrive::GetPose() {
 
 
 frc::DifferentialDriveWheelSpeeds AutonDrive::GetWheelSpeeds() {
-  return {units::meters_per_second_t(getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorVelocity())),
+    frc::SmartDashboard::PutNumber("wheel speed left", getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorVelocity()));
+    frc::SmartDashboard::PutNumber("wheel speed right", getSpeedFromTicksPerSecond(t_right1.GetSelectedSensorVelocity()));
+    return {units::meters_per_second_t(getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorVelocity())),
           units::meters_per_second_t(getSpeedFromTicksPerSecond(t_right1.GetSelectedSensorVelocity()))};
 }
 

@@ -86,7 +86,7 @@ void Robot::AutonomousInit() {
     std::cout << "ac schedule\n";
   }
 
-  a_drive->ResetEncoders();
+  a_drive->ResetOdometry();
 }
 
 void Robot::AutonomousPeriodic() {
