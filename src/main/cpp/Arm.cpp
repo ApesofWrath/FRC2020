@@ -12,11 +12,7 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <math.h>
 
-<<<<<<< HEAD
 double kP = 0.8, kI = 0, kD = 0.0, kIz = 0, kFF = 0, kMaxOutput = 0.3, kMinOutput = -0.3;
-=======
-double kP = 50, kI = 0, kD = 0.0, kIz = 0, kFF = 0, kMaxOutput = 1, kMinOutput = -1;
->>>>>>> 3067ba9dc8ee2748e1323149c1a7378af9b026b9
 
 
 Arm::Arm() {
@@ -78,16 +74,9 @@ void Arm::Up() {
   // } else {
   //   armSparkM0->Set(0);
   // }
-<<<<<<< HEAD
    //armPID->SetReference(armStartPos, rev::ControlType::kPosition);
   MoveToPosition(armStartPos);
   //  armSparkM0->Set(1.0f);
-=======
-  if(last_intake_arm_state == UP_STATE){
-  armPID->SetReference(armStartPos, rev::ControlType::kPosition);
-  }
-  last_intake_arm_state = UP_STATE;
->>>>>>> 3067ba9dc8ee2748e1323149c1a7378af9b026b9
 }
 
 void Arm::Down() {
@@ -105,18 +94,9 @@ void Arm::Down() {
   // } else {
   //   armSparkM0 ->Set(0);
   // }
-<<<<<<< HEAD
   //armPID->SetReference(armStartPos+5, rev::ControlType::kPosition);
   MoveToPosition(armStartPos+5);
   //armSparkM0->Set(-1.0f);
-=======
-  if(last_intake_arm_state == DOWN_STATE){
-  armPID->SetReference(armStartPos+15, rev::ControlType::kPosition);
-  }
-  last_intake_arm_state = DOWN_STATE;
-  // armSparkM0->Set(.);
-
->>>>>>> 3067ba9dc8ee2748e1323149c1a7378af9b026b9
 }
 
 void Arm::Rest() {
@@ -138,7 +118,6 @@ void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
   frc::SmartDashboard::PutNumber("start", armStartPos);
   frc::SmartDashboard::PutNumber("arm output", armSparkM0->GetAppliedOutput());
   // frc::SmartDashboard::PutNumber("Degrees", modf(armEncoder->GetPosition(), nullptr) * 360);// in degrees
-<<<<<<< HEAD
 /* 
   double p = frc::SmartDashboard::GetNumber("P Gain", 0);
   double i = frc::SmartDashboard::GetNumber("I Gain", 0);
@@ -159,28 +138,6 @@ void Arm::IntakeArmStateMachine(bool up, bool down, bool rest) {
     armPID->SetOutputRange(min, max);
     kMinOutput = min; kMaxOutput = max;
   } */
-=======
-  
-  // double p = frc::SmartDashboard::GetNumber("P Gain", 0);
-  // double i = frc::SmartDashboard::GetNumber("I Gain", 0);
-  // double d = frc::SmartDashboard::GetNumber("D Gain", 0);
-  // double iz = frc::SmartDashboard::GetNumber("I Zone", 0);
-  // double ff = frc::SmartDashboard::GetNumber("Feed Forward", 0);
-  // double max = frc::SmartDashboard::GetNumber("Max Output", 0);
-  // double min = frc::SmartDashboard::GetNumber("Min Output", 0);
-  // double rotations = frc::SmartDashboard::GetNumber("Set Rotations", 0);
-
-  // if PID coefficients on SmartDashboard have changed, write new values to controller
-  // if((p != kP)) { armPID->SetP(p); kP = p; }
-  // if((i != kI)) { armPID->SetI(i); kI = i; }
-  // if((d != kD)) { armPID->SetD(d); kD = d; }
-  // if((iz != kIz)) { armPID->SetIZone(iz); kIz = iz; }
-  // if((ff != kFF)) { armPID->SetFF(ff); kFF = ff; }
-  // if((max != kMaxOutput) || (min != kMinOutput)) { 
-  //   armPID->SetOutputRange(min, max); 
-  //   kMinOutput = min; kMaxOutput = max; 
-  // }
->>>>>>> 3067ba9dc8ee2748e1323149c1a7378af9b026b9
 
 
   if(rest){
