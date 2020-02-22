@@ -15,7 +15,7 @@
 
 
 
-void apesofwrath::Robot::RobotInit() {
+void Robot::RobotInit() {
   m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
@@ -40,7 +40,7 @@ void apesofwrath::Robot::RobotInit() {
  * <p> This runs after the mode specific periodic functions, but before
  * LiveWindow and SmartDashboard integrated updating.
  */
-void apesofwrath::Robot::RobotPeriodic() {
+void Robot::RobotPeriodic() {
     
 }
 
@@ -55,7 +55,7 @@ void apesofwrath::Robot::RobotPeriodic() {
  * if-else structure below with additional strings. If using the SendableChooser
  * make sure to add them to the chooser code above as well.
  */
-void apesofwrath::Robot::AutonomousInit() {
+void Robot::AutonomousInit() {
   m_autoSelected = m_chooser.GetSelected();
   // m_autoSelected = SmartDashboard::GetString("Auto Selector",
   //     kAutoNameDefault);
@@ -68,17 +68,17 @@ void apesofwrath::Robot::AutonomousInit() {
   }
 }
 
-void apesofwrath::Robot::AutonomousPeriodic() {
+void Robot::AutonomousPeriodic() {
   if (m_autoSelected == kAutoNameCustom) {
     // Custom Auto goes here
   } else {
     // Default Auto goes here
   }
 }
-void apesofwrath::Robot::TeleopInit() {
+void Robot::TeleopInit() {
 }
 
-void apesofwrath::Robot::TeleopPeriodic() {
+void Robot::TeleopPeriodic() {
   
   if (joy->GetTrigger()) {
     talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON * joy->GetThrottle());
@@ -91,13 +91,13 @@ void apesofwrath::Robot::TeleopPeriodic() {
   UpdateButtons();
 }
 
-void apesofwrath::Robot::TestPeriodic() {}
+void Robot::TestPeriodic() {}
 
 #ifndef RUNNING_FRC_TESTS
-int main() { return frc::StartRobot<apesofwrath::Robot>(); }
+int main() { return frc::StartRobot<:Robt>(); }
 #endif
 
-void apesofwrath::Robot::UpdateButtons(){
+void Robot::UpdateButtons(){
   stop = joy->GetRawButton(9);
   intake = joy->GetRawButton(8);
   shoot = joy->GetRawButton(7);

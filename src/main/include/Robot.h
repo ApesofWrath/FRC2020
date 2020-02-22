@@ -18,7 +18,6 @@
 #include <cameraserver/CameraServer.h>
 // #include <frc/WPILib.h>
 #include "Shooter.h"
-namespace apesofwrath {
 
 class Robot : public frc::TimedRobot {
  public:
@@ -48,5 +47,3 @@ class Robot : public frc::TimedRobot {
   const std::string kAutoNameCustom = "My Auto";
   std::string m_autoSelected;
 };
-
-}
