@@ -111,7 +111,6 @@ void Robot::AutonomousPeriodic() {
 }
 void Robot::TeleopInit() {
 }
-bool toggle = false;
 void Robot::TeleopPeriodic() {
   
 
@@ -200,7 +199,7 @@ std::string Robot::getColor(Colors c) {
 int main() { return frc::StartRobot<Robot>(); }
 #endif
 
-void apesofwrath::Robot::UpdateButtons(){
+void Robot::UpdateButtons(){
   stop = joy->GetRawButton(9);
   intake = joy->GetRawButton(8);
   shoot = joy->GetRawButton(7);
