@@ -78,7 +78,7 @@ void Arm::Up() {
   //   armSparkM0->Set(0);
   // }
    //armPID->SetReference(armStartPos, rev::ControlType::kPosition);
-  MoveToPosition(armStartPos);
+  MoveToPosition(armStartPos+2);
   //  armSparkM0->Set(1.0f);
 }
 
@@ -98,7 +98,7 @@ void Arm::Down() {
   //   armSparkM0 ->Set(0);
   // }
   //armPID->SetReference(armStartPos+5, rev::ControlType::kPosition);
-  MoveToPosition(armStartPos+15);
+  MoveToPosition(armStartPos+12.69);
   //armSparkM0->Set(-1.0f);
 }
 
@@ -154,16 +154,16 @@ void Arm::IntakeArmStateMachine() {
     case UP_STATE:
       if (last_intake_arm_state != UP_STATE) {
         targetPos = armStartPos;
-        MoveToPosition(armStartPos);
+        MoveToPosition(armStartPos+2);
       }
       frc::SmartDashboard::PutString("INTAKE ARM", "up");
     break;
 
     case DOWN_STATE:
       if (last_intake_arm_state != DOWN_STATE) {
-        targetPos = armStartPos + 15;
+        targetPos = armStartPos + 12.69;
       }
-      if (abs(targetPos - armCurrPos) > 5){
+      if (abs(targetPos - armCurrPos) > 0){
          MoveToPosition(targetPos);
       } else {
         Rest();
