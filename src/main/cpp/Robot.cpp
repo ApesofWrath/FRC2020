@@ -58,6 +58,7 @@ void Robot::RobotInit() {
  */
 void Robot::RobotPeriodic() {
   // std::cout << "rp\n";
+  frc2::CommandScheduler::GetInstance().Run();
 }
 
 /**
@@ -86,6 +87,7 @@ void Robot::AutonomousInit() {
     std::cout << "ac schedule\n";
   }
 
+
   // a_drive->ResetOdometry();
 }
 
@@ -95,11 +97,11 @@ void Robot::AutonomousPeriodic() {
   // } else {
   //   // Default Auto goes here
   // }
-  frc2::CommandScheduler::GetInstance().Run();
 
   a_drive->Update();
 }
 void Robot::TeleopInit() {
+  frc2::CommandScheduler::GetInstance().Disable();
 }
 // bool toggle = false;
 void Robot::TeleopPeriodic() {

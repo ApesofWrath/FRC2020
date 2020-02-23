@@ -10,8 +10,9 @@
 #include "Drive/DriveBase.h"
 #include "Drive/DriveConstants.h"
 #include <ctre/Phoenix.h>
+#include <frc2/command/SubsystemBase.h>
 
-class AutonDrive {
+class AutonDrive : public frc2::SubsystemBase {
 public:
     AutonDrive(int left1, int left2, int right1, int right2, AHRS* ahrs_);
 
@@ -29,7 +30,7 @@ public:
 
     double GetHeading();
 
-    void Update();
+    void Periodic() override;
 
     double GetAverageEncoderDistance();
 

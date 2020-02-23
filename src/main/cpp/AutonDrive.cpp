@@ -43,7 +43,7 @@ AutonDrive::AutonDrive(int left1, int left2, int right1, int right2, AHRS* ahrs_
       
 }
 
-void AutonDrive::Update() {
+void AutonDrive::Periodic() {
     std::cout << "m_o.u\n";
     m_odometry->Update(frc::Rotation2d(units::degree_t(GetHeading())),
                     units::meter_t(getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorPosition())),
