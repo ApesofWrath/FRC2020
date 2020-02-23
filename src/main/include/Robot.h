@@ -60,10 +60,9 @@ class Robot : public frc::TimedRobot {
     
   void UpdateButtons();
 
-  bool rest, up, down, stop, in , out;
-  bool shoot, intake, stop;
+  bool stop_intake, in_intake, out_intake;
   
-  bool shoot, intake, stop, waiting;
+  bool shoot_shooter, intake_shooter, stop_shooter, waiting_shooter;
 
  private:
   frc::SendableChooser<std::string> m_chooser;
@@ -72,7 +71,4 @@ class Robot : public frc::TimedRobot {
   const std::string kAutoNameCustom = "My Auto";
   std::string m_autoSelected;
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> shooter update

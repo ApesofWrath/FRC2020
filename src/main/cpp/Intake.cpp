@@ -27,18 +27,18 @@ void Intake::Stop() {
 void Intake::In() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.3);
-  intakeSparkM0->Set(0.30);
+  intakeSparkM0->Set(0.50);
 
 }
 
 void Intake::Out() {
 
   // talonIntake->Set(ControlMode::PercentOutput, -0.3);
-  intakeSparkM0->Set(-0.30);
+  intakeSparkM0->Set(-0.50);
 
 }
 
-void Intake::IntakeStateMachine(Arm *arm, bool stop, bool in, bool out) {
+void Intake::IntakeStateMachine(Arm *arm, Shooter *shooter, bool stop, bool in, bool out) {
 
   if (stop) {
     intake_state = STOP_STATE;
