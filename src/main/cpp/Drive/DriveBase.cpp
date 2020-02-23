@@ -225,7 +225,7 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 
 	double target_l, target_r, target_yaw_rate;
 
-	double throttle = JoyThrottle->GetY();
+	double throttle = JoyWheel->GetX();
 
 	double reverse_y = 1.0;
 
@@ -291,7 +291,7 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 } else { //vel control wheel
 //	led_solenoid->Set(false);
 	double reverse_x = 1.0;
-	double wheel = -1.0 * JoyWheel->GetX();
+	double wheel = -1.0 * JoyThrottle->GetY();
 
 	if (wheel < 0.0) {
 		reverse_x = 1.0;//for black wheel, is opposite

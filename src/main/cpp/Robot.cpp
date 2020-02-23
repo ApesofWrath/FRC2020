@@ -142,7 +142,7 @@ void Robot::TeleopPeriodic() {
   //   Falcon_T2->Set(ControlMode::PercentOutput, 0);
   // }
 
-  drive->RunTeleopDrive(joyT, joyW, true, false, false);
+  drive->RunTeleopDrive(joyW, joyT, true, false, false);
 
   // drive->ManualOpenLoopDrive(joyT, joyW);
   // drive->TeleopWCDrive(joyT,joyW,false,false);
