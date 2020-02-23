@@ -25,23 +25,15 @@ void Robot::RobotInit() {
   m_descolor_chooser.AddObject("Green",  Colors::GREEN);
   m_descolor_chooser.AddObject("Yellow", Colors::YELLOW);
 
-<<<<<<< HEAD
-  frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser); */
-=======
   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
   m_descolor_chooser.AddObject("Red",    Colors::RED);
   m_descolor_chooser.AddObject("Blue",   Colors::BLUE);
   m_descolor_chooser.AddObject("Green",  Colors::GREEN);
   m_descolor_chooser.AddObject("Yellow", Colors::YELLOW);
->>>>>>> 71a6b2bf792c7f3faed3fe74d6410f67bacb297d
 
 
-  joyT = new frc::Joystick(0);
-  joyW = new frc::Joystick(1);
-<<<<<<< HEAD
 
-=======
->>>>>>> 71a6b2bf792c7f3faed3fe74d6410f67bacb297d
+
   controlpanel = new ControlPanel();
 
   Falcon_T = new TalonFX(0);
@@ -49,9 +41,22 @@ void Robot::RobotInit() {
 
   T46 = new TalonSRX(46);
   T46->SetInverted(InvertType::InvertMotorOutput);
-
+*/
+  joyT = new frc::Joystick(0);
+  joyW = new frc::Joystick(1);
   drive = new DriveController();
 
+  joy = new frc::Joystick(0);
+  talon1 = new TalonSRX(36);
+
+  neo_1 = new rev::CANSparkMax(1, rev::CANSparkMax::MotorType::kBrushless);
+  neo_2 = new rev::CANSparkMax(2, rev::CANSparkMax::MotorType::kBrushless);
+  neo_3 = new rev::CANSparkMax(3, rev::CANSparkMax::MotorType::kBrushless);
+  neo_4 = new rev::CANSparkMax(4, rev::CANSparkMax::MotorType::kBrushless);
+
+
+  arm = new Arm();
+  intake = new Intake();
 }
 
 /**
@@ -102,11 +107,6 @@ void Robot::TeleopInit() {
 bool toggle = false;
 void Robot::TeleopPeriodic() {
   
-  
-  // frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
-
-  // controlpanel->DesireColor(m_descolor_chooser.GetSelected());
-  
 
 
   // if (joyT->GetRawButton(BUTTON_STOP)) {
@@ -124,7 +124,6 @@ void Robot::TeleopPeriodic() {
   // if (joyT->GetRawButton(1)) {
   //   Falcon_T->Set(ControlMode::PercentOutput, joyT->GetThrottle());
   //   Falcon_T2->Set(ControlMode::PercentOutput, joyT->GetThrottle());
-<<<<<<< HEAD
   // } else {
   //   Falcon_T->Set(ControlMode::PercentOutput, 0);
   //   Falcon_T2->Set(ControlMode::PercentOutput, 0);
@@ -148,7 +147,23 @@ void Robot::TeleopPeriodic() {
   //   talon0->Set(ControlMode::PercentOutput, 0);
   // } else {
   //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
-  // }
+  UpdateButtons();
+
+  intake->IntakeStateMachine(arm, stop, in, out);
+
+  frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
+
+}
+
+void Robot::UpdateButtons(){
+
+  // rest = joy->GetRawButton(9);
+  // down = joy->GetRawButton(8);
+  // up = joy->GetRawButton(7);
+  
+  stop = joyT->GetRawButton(7);
+  in = joyT->GetRawButton(8);
+  out = joyT->GetRawButton(9);
 
 }
 
@@ -169,37 +184,7 @@ std::string Robot::getColor(Colors c) {
     default:
       return "None";
   }
-=======
-  // } else {
-  //   Falcon_T->Set(ControlMode::PercentOutput, 0);
-  //   Falcon_T2->Set(ControlMode::PercentOutput, 0);
-  // }
-
-  drive->RunTeleopDrive(joyT, joyW, true, false, false);
-
-  // drive->ManualOpenLoopDrive(joyT, joyW);
-  // drive->TeleopWCDrive(joyT,joyW,false,false);
-
-  // T46->Set(ControlMode::PercentOutput, 1.0f);
-
-  // if (joyT->GetRawButton(1)) {
-
-  // } else {
-  //   T46->Set(ControlMode::PercentOutput, 0.0f);
-  // }
-  // controlpanel->StateMachine();
-
-  // if (((currentColor == desiredColor || desiredColor == Colors::WHITE) && !joy->GetTrigger()) || joy->GetRawButton(2)) {
-  //   talon0->Set(ControlMode::PercentOutput, 0);
-  // } else {
-  //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
-  // }
-
->>>>>>> 71a6b2bf792c7f3faed3fe74d6410f67bacb297d
 }
-
-void Robot::TestPeriodic() {}
-
 
 
 #ifndef RUNNING_FRC_TESTS
