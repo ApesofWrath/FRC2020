@@ -27,14 +27,14 @@ void Intake::Stop() {
 void Intake::In() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.3);
-  intakeSparkM0->Set(0.4069);
+  intakeSparkM0->Set(0.6069);
 
 }
 
 void Intake::Out() {
 
   // talonIntake->Set(ControlMode::PercentOutput, -0.3);
-  intakeSparkM0->Set(-0.4069);
+  intakeSparkM0->Set(-0.6069);
 
 }
 
