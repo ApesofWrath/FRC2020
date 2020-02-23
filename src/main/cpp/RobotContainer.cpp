@@ -68,7 +68,7 @@ frc2::Command* RobotContainer::GetAutonomousCommand() {
         frc2::PIDController(K_P_LEFT_VEL, 0, 0),
         frc2::PIDController(K_P_RIGHT_VEL, 0, 0),
         [this](auto left, auto right) { m_drive->TankDriveVolts(left, right); },
-        {});
+        {m_drive});
 
     // no auto
     std::cout << "step 11\n";

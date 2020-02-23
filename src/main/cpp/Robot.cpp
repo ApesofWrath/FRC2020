@@ -102,6 +102,10 @@ void Robot::AutonomousPeriodic() {
 }
 void Robot::TeleopInit() {
   frc2::CommandScheduler::GetInstance().Disable();
+  if (m_autonomousCommand != nullptr) {
+    m_autonomousCommand->Cancel();
+    m_autonomousCommand = nullptr;
+  }
 }
 // bool toggle = false;
 void Robot::TeleopPeriodic() {
