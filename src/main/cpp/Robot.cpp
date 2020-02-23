@@ -190,12 +190,15 @@ void apesofwrath::Robot::TeleopPeriodic() {
   //   talon0->Set(ControlMode::PercentOutput, 0);
   // } else {
   //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
-  shooter->ShooterStateMachine(stop, intake, shoot, waiting);
   UpdateButtons();
 
+<<<<<<< HEAD
   // intake->IntakeStateMachine(arm, stop, in, out);
+=======
+  shooter->ShooterStateMachine(stop_shooter, intake_shooter, shoot_shooter, waiting_shooter);
+  intake->IntakeStateMachine(arm, shooter, stop_intake, in_intake, out_intake);
+>>>>>>> Intake Work for combining code
 
-  shooter->ShooterStateMachine(stop, intake, shoot);
   frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
 
 }
@@ -206,10 +209,14 @@ void Robot::UpdateButtons(){
   // down = joy->GetRawButton(8);
   // up = joy->GetRawButton(7);
   
-  stop = joyT->GetRawButton(7);
-  in = joyT->GetRawButton(8);
-  out = joyT->GetRawButton(9);
-
+  stop_intake = joyT->GetRawButton(7);
+  in_intake = joyT->GetRawButton(6);
+  out_intake = joyT->GetRawButton(11);
+  stop_shooter = joy->GetRawButton(2);
+  intake_shooter = joy->GetRawButton(4);
+  shoot_shooter = joy->GetRawButton(3);
+  waiting_shooter = joy->GetRawButton(5);
+  
 }
 
 void apesofwrath::Robot::TestPeriodic() {}
@@ -235,13 +242,3 @@ std::string Robot::getColor(Colors c) {
 #ifndef RUNNING_FRC_TESTS
 int main() { return frc::StartRobot<apesofwrath::Robot>(); }
 #endif
-
-void Robot::UpdateButtons(){
-  stop = joy->GetRawButton(9);
-  intake = joy->GetRawButton(8);
-  shoot = joy->GetRawButton(7);
-  waiting = joy->GetRawButton(10);
-  
-  
-  // speed = joy->GetRawAxis(1);
-}
