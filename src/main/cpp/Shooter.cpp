@@ -73,25 +73,25 @@
     }
 
     void Shooter::Shoot(){
-        beltNEO->Set(1*speed);
-        topWNEO->Set( -1*speed);
-        botWNEO->Set( -1*speed);
+        beltNEO->Set(1);
+        topWNEO->Set(1);
+        botWNEO->Set(1);
     }
 
     void Shooter::Intake(){                
-        beltNEO->Set( 0);
-        topWNEO->Set( 1*speed);
-        botWNEO->Set( -.5*speed);
+        beltNEO->Set(0.2);
+        topWNEO->Set(0);
+        botWNEO->Set(0);
     }
 
     void Shooter::Stop(){
-        beltNEO->Set( 0);
-        topWNEO->Set( 0);
-        botWNEO->Set( 0);
+        beltNEO->Set(0);
+        topWNEO->Set(0);
+        botWNEO->Set(0);
     }
 
     void Shooter::Waiting(){
-        beltNEO->Set( .5);
-        topWNEO->Set( 1*speed);
-        botWNEO->Set( 1*speed);
+        beltNEO->Set(0);
+        topWNEO->Set(0);
+        botWNEO->Set(0);
     }
