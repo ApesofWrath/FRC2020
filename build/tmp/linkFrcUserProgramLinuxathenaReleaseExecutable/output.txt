@@ -1,4 +1,4 @@
-See file:///C:/Users/osgoo/Desktop/Robotics/2020/FRC2020-OUTTAKESKELE/FRC2020/build/tmp/linkFrcUserProgramLinuxathenaReleaseExecutable/output.txt for all output for linkFrcUserProgramLinuxathenaReleaseExecutable.
+See file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/linkFrcUserProgramLinuxathenaReleaseExecutable/output.txt for all output for linkFrcUserProgramLinuxathenaReleaseExecutable.
 linking frcUserProgram successful.
 
-Finished linkFrcUserProgramLinuxathenaReleaseExecutable, see full log file:///C:/Users/osgoo/Desktop/Robotics/2020/FRC2020-OUTTAKESKELE/FRC2020/build/tmp/linkFrcUserProgramLinuxathenaReleaseExecutable/output.txt.
+Finished linkFrcUserProgramLinuxathenaReleaseExecutable, see full log file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/linkFrcUserProgramLinuxathenaReleaseExecutable/output.txt.

@@ -94,7 +94,7 @@ void Robot::TeleopPeriodic() {
 void Robot::TestPeriodic() {}
 
 #ifndef RUNNING_FRC_TESTS
-int main() { return frc::StartRobot<:Robt>(); }
+int main() { return frc::StartRobot<Robot>(); }
 #endif
 
 void Robot::UpdateButtons(){
