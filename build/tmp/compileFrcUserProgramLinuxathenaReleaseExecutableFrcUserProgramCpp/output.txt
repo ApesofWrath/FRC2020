@@ -1,4 +1,0 @@
-See file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp.
-compiling Shooter.cpp successful.
-
-Finished compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp, see full log file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp/output.txt.

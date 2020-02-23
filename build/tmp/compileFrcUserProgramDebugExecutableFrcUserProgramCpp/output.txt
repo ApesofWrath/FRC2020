@@ -1,6 +1,0 @@
-See file:///C:/Users/osgoo/Desktop/Robotics/2020/FRC2020-OUTTAKESKELE/FRC2020/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
-compiling Shooter.cpp successful.
-
-compiling Robot.cpp successful.
-
-Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/osgoo/Desktop/Robotics/2020/FRC2020-OUTTAKESKELE/FRC2020/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.
