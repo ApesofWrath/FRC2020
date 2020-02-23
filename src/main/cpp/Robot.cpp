@@ -79,6 +79,11 @@ void Robot::AutonomousInit() {
   //     kAutoNameDefault);
   std::cout << "Auto selected: " << m_container->m_autoSelected << std::endl;
 
+  if (m_autonomousCommand != nullptr) {
+    m_autonomousCommand->Cancel();
+    m_autonomousCommand = nullptr;
+  }
+
   m_autonomousCommand = m_container->GetAutonomousCommand();
   std::cout << "ac gotten\n";
 
@@ -98,7 +103,7 @@ void Robot::AutonomousPeriodic() {
   //   // Default Auto goes here
   // }
 
-  a_drive->Update();
+  // a_drive->Update();
 }
 void Robot::TeleopInit() {
   frc2::CommandScheduler::GetInstance().Disable();
