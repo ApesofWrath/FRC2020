@@ -33,8 +33,8 @@ AutonDrive::AutonDrive(int left1, int left2, int right1, int right2, AHRS* ahrs_
 
     t_right1.SetInverted(true);
     t_right2.SetInverted(true);
-    t_left1.SetInverted(true);
-    t_left2.SetInverted(true);
+    // t_left1.SetInverted(true);
+    // // t_left2.SetInverted(true);
     
 
     m_odometry = new DifferentialDriveOdometry(frc::Rotation2d(units::degree_t(GetHeading())));
@@ -45,9 +45,10 @@ AutonDrive::AutonDrive(int left1, int left2, int right1, int right2, AHRS* ahrs_
 
 void AutonDrive::Periodic() {
     std::cout << "m_o.u\n";
+    GetWheelSpeeds();
     m_odometry->Update(frc::Rotation2d(units::degree_t(GetHeading())),
-                    units::meter_t(getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorPosition())),
-                    units::meter_t(getSpeedFromTicksPerSecond(t_right1.GetSelectedSensorPosition())));
+                    units::meter_t(getDistanceFromTicks(t_left1.GetSelectedSensorPosition())),
+                    units::meter_t(getDistanceFromTicks(t_right1.GetSelectedSensorPosition())));
 }
 
 void AutonDrive::TankDriveVolts(units::volt_t left, units::volt_t right) {
@@ -76,7 +77,7 @@ void AutonDrive::TankDriveVolts(units::volt_t left, units::volt_t right) {
 }
 
 double AutonDrive::GetAverageEncoderDistance() {
-    return (getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorPosition()) + getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorPosition())) / 2.0;
+    return (getDistanceFromTicks(t_left1.GetSelectedSensorPosition()) + getDistanceFromTicks(t_left1.GetSelectedSensorPosition())) / 2.0;
 }
 
 void AutonDrive::SetMaxOutput(double maxOutput) {
@@ -85,7 +86,7 @@ void AutonDrive::SetMaxOutput(double maxOutput) {
 
 double AutonDrive::GetHeading() {
     std::cout << "gh\n";
-    return std::remainder(ahrs->GetAngle(), 360);
+    return std::remainder(-ahrs->GetAngle(), 360);
 }
 
 double AutonDrive::GetTurnRate() {
@@ -99,14 +100,16 @@ frc::Pose2d AutonDrive::GetPose() {
 
 
 frc::DifferentialDriveWheelSpeeds AutonDrive::GetWheelSpeeds() {
-    frc::SmartDashboard::PutNumber("wheel speed left", getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorVelocity()));
-    frc::SmartDashboard::PutNumber("wheel speed right", getSpeedFromTicksPerSecond(t_right1.GetSelectedSensorVelocity()));
-    return {units::meters_per_second_t(getSpeedFromTicksPerSecond(t_left1.GetSelectedSensorVelocity())),
-          units::meters_per_second_t(getSpeedFromTicksPerSecond(t_right1.GetSelectedSensorVelocity()))};
+    frc::SmartDashboard::PutNumber("wheel speed left", getSpeedFromTicksPer100Milliseconds(t_left1.GetSelectedSensorVelocity()));
+    frc::SmartDashboard::PutNumber("wheel speed right", getSpeedFromTicksPer100Milliseconds(t_right1.GetSelectedSensorVelocity()));
+    return {units::meters_per_second_t(getSpeedFromTicksPer100Milliseconds(t_left1.GetSelectedSensorVelocity())),
+          units::meters_per_second_t(getSpeedFromTicksPer100Milliseconds(t_right1.GetSelectedSensorVelocity()))};
 }
 
 void AutonDrive::ResetOdometry(frc::Pose2d pose) {
   ResetEncoders();
+  ahrs->Reset();
+  ahrs->ZeroYaw();
   m_odometry->ResetPosition(pose,
                            frc::Rotation2d(units::degree_t(GetHeading())));
 }

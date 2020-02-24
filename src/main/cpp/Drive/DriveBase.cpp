@@ -31,8 +31,12 @@ double last_target_heading = 0.0;
 double last_yaw_angle = 0.0;
 
 
-double getSpeedFromTicksPerSecond(int ticks_per_second) {
-	return TICKS_TO_DISTANCE * ticks_per_second;
+double getSpeedFromTicksPer100Milliseconds(int ticks_per_second) {
+	return TICKS_TO_DISTANCE * ticks_per_second * 10;
+}
+
+double getDistanceFromTicks(int ticks) {
+	return TICKS_TO_DISTANCE * ticks;
 }
 
 //WestCoast, 2-speed transmission option
@@ -186,8 +190,8 @@ void DriveBase::ManualOpenLoopDrive(Joystick* throttle, Joystick* wheel) {
 	canTalonLeft1->Set(ControlMode::PercentOutput, left_out);
 	canTalonRight1->Set(ControlMode::PercentOutput, left_out);
 
-	double cspeed_l = abs(getSpeedFromTicksPerSecond(canTalonLeft1->GetSelectedSensorVelocity())) ;
-	double cspeed_r = abs(getSpeedFromTicksPerSecond(canTalonRight1->GetSelectedSensorVelocity()));
+	double cspeed_l = abs(getSpeedFromTicksPer100Milliseconds(canTalonLeft1->GetSelectedSensorVelocity())) ;
+	double cspeed_r = abs(getSpeedFromTicksPer100Milliseconds(canTalonRight1->GetSelectedSensorVelocity()));
 
 	if (cspeed_l > max_fwd_speed_l) {
 		max_fwd_speed_l = cspeed_l;
@@ -559,8 +563,8 @@ void DriveBase::Controller(double ref_kick,
 
 	
 
-	double cspeed_l = getSpeedFromTicksPerSecond(canTalonLeft1->GetSelectedSensorVelocity());
-	double cspeed_r = getSpeedFromTicksPerSecond(canTalonRight1->GetSelectedSensorVelocity());
+	double cspeed_l = getSpeedFromTicksPer100Milliseconds(canTalonLeft1->GetSelectedSensorVelocity());
+	double cspeed_r = getSpeedFromTicksPer100Milliseconds(canTalonRight1->GetSelectedSensorVelocity());
 	frc::SmartDashboard::PutNumber("fwd speed left", cspeed_l);
 	frc::SmartDashboard::PutNumber("fwd speed right", cspeed_r);
 

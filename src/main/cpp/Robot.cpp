@@ -83,6 +83,7 @@ void Robot::AutonomousInit() {
     m_autonomousCommand->Cancel();
     m_autonomousCommand = nullptr;
   }
+  a_drive->ResetOdometry(frc::Pose2d( 0_m, 0_m, frc::Rotation2d(0_deg)));  
 
   m_autonomousCommand = m_container->GetAutonomousCommand();
   std::cout << "ac gotten\n";
@@ -91,6 +92,7 @@ void Robot::AutonomousInit() {
     m_autonomousCommand->Schedule();
     std::cout << "ac schedule\n";
   }
+
 
 
   // a_drive->ResetOdometry();
@@ -104,6 +106,14 @@ void Robot::AutonomousPeriodic() {
   // }
 
   // a_drive->Update();
+
+  frc::Pose2d pose = a_drive->GetPose();
+
+  frc::SmartDashboard::PutNumber("heading", pose.Rotation().Degrees().value());
+  frc::SmartDashboard::PutNumber("translation x", pose.Translation().X().value());
+  frc::SmartDashboard::PutNumber("translation y", pose.Translation().Y().value());
+
+  // pose.
 }
 void Robot::TeleopInit() {
   frc2::CommandScheduler::GetInstance().Disable();

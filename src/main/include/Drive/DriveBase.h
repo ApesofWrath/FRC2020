@@ -226,5 +226,6 @@ private:
 
 };
 
-const double TICKS_TO_DISTANCE=1.0/(2048.0*(84.0/8.0)*(1/(2*PI*3))*(1/0.0254)) * 10;
-double getSpeedFromTicksPerSecond(int ticks_per_second);
+const double TICKS_TO_DISTANCE=1.0/(2048.0*(84.0/8.0)*(1/(2*PI*3))*(1/0.0254));
+double getSpeedFromTicksPer100Milliseconds(int ticks_per_second);
+double getDistanceFromTicks(int ticks);

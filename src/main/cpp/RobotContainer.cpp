@@ -41,8 +41,8 @@ frc2::Command* RobotContainer::GetAutonomousCommand() {
     std::cout << "step 9.5\n";
 
     std::vector<frc::Translation2d> points = {
-        frc::Translation2d(1_m,0_m),
-        frc::Translation2d(2_m,0_m),
+        // frc::Translation2d(1_m,0_m),
+        // frc::Translation2d(2_m,0_m),
     };
 
 
@@ -52,7 +52,7 @@ frc2::Command* RobotContainer::GetAutonomousCommand() {
         // Pass through these two interior waypoints, making an 's' curve path
         points,
         // End 3 meters straight ahead of where we started, facing forward
-        frc::Pose2d(3_m, 0_m, frc::Rotation2d(0_deg)),
+        frc::Pose2d(1_m, 1_m, frc::Rotation2d(90_deg)),
         // Pass the config
         *config);
 
