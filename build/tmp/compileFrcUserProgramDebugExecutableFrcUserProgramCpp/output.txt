@@ -1,52 +1,180 @@
-See file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+See file:///C:/Users/osgoo/Desktop/Robotics/2020/FRC2020-TSM/FRC2020/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling ControlPanel.cpp successful.
+
+compiling Arm.cpp successful.
+
+compiling Intake.cpp successful.
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Intake.h:5:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Intake.cpp:8:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning is a GCC extension
+ #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
+  ^~~~~~~
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
+
+compiling TeleopStateMachine.cpp failed.
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Intake.h:5:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/TeleopStateMachine.h:3,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:1:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning is a GCC extension
+ #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
+  ^~~~~~~
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp: In member function 'void TeleopStateMachine::StateMachine(ButtonData)':
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:86:7: error: 'shooter' was not declared in this scope
+       shooter->shooter_state = shooter->INTAKE_STATE;
+       ^~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:86:7: note: suggested alternative: 'short'
+       shooter->shooter_state = shooter->INTAKE_STATE;
+       ^~~~~~~
+       short
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:89:7: error: 'shooter' was not declared in this scope
+       shooter->shooter_state = shooter->SHOOT_STATE;
+       ^~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:89:7: note: suggested alternative: 'short'
+       shooter->shooter_state = shooter->SHOOT_STATE;
+       ^~~~~~~
+       short
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:95:7: error: 'shooter' was not declared in this scope
+       shooter->shooter_state = shooter->STOP_STATE;
+       ^~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:95:7: note: suggested alternative: 'short'
+       shooter->shooter_state = shooter->STOP_STATE;
+       ^~~~~~~
+       short
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:109:11: error: 'shooter' was not declared in this scope
+           shooter->shooter_state = shooter->STOP_STATE;
+           ^~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:109:11: note: suggested alternative: 'short'
+           shooter->shooter_state = shooter->STOP_STATE;
+           ^~~~~~~
+           short
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:110:26: error: 'class ControlPanel' has no member named 'control_panel_state'; did you mean 'ControlPanel'?
+           control_panel->control_panel_state = control_panel->IDLE_STATE;
+                          ^~~~~~~~~~~~~~~~~~~
+                          ControlPanel
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:110:63: error: 'class ControlPanel' has no member named 'IDLE_STATE'
+           control_panel->control_panel_state = control_panel->IDLE_STATE;
+                                                               ^~~~~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:199:26: error: 'class ControlPanel' has no member named 'control_panel_state'; did you mean 'ControlPanel'?
+           control_panel->control_panel_state = control_panel->ROTATION_MODE;
+                          ^~~~~~~~~~~~~~~~~~~
+                          ControlPanel
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\TeleopStateMachine.cpp:209:26: error: 'class ControlPanel' has no member named 'control_panel_state'; did you mean 'ControlPanel'?
+           control_panel->control_panel_state = control_panel->POSITION_MODE;
+                          ^~~~~~~~~~~~~~~~~~~
+                          ControlPanel
+
+compiling DriveBase.cpp successful.
+In file included from c:\users\osgoo\desktop\robotics\2020\frc2020-tsm\frc2020\src\main\include\drive\drivebase.h:5:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Drive\DriveBase.cpp:1:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning is a GCC extension
+ #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
+  ^~~~~~~
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Drive\DriveBase.cpp: In member function 'void DriveBase::ManualOpenLoopDrive(frc::Joystick*, frc::Joystick*)':
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Drive\DriveBase.cpp:182:18: warning: variable 'right_out' set but not used [-Wunused-but-set-variable]
+  float left_out, right_out;
+                  ^~~~~~~~~
+
 compiling Robot.cpp failed.
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp: In member function 'virtual void apesofwrath::Robot::RobotInit()':
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:23:67: warning: 'void frc::SendableChooser<T>::AddDefault(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use SetDefaultOption() instead [-Wdeprecated-declarations]
-   m_descolor_chooser.AddDefault("None", apesofwrath::Colors::WHITE);
-                                                                   ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:57:8: note: declared here
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Drive/DriveBase.h:5:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Drive/DriveController.h:4,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:18,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning is a GCC extension
+ #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead."
+  ^~~~~~~
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/WPILib.h:14:2: warning: #warning "Including this header drastically increases compilation times and is bad style. Include only what you use instead." [-Wcpp]
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/TeleopStateMachine.h:3:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:26,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Intake.h:10:7: error: redefinition of 'class Intake'
+ class Intake {
+       ^~~~~~
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:21:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Intake.h:10:7: note: previous definition of 'class Intake'
+ class Intake {
+       ^~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp: In member function 'virtual void apesofwrath::Robot::RobotInit()':
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:46:3: error: 'joyThrottle' was not declared in this scope
+   joyThrottle = new frc::Joystick(0);
+   ^~~~~~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:46:3: note: suggested alternative: 'JoyThrottle'
+   joyThrottle = new frc::Joystick(0);
+   ^~~~~~~~~~~
+   JoyThrottle
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:48:3: error: 'joyWheel' was not declared in this scope
+   joyWheel = new frc::Joystick(1);
+   ^~~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:48:3: note: suggested alternative: 'JoyWheel'
+   joyWheel = new frc::Joystick(1);
+   ^~~~~~~~
+   JoyWheel
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:61:68: warning: 'void frc::SendableChooser<T>::AddDefault(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use SetDefaultOption() instead [-Wdeprecated-declarations]
+   m_descolor_chooser.AddDefault("None",  apesofwrath::Colors::WHITE);
+                                                                    ^
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:13:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:57:8: note: declared here
    void AddDefault(wpi::StringRef name, T object) {
         ^~~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:24:66: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:62:66: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddObject("Red",    apesofwrath::Colors::RED);
                                                                   ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:13:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
    void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
         ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:25:67: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:63:67: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddObject("Blue",   apesofwrath::Colors::BLUE);
                                                                    ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:13:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
    void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
         ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:26:68: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:64:68: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddObject("Green",  apesofwrath::Colors::GREEN);
                                                                     ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:13:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
    void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
         ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:27:69: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:65:69: warning: 'void frc::SendableChooser<T>::AddObject(wpi::StringRef, T) [with T = apesofwrath::Colors]' is deprecated: use AddOption() instead [-Wdeprecated-declarations]
    m_descolor_chooser.AddObject("Yellow", apesofwrath::Colors::YELLOW);
                                                                      ^
-In file included from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\include/Robot.h:13:0,
-                 from C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:8:
-C:\Users\andy\.gradle\caches\transforms-2\files-2.1\77aec02c88b6cdbbe6ae1baa0d102dbc\wpilibc-cpp-2020.1.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:13:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\.gradle\caches\transforms-2\files-2.1\32f92d540f27767165b8fb46ab0acba1\wpilibc-cpp-2020.2.2-headers/frc/smartdashboard/SendableChooser.h:54:8: note: declared here
    void AddObject(wpi::StringRef name, T object) { AddOption(name, object); }
         ^~~~~~~~~
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp: In member function 'virtual void apesofwrath::Robot::TeleopPeriodic()':
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:118:85: error: expected ')' before '{' token
-   if ((currentColor == desiredColor || desiredColor == apesofwrath::Colors::WHITE ) {
-                                                                                     ^
-C:\Users\andy\OneDrive\Desktop\frc20\frc20\Test\src\main\cpp\Robot.cpp:132:1: error: expected primary-expression before '}' token
- }
- ^
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp: In member function 'virtual void apesofwrath::Robot::RobotPeriodic()':
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:79:3: error: 'detectedColor' was not declared in this scope
+   detectedColor = m_colorSensor.GetColor();
+   ^~~~~~~~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:79:3: note: suggested alternative: 'desiredColor'
+   detectedColor = m_colorSensor.GetColor();
+   ^~~~~~~~~~~~~
+   desiredColor
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:79:19: error: 'm_colorSensor' was not declared in this scope
+   detectedColor = m_colorSensor.GetColor();
+                   ^~~~~~~~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp: In member function 'virtual void apesofwrath::Robot::TeleopPeriodic()':
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:170:26: error: no matching function for call to 'TeleopStateMachine::GatherButtonDataFromJoysticks(frc::Joystick*&, frc::Joystick*&)'
+     JoyThrottle, JoyWheel)); //joyOp maybe???
+                          ^
+In file included from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/Robot.h:26:0,
+                 from C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:8:
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/TeleopStateMachine.h:49:16: note: candidate: ButtonData TeleopStateMachine::GatherButtonDataFromJoysticks(frc::Joystick*, frc::Joystick*, frc::Joystick*)
+     ButtonData GatherButtonDataFromJoysticks(Joystick* joyThrottle, Joystick* joyWheel, Joystick* joyOp);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\include/TeleopStateMachine.h:49:16: note:   candidate expects 3 arguments, 2 provided
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp: At global scope:
+C:\Users\osgoo\Desktop\Robotics\2020\FRC2020-TSM\FRC2020\src\main\cpp\Robot.cpp:197:13: error: 'Robot' has not been declared
+ std::string Robot::getColor(Colors c) {
+             ^~~~~
 
-Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/andy/OneDrive/Desktop/frc20/frc20/Test/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.
+Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/osgoo/Desktop/Robotics/2020/FRC2020-TSM/FRC2020/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.

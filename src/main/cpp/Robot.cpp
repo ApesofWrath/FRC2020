@@ -43,16 +43,16 @@ void apesofwrath::Robot::RobotInit() {
   T46->SetInverted(InvertType::InvertMotorOutput);
 */
   joyT = new frc::Joystick(0);
+  joyThrottle = new frc::Joystick(0);
   joyW = new frc::Joystick(1);
+  joyWheel = new frc::Joystick(1);
   drive = new DriveController();
 
-  joy = new frc::Joystick(0);
-  talon1 = new TalonSRX(36);
 
-  neo_1 = new rev::CANSparkMax(1, rev::CANSparkMax::MotorType::kBrushless);
-  neo_2 = new rev::CANSparkMax(2, rev::CANSparkMax::MotorType::kBrushless);
-  neo_3 = new rev::CANSparkMax(3, rev::CANSparkMax::MotorType::kBrushless);
-  neo_4 = new rev::CANSparkMax(4, rev::CANSparkMax::MotorType::kBrushless);
+  // neo_1 = new rev::CANSparkMax(1, rev::CANSparkMax::MotorType::kBrushless);
+  // neo_2 = new rev::CANSparkMax(2, rev::CANSparkMax::MotorType::kBrushless);
+  // neo_3 = new rev::CANSparkMax(3, rev::CANSparkMax::MotorType::kBrushless);
+  // neo_4 = new rev::CANSparkMax(4, rev::CANSparkMax::MotorType::kBrushless);
 
 
   arm = new Arm();
@@ -138,10 +138,10 @@ void apesofwrath::Robot::AutonomousPeriodic() {
     // Default Auto goes here
   }
 }
-void Robot::TeleopInit() {
+void apesofwrath::Robot::TeleopInit() {
 }
 bool toggle = false;
-void Robot::TeleopPeriodic() {
+void apesofwrath::Robot::TeleopPeriodic() {
   
 
 
@@ -167,7 +167,7 @@ void Robot::TeleopPeriodic() {
 
   drive->RunTeleopDrive(joyT, joyW, true, false, false);
   tsm->StateMachine(tsm->GatherButtonDataFromJoysticks(
-    joyThrottle, joyWheel, joyOp));
+    JoyThrottle, JoyWheel)); //joyOp maybe???
   // drive->ManualOpenLoopDrive(joyT, joyW);
   // drive->TeleopWCDrive(joyT,joyW,false,false);
 
@@ -186,9 +186,9 @@ void Robot::TeleopPeriodic() {
   //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
   UpdateButtons();
 
-  intake->IntakeStateMachine(arm, stop, in, out);
+  // intake->IntakeStateMachine(arm, stop, in, out);
 
-  frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
+  // frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
 
 }
 

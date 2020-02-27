@@ -34,6 +34,7 @@ enum Colors {
   GREEN = 3,
   WHITE = 4
 };
+
 class Robot : public frc::TimedRobot {
  public: 
 
@@ -45,7 +46,7 @@ class Robot : public frc::TimedRobot {
   const int BUTTON_STOP = 2, POSITION_BUTTON = 5, ROTATION_BUTTON = 4, INTAKE = 3;
 
   Colors currentColor, desiredColor;
-  frc::Joystick  *joyT, *joyW;
+  frc::Joystick  *joyT, *joyW, *JoyThrottle, *JoyWheel;
 
   Arm* arm;
   Intake* intake;
