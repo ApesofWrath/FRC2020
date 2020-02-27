@@ -84,9 +84,5 @@ class Robot : public frc::TimedRobot {
   const std::string kAutoNameCustom = "My Auto";
   const Colors kDesColorDefault = Colors::WHITE;
   std::string m_autoSelected;
-<<<<<<< HEAD
-};
-=======
 };
 
->>>>>>> Intake Work for combining code

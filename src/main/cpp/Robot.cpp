@@ -192,12 +192,8 @@ void apesofwrath::Robot::TeleopPeriodic() {
   //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
   UpdateButtons();
 
-<<<<<<< HEAD
-  // intake->IntakeStateMachine(arm, stop, in, out);
-=======
   shooter->ShooterStateMachine(stop_shooter, intake_shooter, shoot_shooter, waiting_shooter);
   intake->IntakeStateMachine(arm, shooter, stop_intake, in_intake, out_intake);
->>>>>>> Intake Work for combining code
 
   frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
 
