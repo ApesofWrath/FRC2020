@@ -14,67 +14,75 @@
     "systemCMacros": [],
     "systemCArgs": [],
     "allLibFiles": [
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\77aec02c88b6cdbbe6ae1baa0d102dbc\\wpilibc-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\603cb3c4292f5c9ad5d0f9e5f496c319\\ntcore-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6052d830a658f522a859cddd6e1e0630\\hal-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2aade005695a325322cde8f3ee86761b\\wpiutil-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\7efde753c0dd9aec36ed8ab2bd1e5fc2\\cameraserver-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6da1ee272b6a74bff11c1c409cf00b58\\cscore-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\df2f66ef27014bd873f90be1e8956195\\wpiapi-cpp-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0aaf3cf917244c0ac32ba6be7873ad12\\api-cpp-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\1771186121530c59384c6b97dda6f2d0\\cci-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b92d9e2a48ae89d12afe1aec1234ee3\\diagnostics-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eb6e8dc2cf8ca506a5977f5bf49e1fb3\\canutils-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b0e3d47df50eaca1986b9c747068906b\\platform-stub-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ae5245e85e699726fa8295b32f53734b\\core-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6baf188dacd663d72f604363904ca022\\ColorSensorV3-cpp-1.0.1-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c063bc61295dc3791e134b3c4f30c5cc\\wpilibOldCommands-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\759586253259c660302d160693400dda\\wpilibc-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8e3782711e32b6990b439eebf6958cb7\\ntcore-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\bcf1af0d207011f8de9b55253af9ee05\\hal-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\fb9f79baf3792646b7fa026c59a01d46\\wpiutil-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\623cf65fabcd53a3f4611f815ab9386a\\cameraserver-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0778a2eba9cedabec72881de45edc717\\cscore-cpp-2020.1.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ca944eba6e1a3fc6c8b4c8bd1e3e4ebf\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\92d874cae25fa1157db6aff6d6592e80\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5c39718451953b5b1de3ea0387807269\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8bff16c6a54dcfdf64e1cf5f20b52a5f\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5743d3012fbdb351445f31494ac96c48\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\dd1de90be37d2fa2bf2d30efa619ee90\\cscore-cpp-2020.2.2-sources\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f27e70f47a7fa7d019dfaa61bab464f8\\ColorSensorV3-cpp-1.0.1-source\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8b2910045039cbe9cbf5f2864947406\\wpilibOldCommands-cpp-2020.1.2-sources\\"
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d0f6e12ae56b02e878f82abcdabea53f\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8e8e397f84a97c241a8a676369d0fd8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c5a5056ee285ef8b1f5dcc3a7e342a10\\wpilibOldCommands-cpp-2020.2.2-sources\\"
     ],
     "allLibSources": [
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\759586253259c660302d160693400dda\\wpilibc-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8e3782711e32b6990b439eebf6958cb7\\ntcore-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\bcf1af0d207011f8de9b55253af9ee05\\hal-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\fb9f79baf3792646b7fa026c59a01d46\\wpiutil-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\623cf65fabcd53a3f4611f815ab9386a\\cameraserver-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0778a2eba9cedabec72881de45edc717\\cscore-cpp-2020.1.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ca944eba6e1a3fc6c8b4c8bd1e3e4ebf\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\92d874cae25fa1157db6aff6d6592e80\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5c39718451953b5b1de3ea0387807269\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8bff16c6a54dcfdf64e1cf5f20b52a5f\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5743d3012fbdb351445f31494ac96c48\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\dd1de90be37d2fa2bf2d30efa619ee90\\cscore-cpp-2020.2.2-sources\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f27e70f47a7fa7d019dfaa61bab464f8\\ColorSensorV3-cpp-1.0.1-source\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8b2910045039cbe9cbf5f2864947406\\wpilibOldCommands-cpp-2020.1.2-sources\\"
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d0f6e12ae56b02e878f82abcdabea53f\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8e8e397f84a97c241a8a676369d0fd8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c5a5056ee285ef8b1f5dcc3a7e342a10\\wpilibOldCommands-cpp-2020.2.2-sources\\"
     ],
     "allLibHeaders": [
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\77aec02c88b6cdbbe6ae1baa0d102dbc\\wpilibc-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\603cb3c4292f5c9ad5d0f9e5f496c319\\ntcore-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6052d830a658f522a859cddd6e1e0630\\hal-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2aade005695a325322cde8f3ee86761b\\wpiutil-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\7efde753c0dd9aec36ed8ab2bd1e5fc2\\cameraserver-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6da1ee272b6a74bff11c1c409cf00b58\\cscore-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\df2f66ef27014bd873f90be1e8956195\\wpiapi-cpp-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0aaf3cf917244c0ac32ba6be7873ad12\\api-cpp-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\1771186121530c59384c6b97dda6f2d0\\cci-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b92d9e2a48ae89d12afe1aec1234ee3\\diagnostics-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eb6e8dc2cf8ca506a5977f5bf49e1fb3\\canutils-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b0e3d47df50eaca1986b9c747068906b\\platform-stub-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ae5245e85e699726fa8295b32f53734b\\core-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6baf188dacd663d72f604363904ca022\\ColorSensorV3-cpp-1.0.1-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c063bc61295dc3791e134b3c4f30c5cc\\wpilibOldCommands-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
     ],
     "binaries": [
@@ -122,25 +130,28 @@
           }
         ],
         "libHeaders": [
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\77aec02c88b6cdbbe6ae1baa0d102dbc\\wpilibc-cpp-2020.1.2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\603cb3c4292f5c9ad5d0f9e5f496c319\\ntcore-cpp-2020.1.2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6052d830a658f522a859cddd6e1e0630\\hal-cpp-2020.1.2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2aade005695a325322cde8f3ee86761b\\wpiutil-cpp-2020.1.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
           "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
           "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
           "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\7efde753c0dd9aec36ed8ab2bd1e5fc2\\cameraserver-cpp-2020.1.2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6da1ee272b6a74bff11c1c409cf00b58\\cscore-cpp-2020.1.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
           "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\df2f66ef27014bd873f90be1e8956195\\wpiapi-cpp-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0aaf3cf917244c0ac32ba6be7873ad12\\api-cpp-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\1771186121530c59384c6b97dda6f2d0\\cci-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b92d9e2a48ae89d12afe1aec1234ee3\\diagnostics-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eb6e8dc2cf8ca506a5977f5bf49e1fb3\\canutils-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b0e3d47df50eaca1986b9c747068906b\\platform-stub-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ae5245e85e699726fa8295b32f53734b\\core-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6baf188dacd663d72f604363904ca022\\ColorSensorV3-cpp-1.0.1-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c063bc61295dc3791e134b3c4f30c5cc\\wpilibOldCommands-cpp-2020.1.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
           "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
         ],
         "sharedLibrary": false,
@@ -232,67 +243,75 @@
     "systemCMacros": [],
     "systemCArgs": [],
     "allLibFiles": [
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\77aec02c88b6cdbbe6ae1baa0d102dbc\\wpilibc-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\603cb3c4292f5c9ad5d0f9e5f496c319\\ntcore-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6052d830a658f522a859cddd6e1e0630\\hal-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2aade005695a325322cde8f3ee86761b\\wpiutil-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\7efde753c0dd9aec36ed8ab2bd1e5fc2\\cameraserver-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6da1ee272b6a74bff11c1c409cf00b58\\cscore-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\df2f66ef27014bd873f90be1e8956195\\wpiapi-cpp-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0aaf3cf917244c0ac32ba6be7873ad12\\api-cpp-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\1771186121530c59384c6b97dda6f2d0\\cci-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b92d9e2a48ae89d12afe1aec1234ee3\\diagnostics-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eb6e8dc2cf8ca506a5977f5bf49e1fb3\\canutils-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b0e3d47df50eaca1986b9c747068906b\\platform-stub-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ae5245e85e699726fa8295b32f53734b\\core-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6baf188dacd663d72f604363904ca022\\ColorSensorV3-cpp-1.0.1-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c063bc61295dc3791e134b3c4f30c5cc\\wpilibOldCommands-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\759586253259c660302d160693400dda\\wpilibc-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8e3782711e32b6990b439eebf6958cb7\\ntcore-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\bcf1af0d207011f8de9b55253af9ee05\\hal-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\fb9f79baf3792646b7fa026c59a01d46\\wpiutil-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\623cf65fabcd53a3f4611f815ab9386a\\cameraserver-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0778a2eba9cedabec72881de45edc717\\cscore-cpp-2020.1.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ca944eba6e1a3fc6c8b4c8bd1e3e4ebf\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\92d874cae25fa1157db6aff6d6592e80\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5c39718451953b5b1de3ea0387807269\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8bff16c6a54dcfdf64e1cf5f20b52a5f\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5743d3012fbdb351445f31494ac96c48\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\dd1de90be37d2fa2bf2d30efa619ee90\\cscore-cpp-2020.2.2-sources\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f27e70f47a7fa7d019dfaa61bab464f8\\ColorSensorV3-cpp-1.0.1-source\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8b2910045039cbe9cbf5f2864947406\\wpilibOldCommands-cpp-2020.1.2-sources\\"
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d0f6e12ae56b02e878f82abcdabea53f\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8e8e397f84a97c241a8a676369d0fd8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c5a5056ee285ef8b1f5dcc3a7e342a10\\wpilibOldCommands-cpp-2020.2.2-sources\\"
     ],
     "allLibSources": [
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\759586253259c660302d160693400dda\\wpilibc-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8e3782711e32b6990b439eebf6958cb7\\ntcore-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\bcf1af0d207011f8de9b55253af9ee05\\hal-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\fb9f79baf3792646b7fa026c59a01d46\\wpiutil-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\623cf65fabcd53a3f4611f815ab9386a\\cameraserver-cpp-2020.1.2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0778a2eba9cedabec72881de45edc717\\cscore-cpp-2020.1.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ca944eba6e1a3fc6c8b4c8bd1e3e4ebf\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\92d874cae25fa1157db6aff6d6592e80\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5c39718451953b5b1de3ea0387807269\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8bff16c6a54dcfdf64e1cf5f20b52a5f\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5743d3012fbdb351445f31494ac96c48\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\dd1de90be37d2fa2bf2d30efa619ee90\\cscore-cpp-2020.2.2-sources\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f27e70f47a7fa7d019dfaa61bab464f8\\ColorSensorV3-cpp-1.0.1-source\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8b2910045039cbe9cbf5f2864947406\\wpilibOldCommands-cpp-2020.1.2-sources\\"
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d0f6e12ae56b02e878f82abcdabea53f\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8e8e397f84a97c241a8a676369d0fd8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c5a5056ee285ef8b1f5dcc3a7e342a10\\wpilibOldCommands-cpp-2020.2.2-sources\\"
     ],
     "allLibHeaders": [
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\77aec02c88b6cdbbe6ae1baa0d102dbc\\wpilibc-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\603cb3c4292f5c9ad5d0f9e5f496c319\\ntcore-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6052d830a658f522a859cddd6e1e0630\\hal-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2aade005695a325322cde8f3ee86761b\\wpiutil-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\7efde753c0dd9aec36ed8ab2bd1e5fc2\\cameraserver-cpp-2020.1.2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6da1ee272b6a74bff11c1c409cf00b58\\cscore-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\df2f66ef27014bd873f90be1e8956195\\wpiapi-cpp-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0aaf3cf917244c0ac32ba6be7873ad12\\api-cpp-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\1771186121530c59384c6b97dda6f2d0\\cci-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b92d9e2a48ae89d12afe1aec1234ee3\\diagnostics-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eb6e8dc2cf8ca506a5977f5bf49e1fb3\\canutils-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b0e3d47df50eaca1986b9c747068906b\\platform-stub-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ae5245e85e699726fa8295b32f53734b\\core-5.17.3-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6baf188dacd663d72f604363904ca022\\ColorSensorV3-cpp-1.0.1-headers\\",
-      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c063bc61295dc3791e134b3c4f30c5cc\\wpilibOldCommands-cpp-2020.1.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
       "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
     ],
     "binaries": [
@@ -340,25 +359,28 @@
           }
         ],
         "libHeaders": [
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\77aec02c88b6cdbbe6ae1baa0d102dbc\\wpilibc-cpp-2020.1.2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\603cb3c4292f5c9ad5d0f9e5f496c319\\ntcore-cpp-2020.1.2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6052d830a658f522a859cddd6e1e0630\\hal-cpp-2020.1.2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2aade005695a325322cde8f3ee86761b\\wpiutil-cpp-2020.1.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
           "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f706b5d5cd4bcea038ba587a522740f2\\chipobject-2020.10.1-headers\\",
           "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5534c65e0992107bcb0c55bf86146863\\netcomm-2020.10.1-headers\\",
           "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\74bb0c258eb3df4b65691e2162a6f51e\\visa-2020.10.1-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\7efde753c0dd9aec36ed8ab2bd1e5fc2\\cameraserver-cpp-2020.1.2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6da1ee272b6a74bff11c1c409cf00b58\\cscore-cpp-2020.1.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
           "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\df2f66ef27014bd873f90be1e8956195\\wpiapi-cpp-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\0aaf3cf917244c0ac32ba6be7873ad12\\api-cpp-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\1771186121530c59384c6b97dda6f2d0\\cci-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b92d9e2a48ae89d12afe1aec1234ee3\\diagnostics-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eb6e8dc2cf8ca506a5977f5bf49e1fb3\\canutils-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b0e3d47df50eaca1986b9c747068906b\\platform-stub-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ae5245e85e699726fa8295b32f53734b\\core-5.17.3-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6baf188dacd663d72f604363904ca022\\ColorSensorV3-cpp-1.0.1-headers\\",
-          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c063bc61295dc3791e134b3c4f30c5cc\\wpilibOldCommands-cpp-2020.1.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
           "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
         ],
         "sharedLibrary": false,
@@ -433,6 +455,844 @@
     ],
     "nameBinaryMap": {
       "frcUserProgram": 0
+    }
+  },
+  {
+    "name": "windowsx86-64",
+    "architecture": "x86-64",
+    "operatingSystem": "Windows 10",
+    "flavor": "default",
+    "buildType": "debug",
+    "cppPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\bin\\HostX64\\x64\\cl.exe",
+    "cPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\bin\\HostX64\\x64\\cl.exe",
+    "msvc": true,
+    "gcc": false,
+    "systemCppMacros": [],
+    "systemCppArgs": [],
+    "systemCMacros": [],
+    "systemCArgs": [],
+    "allLibFiles": [
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\abc6ab1640002d48fcbfcb4119200197\\googletest-1.9.0-4-437e100-1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ca944eba6e1a3fc6c8b4c8bd1e3e4ebf\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\92d874cae25fa1157db6aff6d6592e80\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5c39718451953b5b1de3ea0387807269\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8bff16c6a54dcfdf64e1cf5f20b52a5f\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5743d3012fbdb351445f31494ac96c48\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\dd1de90be37d2fa2bf2d30efa619ee90\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\205d6c50814df02e88f0e6a5c54c88b2\\googletest-1.9.0-4-437e100-1-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d0f6e12ae56b02e878f82abcdabea53f\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8e8e397f84a97c241a8a676369d0fd8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c5a5056ee285ef8b1f5dcc3a7e342a10\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibSources": [
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ca944eba6e1a3fc6c8b4c8bd1e3e4ebf\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\92d874cae25fa1157db6aff6d6592e80\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5c39718451953b5b1de3ea0387807269\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8bff16c6a54dcfdf64e1cf5f20b52a5f\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5743d3012fbdb351445f31494ac96c48\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\dd1de90be37d2fa2bf2d30efa619ee90\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\205d6c50814df02e88f0e6a5c54c88b2\\googletest-1.9.0-4-437e100-1-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d0f6e12ae56b02e878f82abcdabea53f\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8e8e397f84a97c241a8a676369d0fd8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c5a5056ee285ef8b1f5dcc3a7e342a10\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibHeaders": [
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\abc6ab1640002d48fcbfcb4119200197\\googletest-1.9.0-4-437e100-1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+    ],
+    "binaries": [
+      {
+        "componentName": "frcUserProgramTest",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\test\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\frcUserProgramTest\\headers\\"
+              ],
+              "includes": [
+                "**/*.cpp"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/Od",
+              "/MDd"
+            ],
+            "macros": [
+              "RUNNING_FRC_TESTS"
+            ]
+          },
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/Od",
+              "/MDd"
+            ],
+            "macros": [
+              "RUNNING_FRC_TESTS"
+            ]
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\abc6ab1640002d48fcbfcb4119200197\\googletest-1.9.0-4-437e100-1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "componentName": "frcUserProgram",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/Od",
+              "/MDd"
+            ],
+            "macros": []
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": true
+      }
+    ],
+    "sourceBinaries": [
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\test\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/Od",
+          "/MDd"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\frcUserProgramTest\\headers\\"
+          ],
+          "includes": [
+            "**/*.cpp"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/Od",
+          "/MDd"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/Od",
+          "/MDd"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/Od",
+          "/MDd"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      }
+    ],
+    "nameBinaryMap": {
+      "frcUserProgram": 1,
+      "frcUserProgramTest": 0
+    }
+  },
+  {
+    "name": "windowsx86-64",
+    "architecture": "x86-64",
+    "operatingSystem": "Windows 10",
+    "flavor": "default",
+    "buildType": "release",
+    "cppPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\bin\\HostX64\\x64\\cl.exe",
+    "cPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\bin\\HostX64\\x64\\cl.exe",
+    "msvc": true,
+    "gcc": false,
+    "systemCppMacros": [],
+    "systemCppArgs": [],
+    "systemCMacros": [],
+    "systemCArgs": [],
+    "allLibFiles": [
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\abc6ab1640002d48fcbfcb4119200197\\googletest-1.9.0-4-437e100-1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ca944eba6e1a3fc6c8b4c8bd1e3e4ebf\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\92d874cae25fa1157db6aff6d6592e80\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5c39718451953b5b1de3ea0387807269\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8bff16c6a54dcfdf64e1cf5f20b52a5f\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5743d3012fbdb351445f31494ac96c48\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\dd1de90be37d2fa2bf2d30efa619ee90\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\205d6c50814df02e88f0e6a5c54c88b2\\googletest-1.9.0-4-437e100-1-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d0f6e12ae56b02e878f82abcdabea53f\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8e8e397f84a97c241a8a676369d0fd8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c5a5056ee285ef8b1f5dcc3a7e342a10\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibSources": [
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ca944eba6e1a3fc6c8b4c8bd1e3e4ebf\\wpilibc-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\92d874cae25fa1157db6aff6d6592e80\\ntcore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5c39718451953b5b1de3ea0387807269\\hal-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\8bff16c6a54dcfdf64e1cf5f20b52a5f\\wpiutil-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\5743d3012fbdb351445f31494ac96c48\\cameraserver-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\dd1de90be37d2fa2bf2d30efa619ee90\\cscore-cpp-2020.2.2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\6440cf0dee8de0741badf5383075deb7\\opencv-cpp-3.4.7-2-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\205d6c50814df02e88f0e6a5c54c88b2\\googletest-1.9.0-4-437e100-1-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d0f6e12ae56b02e878f82abcdabea53f\\navx-cpp-3.1.409-sources\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\f8e8e397f84a97c241a8a676369d0fd8\\ColorSensorV3-cpp-1.2.0-source\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c5a5056ee285ef8b1f5dcc3a7e342a10\\wpilibOldCommands-cpp-2020.2.2-sources\\"
+    ],
+    "allLibHeaders": [
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\abc6ab1640002d48fcbfcb4119200197\\googletest-1.9.0-4-437e100-1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+      "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+      "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+    ],
+    "binaries": [
+      {
+        "componentName": "frcUserProgramTest",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\test\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\frcUserProgramTest\\headers\\"
+              ],
+              "includes": [
+                "**/*.cpp"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/O2",
+              "/MD"
+            ],
+            "macros": [
+              "RUNNING_FRC_TESTS"
+            ]
+          },
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/O2",
+              "/MD"
+            ],
+            "macros": [
+              "RUNNING_FRC_TESTS"
+            ]
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\abc6ab1640002d48fcbfcb4119200197\\googletest-1.9.0-4-437e100-1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "componentName": "frcUserProgram",
+        "sourceSets": [
+          {
+            "source": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\cpp\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "exportedHeaders": {
+              "srcDirs": [
+                "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+              ],
+              "includes": [
+                "**/*.cpp",
+                "**/*.cc"
+              ],
+              "excludes": []
+            },
+            "cpp": true,
+            "args": [
+              "/W3",
+              "/EHsc",
+              "/Zi",
+              "/FS",
+              "/Zc:inline",
+              "/wd4244",
+              "/wd4267",
+              "/wd4146",
+              "/wd4996",
+              "/Zc:throwingNew",
+              "/D_CRT_SECURE_NO_WARNINGS",
+              "/std:c++17",
+              "/permissive-",
+              "/O2",
+              "/MD"
+            ],
+            "macros": []
+          }
+        ],
+        "libHeaders": [
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d4e0f09c45bbaa95e9510fd9966e1d69\\wpilibc-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\52dff4d602c78152e87dba4df2673c00\\ntcore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\db3213f7918c4746c4e8da9650c505b2\\hal-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\10201cdb49da2a3b0e9aa4aa1244aaf4\\wpiutil-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\79c17116f42951d01366b484dd98ff8e\\cameraserver-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\c9e607605753f00a6c567c6feeb9b37e\\cscore-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\93cf4ee7203117caeaf8da7890ac03ac\\navx-cpp-3.1.409-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\e1b19167d60dec38bd074f66cb6e7174\\wpiapi-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\ed6923f8c26df9b305ef9ddcc846d9cc\\api-cpp-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\12a9c9df08fdc5ed728754ce9cceef0e\\cci-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b6976bfa417f79f31ed61d15e09c0e2e\\diagnostics-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\2adc45f322a652a9d161a9c1b6367f72\\canutils-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\62c62924f0ff14e01ce3d688bbc76ffe\\platform-stub-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\b7e015cf1567fe7f8db8de535c3bd919\\core-5.18.2-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\485a0b9896a03da928a9869b2e2f9654\\ColorSensorV3-cpp-1.2.0-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\d30607a8c61a121d39b409cb87fc59fb\\SparkMax-cpp-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\4b81fa94624afec8cc9f6996d90af024\\SparkMax-driver-1.5.1-headers\\",
+          "C:\\Users\\andy\\.gradle\\caches\\transforms-2\\files-2.1\\9e951d1f1e43cb411742b96ee6d2f8d7\\wpilibOldCommands-cpp-2020.2.2-headers\\",
+          "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+        ],
+        "sharedLibrary": false,
+        "executable": true
+      }
+    ],
+    "sourceBinaries": [
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\test\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/O2",
+          "/MD"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\frcUserProgramTest\\headers\\"
+          ],
+          "includes": [
+            "**/*.cpp"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/O2",
+          "/MD"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\cpp\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/O2",
+          "/MD"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      },
+      {
+        "source": {
+          "srcDirs": [
+            "C:\\Users\\andy\\OneDrive\\Desktop\\frc20\\frc20\\Test\\src\\main\\include\\"
+          ],
+          "includes": [
+            "**/*.cpp",
+            "**/*.cc"
+          ],
+          "excludes": []
+        },
+        "componentName": "frcUserProgramTest",
+        "cpp": true,
+        "args": [
+          "/W3",
+          "/EHsc",
+          "/Zi",
+          "/FS",
+          "/Zc:inline",
+          "/wd4244",
+          "/wd4267",
+          "/wd4146",
+          "/wd4996",
+          "/Zc:throwingNew",
+          "/D_CRT_SECURE_NO_WARNINGS",
+          "/std:c++17",
+          "/permissive-",
+          "/O2",
+          "/MD"
+        ],
+        "macros": [
+          "RUNNING_FRC_TESTS"
+        ],
+        "sharedLibrary": false,
+        "executable": false
+      }
+    ],
+    "nameBinaryMap": {
+      "frcUserProgram": 1,
+      "frcUserProgramTest": 0
     }
   }
 ]

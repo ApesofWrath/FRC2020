@@ -1,5 +1,7 @@
 // #ifndef SRC_INTAKE_H_
 // #define SRC_INTAKE_H_
+#pragma once
+
 
 #include <ctre/Phoenix.h>
 #include <frc/WPILib.h>
@@ -27,7 +29,7 @@ public:
     void In();
     void Out();
 
-    void IntakeStateMachine(Arm *arm, Shooter* shooter, bool stop, bool in, bool out);
+    void IntakeStateMachine();
 
 
 

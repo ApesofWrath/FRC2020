@@ -11,7 +11,7 @@
 
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
-#include <frc/WPILib.h>
+// #include <frc/WPILib.h>
 
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
@@ -26,15 +26,15 @@
 
 #include "TeleopStateMachine.h"
 
-namespace apesofwrath {
+#define BUTTON_STOP_INTAKE     0
+#define BUTTON_IN_INTAKE       0
+#define BUTTON_OUT_INTAKE      0
+#define BUTTON_STOP_SHOOTER    0
+#define BUTTON_INTAKE_SHOOTER  0
+#define BUTTON_SHOOT_SHOOTER   0
+#define BUTTON_WAITING_SHOOTER 0
+#define BUTTON_WFB             13
 
-enum Colors {
-  RED = 0,
-  BLUE = 1,
-  YELLOW = 2,
-  GREEN = 3,
-  WHITE = 4
-};
 
 class Robot : public frc::TimedRobot {
  public: 
@@ -47,7 +47,7 @@ class Robot : public frc::TimedRobot {
   const int BUTTON_STOP = 2, POSITION_BUTTON = 5, ROTATION_BUTTON = 4, INTAKE = 3;
 
   Colors currentColor, desiredColor;
-  frc::Joystick  *joyT, *joyW, *JoyThrottle, *JoyWheel;
+  frc::Joystick  *JoyThrottle, *JoyWheel, *JoyOp;
 
   Arm* arm;
   Intake* intake;
@@ -85,4 +85,3 @@ class Robot : public frc::TimedRobot {
   const Colors kDesColorDefault = Colors::WHITE;
   std::string m_autoSelected;
 };
-

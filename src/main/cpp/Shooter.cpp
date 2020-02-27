@@ -19,27 +19,8 @@
         joy = new frc::Joystick(0);
     }
 
-    void Shooter::ShooterStateMachine(bool shoot, bool intake, bool stop, bool waiting){
+    void Shooter::ShooterStateMachine(){
             
-            speed = (-(joy->GetRawAxis(3)) + 1)/2;
-            frc::SmartDashboard::PutNumber("Speed", speed);
-
-            if(stop){
-                shooter_state = STOP_STATE;
-            }
-
-            if(shoot){
-                shooter_state = SHOOT_STATE;
-            }
-
-            if(intake){
-                shooter_state = INTAKE_STATE;
-            }
-            
-            if(waiting){
-                shooter_state = WAITING_STATE;
-            }
-
             switch(shooter_state) {
                 case INIT_STATE:
                 frc::SmartDashboard::PutString("Shooter ", "init");

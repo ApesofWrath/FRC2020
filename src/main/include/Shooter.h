@@ -36,6 +36,6 @@ class Shooter {
     void Stop();
     void Waiting();
 
-    void ShooterStateMachine(bool shoot, bool intake, bool stop, bool waiting);
+    void ShooterStateMachine();
 };
 
