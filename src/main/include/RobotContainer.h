@@ -17,7 +17,7 @@
 #include <wpi/Path.h>
 #include <wpi/SmallString.h>
 
-#include "AutonDrive.h"
+#include "Auton.h"
 
 
 const std::string kAutoNameDefault = "Default";

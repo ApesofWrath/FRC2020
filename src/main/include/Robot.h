@@ -17,7 +17,7 @@
 #include "ControlPanel.h"
 #include "Drive/DriveController.h"
 #include "RobotContainer.h"
-#include "AutonDrive.h"
+#include "Auton.h"
 
 
 class Robot : public frc::TimedRobot {
