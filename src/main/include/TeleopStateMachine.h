@@ -14,24 +14,27 @@
 using namespace frc;
 
 namespace ButtonIDs {
-    const int WAIT_FOR_BUTTON = 13,
-              LOWER_INTAKE_BUTTON = 12,
-              RAISE_INTAKE_BUTTON = 1,
-              INTAKE_OUT_BUTTON = 6,
-              SHOOT_BUTTON = 14,
-              SHOOTER_INTAKE_BUTTON = 4,
-              ROTATION_MODE_CONTROL_PANEL_BUTTON = 2,
-              POSITION_MODE_CONTROL_PANEL_BUTTON = 15,
-              EMERGENCY_BUTTON = 99;
+    const int WAIT_FOR_BUTTON                    = 13,
+              LOWER_INTAKE_BUTTON                = 8,
+              INTAKE_OUT_BUTTON                  = 2,
+              SHOOT_BUTTON                       = 3,
+              SHOOTER_INTAKE_BUTTON              = 9,
+              SHOOTER_REVERSE_BUTTON             = 16,
+              FULL_RAISE_B1                      = 14,
+              FULL_RAISE_B2                      = 12,
+              ROTATION_MODE_CONTROL_PANEL_BUTTON = 4,
+              POSITION_MODE_CONTROL_PANEL_BUTTON = 1,
+              EMERGENCY_BUTTON                   = 99;
 
 }
 
 
 struct ButtonData {
-    bool wait_for_button, lower_intake_button,
-    raise_intake_button, intake_out_button,
-    shooter_intake_button, rotation_mode_control_panel_button, position_mode_control_panel_button,
-    shoot_button, emergency_button;
+    bool wait_for_button, 
+    lower_intake_button, intake_out_button,
+    shoot_button, shooter_intake_button, shooter_reverse_button,
+    rotation_mode_control_panel_button, position_mode_control_panel_button,
+    full_raise, emergency_button;
 };
 
 class TeleopStateMachine
@@ -49,8 +52,8 @@ public:
 
     enum States {
         INIT_STATE, WAIT_FOR_BUTTON_STATE,
-        INTAKE_SHOOTER_STATE, INTAKE_STATE,
-        SHOOT_STATE,
+        INTAKE_SHOOTER_STATE, SHOOT_STATE, SHOOTER_REVERSE_STATE,
+        INTAKE_STATE, INTAKE_OUT_STATE, FULL_RAISE_STATE,
         ROTATION_MODE_CONTROL_PANEL_STATE, POSITION_MODE_CONTROL_PANEL_STATE,
     };
 

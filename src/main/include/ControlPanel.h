@@ -23,7 +23,7 @@ public:
 
     ControlPanel();
 
-    const int CONTROL_PANEL_TALON = 0;
+    const int CONTROL_PANEL_TALON = 1000;
     const float CONTROL_PANEL_SPEEN_ON = 1.0f;
     enum States {
         IDLE,

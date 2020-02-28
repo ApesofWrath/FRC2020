@@ -5,6 +5,7 @@
     const int STOP_STATE = 2;
     const int SHOOT_STATE = 3;
     const int WAITING_STATE = 4;
+    const int REVERSE_STATE = 5;
 
     Shooter::Shooter() {
         shooter_state = INIT_STATE;
@@ -49,6 +50,11 @@
                 Waiting();
                 last_shooter_state = WAITING_STATE;
                 break;
+                case REVERSE_STATE:
+                frc::SmartDashboard::PutString("Shooter ", "reverse");
+                Reverse();
+                last_shooter_state = REVERSE_STATE_H;
+                break;
             }
 
     }
@@ -73,6 +79,12 @@
 
     void Shooter::Waiting(){
         beltNEO->Set(0);
+        topWNEO->Set(0);
+        botWNEO->Set(0);
+    }
+
+    void Shooter::Reverse() {  
+        beltNEO->Set(-0.2);
         topWNEO->Set(0);
         botWNEO->Set(0);
     }

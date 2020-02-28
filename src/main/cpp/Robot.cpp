@@ -30,9 +30,9 @@ void Robot::RobotInit() {
 
 
 
-
+*/
   controlpanel = new ControlPanel();
-
+/*d
   Falcon_T = new TalonFX(0);
   Falcon_T2 = new TalonFX(1);
 
@@ -74,7 +74,7 @@ void Robot::RobotInit() {
 
   tsm = new TeleopStateMachine(shooter, intake, controlpanel, arm);
   
-  JoyOp = new frc::Joystick(3);
+  JoyOp = new frc::Joystick(2);
 }
 
 void Robot::RobotPeriodic() {}
@@ -158,7 +158,8 @@ void Robot::TeleopPeriodic() {
   //   talon0->Set(ControlMode::PercentOutput, CONTROL_WHEEL_SPEED_ON);
 
   // frc::SmartDashboard::PutNumber("Speed", joy->GetThrottle());
-
+  frc::SmartDashboard::PutString("Last State", TeleopStateMachine::StateName(tsm->last_state));
+  frc::SmartDashboard::PutString("Current State", TeleopStateMachine::StateName(tsm->state));
 }
 
 void Robot::UpdateButtons(){

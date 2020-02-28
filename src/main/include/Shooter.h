@@ -20,7 +20,8 @@ class Shooter {
     const int STOP_STATE_H = 2;
     const int SHOOT_STATE_H = 3;
     const int WAITING_STATE_H = 4;
-
+    const int REVERSE_STATE_H = 5;
+    
     int last_shooter_state = INIT_STATE_H;
     int shooter_state = INIT_STATE_H;
 
@@ -35,6 +36,7 @@ class Shooter {
     void Intake();
     void Stop();
     void Waiting();
+    void Reverse();
 
     void ShooterStateMachine();
 };

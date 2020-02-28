@@ -19,15 +19,21 @@ TeleopStateMachine::~TeleopStateMachine(){
 
 ButtonData TeleopStateMachine::GatherButtonDataFromJoysticks(Joystick* joyThrottle, Joystick* joyWheel, Joystick* joyOp) {
     return ButtonData {
-        joyOp->GetRawButton(ButtonIDs::WAIT_FOR_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::LOWER_INTAKE_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::RAISE_INTAKE_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::INTAKE_OUT_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::SHOOT_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::SHOOTER_INTAKE_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::ROTATION_MODE_CONTROL_PANEL_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::POSITION_MODE_CONTROL_PANEL_BUTTON),
-        joyOp->GetRawButton(ButtonIDs::EMERGENCY_BUTTON)
+        joyOp->GetRawButton(ButtonIDs::WAIT_FOR_BUTTON), //wfb
+
+        joyOp->GetRawButton(ButtonIDs::LOWER_INTAKE_BUTTON), //lib
+        joyOp->GetRawButton(ButtonIDs::INTAKE_OUT_BUTTON), // iob
+
+        joyOp->GetRawButton(ButtonIDs::SHOOT_BUTTON), // sb
+        joyOp->GetRawButton(ButtonIDs::SHOOTER_INTAKE_BUTTON), // sib
+        joyOp->GetRawButton(ButtonIDs::SHOOTER_REVERSE_BUTTON),
+        
+        joyOp->GetRawButton(ButtonIDs::ROTATION_MODE_CONTROL_PANEL_BUTTON), // rmcpb
+        joyOp->GetRawButton(ButtonIDs::POSITION_MODE_CONTROL_PANEL_BUTTON), // pmcpb
+        
+        joyOp->GetRawButton(ButtonIDs::FULL_RAISE_B1) && joyOp->GetRawButton(ButtonIDs::FULL_RAISE_B2),
+        // joyOp->GetRawButton(ButtonIDs::EMERGENCY_BUTTON)
+        false
      };
 }
 
@@ -36,22 +42,31 @@ void TeleopStateMachine::ProcessButtonData(ButtonData data) {
         state = WAIT_FOR_BUTTON_STATE;
     // } else if (data.intake_button) {
     //     state = INTAKE_STATE;
-    } else if (data.shoot_button) {
-        state = SHOOT_STATE;
-    } else if (data.rotation_mode_control_panel_button) {
-        state = ROTATION_MODE_CONTROL_PANEL_STATE;
-    } else if (data.position_mode_control_panel_button) {
-        state = POSITION_MODE_CONTROL_PANEL_STATE;
-    }
-    //arm
-    if (data.raise_intake_button) {
-      state = INTAKE_STATE;
     } 
-    if (data.lower_intake_button) {
-      state = WAIT_FOR_BUTTON_STATE;
+    if (data.shoot_button) {
+        state = SHOOT_STATE;
+    }
+    if (data.shooter_reverse_button) {
+      state = SHOOTER_REVERSE_STATE;
     }
     if (data.shooter_intake_button) {
       state = INTAKE_SHOOTER_STATE;
+    }
+    if (data.rotation_mode_control_panel_button) {
+        state = ROTATION_MODE_CONTROL_PANEL_STATE;
+    }
+    if (data.position_mode_control_panel_button) {
+        state = POSITION_MODE_CONTROL_PANEL_STATE;
+    }
+    //arm
+    if (data.intake_out_button) {
+      state = INTAKE_OUT_STATE;
+    } 
+    if (data.lower_intake_button) {
+      state = INTAKE_STATE;
+    }
+    if (data.full_raise) {
+      state = FULL_RAISE_STATE;
     }
 }
 
@@ -83,7 +98,11 @@ void TeleopStateMachine::StateMachine(ButtonData data) {
 
 
         case WAIT_FOR_BUTTON_STATE:
-          arm->intake_arm_state = arm->DOWN_STATE;
+          if (arm->intake_arm_state == arm->DOWN_STATE) {
+            arm->intake_arm_state = arm->UP_STATE;
+          } else {
+            arm->intake_arm_state = arm->REST_STATE;
+          }
           intake->intake_state = intake->STOP_STATE;
           shooter->shooter_state = shooter->STOP_STATE_H;
           control_panel->state = control_panel->IDLE;
@@ -94,28 +113,66 @@ void TeleopStateMachine::StateMachine(ButtonData data) {
         case INTAKE_STATE:
           arm->intake_arm_state = arm->DOWN_STATE;
           intake->intake_state = intake->IN_STATE;
+          shooter->shooter_state = shooter->STOP_STATE_H;
+          control_panel->state = control_panel->IDLE;
           last_state = INTAKE_STATE;
         break;
 
         case INTAKE_SHOOTER_STATE:
           shooter->shooter_state = shooter->INTAKE_STATE_H;
+          arm->intake_arm_state = arm->UP_STATE;
+          control_panel->state = control_panel->IDLE;
+          intake->intake_state = intake->STOP_STATE;
           last_state = INTAKE_SHOOTER_STATE;
         break;
 
         case SHOOT_STATE:
           shooter->shooter_state = shooter->SHOOT_STATE_H;
+          arm->intake_arm_state = arm->UP_STATE;
+          control_panel->state = control_panel->IDLE;
+          intake->intake_state = intake->STOP_STATE;
           last_state = SHOOT_STATE;
         break;
 
         case ROTATION_MODE_CONTROL_PANEL_STATE:
           control_panel->state = control_panel->ROTATION_MODE;
+          arm->intake_arm_state = arm->UP_STATE;
+          intake->intake_state = intake->STOP_STATE;
+          shooter->shooter_state = shooter->STOP_STATE_H;
           last_state = ROTATION_MODE_CONTROL_PANEL_STATE;
         break;
 
+        case FULL_RAISE_STATE:
+          arm->intake_arm_state = arm->REST_STATE;
+          intake->intake_state = intake->STOP_STATE;
+          control_panel->state = control_panel->IDLE;
+          shooter->shooter_state = shooter->STOP_STATE_H;
+          arm->MoveToPosition(arm->armStartPos);
 
         case POSITION_MODE_CONTROL_PANEL_STATE:
           control_panel->state = control_panel->POSITION_MODE;
+          arm->intake_arm_state = arm->UP_STATE;
+          intake->intake_state = intake->STOP_STATE;
+          shooter->shooter_state = shooter->STOP_STATE_H;
           last_state = POSITION_MODE_CONTROL_PANEL_STATE;
+        break;
+
+        case INTAKE_OUT_STATE:
+          intake->intake_state = intake->OUT_STATE;
+          if (arm->intake_arm_state != arm->DOWN_STATE) {
+            arm->intake_arm_state = arm->DOWN_STATE;
+          }
+          control_panel->state = control_panel->IDLE;
+          shooter->shooter_state = shooter->STOP_STATE_H;
+          last_state = INTAKE_OUT_STATE;
+        break;
+
+        case SHOOTER_REVERSE_STATE:
+          arm->intake_arm_state = arm->UP_STATE;
+          intake->intake_state = intake->STOP_STATE;
+          control_panel->state = control_panel->IDLE;
+          shooter->shooter_state = shooter->REVERSE_STATE_H;
+          last_state = SHOOTER_REVERSE_STATE;
         break;
     }
 
