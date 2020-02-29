@@ -52,7 +52,7 @@ void Robot::RobotInit() {
   // neo_4 = new rev::CANSparkMax(4, rev::CANSparkMax::MotorType::kBrushless);
 
 
-  arm = new Arm();
+  arm = new Arm(drive);
   intake = new Intake();
 
   m_descolor_chooser.AddDefault("None",  Colors::WHITE);

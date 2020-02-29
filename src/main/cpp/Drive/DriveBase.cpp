@@ -1,5 +1,6 @@
 #include "../../include/Drive/DriveBase.h"
 #include "frc/smartdashboard/SmartDashboard.h"
+#include "Macros.h"
 
 using namespace std::chrono;
 
@@ -337,7 +338,8 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 
 		frc::SmartDashboard::PutNumber("yaw rate", cyawrate);
 	frc::SmartDashboard::PutNumber("max yaw rate", max_yaw_rate_);
-
+	last_speed = GetForwardSpeed();
+	last_angular_speed = GetAngularSpeed();
 	Controller(0.0, target_r, target_l, target_yaw_rate, k_p_right_vel,
 			k_p_left_vel, 0.0, k_p_yaw_vel, 0.0, k_d_right_vel, k_d_left_vel, 0.0,
 			0.0, 0.0, 0.0);
@@ -621,7 +623,7 @@ double DriveBase::GetLeftVel() { //550 left back //590 left forward
 	return l_current;
 }
 
-double DriveBase::GetRightVel() { //580 right back //580 right forward
+double DriveBase::GetRightVel() { //
 
 	double r_current = ((double) canTalonRight1->GetSelectedSensorVelocity(0)
 			/ (double) TICKS_PER_ROT) * MINUTE_CONVERSION;
@@ -746,3 +748,17 @@ void DriveBase::RunTeleopDrive(Joystick *JoyThrottle,
 
 }
 
+
+
+double DriveBase::GetAngularSpeed() {
+	return DEG2RAD(ahrs->GetRate());
+}
+double DriveBase::GetAngularAcceleration() {
+	return (GetAngularSpeed() - last_angular_speed) / seconds_since_last_update;
+}
+double DriveBase::GetForwardSpeed() {
+	return (GetLeftVel() + GetRightVel()) / 2;
+}
+double DriveBase::GetForwardAcceleration() {
+	return (GetForwardSpeed() - last_speed) / seconds_since_last_update;
+};

@@ -15,7 +15,7 @@
 double kP = 0.8, kI = 0, kD = 0.0, kIz = 0, kFF = 0, kMaxOutput = 0.3, kMinOutput = -0.3;
 
 
-Arm::Arm() {
+Arm::Arm(DriveBase* drive) {
 
 //  talonArm = new TalonSRX(1); uh maybe talon for intake not arm?
   armSparkM0 = new rev::CANSparkMax(21, rev::CANSparkMax::MotorType::kBrushless);
@@ -59,6 +59,7 @@ Arm::Arm() {
   
   //armPID->SetSmartMotionAccelStrategy(rev::CANPIDController::AccelStrategy::kSCurve);
 
+  m_drive = drive;
 
 }
 
@@ -112,6 +113,23 @@ void Arm::MoveToPosition(double desiredPosition){
   frc::SmartDashboard::PutNumber("intake desired position", desiredPosition);
   frc::SmartDashboard::PutNumber("intake position error", desiredPosition - (armEncoder->GetPosition()));
   armPID->SetReference(desiredPosition, rev::ControlType::kPosition);
+}
+
+void Arm::ShouldBeInSmartMode() {
+  if (abs(m_drive->GetAngularSpeed()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+    return true;
+  }
+  if (abs(m_drive->GetAngularAcceleration()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+    return true;
+  }
+  if (abs(m_drive->GetForwardSpeed()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+    return true;
+  }
+  if (abs(m_drive->GetForwardAcceleration()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+    return true;
+  }
+
+
 }
 
 void Arm::IntakeArmStateMachine() {

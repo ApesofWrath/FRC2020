@@ -6,6 +6,15 @@
 #include "rev/CANSparkMax.h"
 #include <frc/Joystick.h>
 
+#include "Drive/DriveBase.h"
+#include "Macros.h"
+
+#define SMART_MODE_THRESHOLD_FWD_SPEED 0.1
+#define SMART_MODE_THRESHOLD_FWD_ACCEL 0.1
+#define SMART_MODE_THRESHOLD_ANG_SPEED 0.1
+#define SMART_MODE_THRESHOLD_ANG_ACCEL 0.1
+
+
 class Arm {
 public:
 
@@ -28,19 +37,22 @@ public:
 
   States intake_arm_state = REST_STATE, last_intake_arm_state = REST_STATE;
 
-    Arm();
+  Arm(DriveBase* drive);
 
-    void Up();
-    void Down();
-    void Rest();
-    void MoveToPosition(double desiredPosition);
+  void Up();
+  void Down();
+  void Rest();
+  void MoveToPosition(double desiredPosition);
 
-    void IntakeArmStateMachine();
+  void ShouldBeInSmartMode();
 
-    void UpperSoftLimit();
-    void LowerSoftLimit();
+  void IntakeArmStateMachine();
 
+  void UpperSoftLimit();
+  void LowerSoftLimit();
 
+  DriveBase* m_drive;
+  
 };
 
 #endif
