@@ -14,14 +14,14 @@
 using namespace frc;
 
 namespace ButtonIDs {
-    const int WAIT_FOR_BUTTON                    = 12,//13
+    const int WAIT_FOR_BUTTON                    = 13,//13
               LOWER_INTAKE_BUTTON                = 8,
               INTAKE_OUT_BUTTON                  = 2,
               SHOOT_BUTTON                       = 3,
               SHOOTER_INTAKE_BUTTON              = 9,
               SHOOTER_REVERSE_BUTTON             = 16,
-              FULL_RAISE_B1                      = 1400,
-              FULL_RAISE_B2                      = 1200,
+              FULL_RAISE_B1                      = 14,
+              FULL_RAISE_B2                      = 12,
               ROTATION_MODE_CONTROL_PANEL_BUTTON = 4,
               POSITION_MODE_CONTROL_PANEL_BUTTON = 1,
               HUMAN_LOAD_BUTTON                  = 5,
