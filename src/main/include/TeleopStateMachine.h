@@ -14,16 +14,17 @@
 using namespace frc;
 
 namespace ButtonIDs {
-    const int WAIT_FOR_BUTTON                    = 13,
+    const int WAIT_FOR_BUTTON                    = 12,//13
               LOWER_INTAKE_BUTTON                = 8,
               INTAKE_OUT_BUTTON                  = 2,
               SHOOT_BUTTON                       = 3,
               SHOOTER_INTAKE_BUTTON              = 9,
               SHOOTER_REVERSE_BUTTON             = 16,
-              FULL_RAISE_B1                      = 14,
-              FULL_RAISE_B2                      = 12,
+              FULL_RAISE_B1                      = 1400,
+              FULL_RAISE_B2                      = 1200,
               ROTATION_MODE_CONTROL_PANEL_BUTTON = 4,
               POSITION_MODE_CONTROL_PANEL_BUTTON = 1,
+              HUMAN_LOAD_BUTTON                  = 5,
               EMERGENCY_BUTTON                   = 99;
 
 }
@@ -34,7 +35,7 @@ struct ButtonData {
     lower_intake_button, intake_out_button,
     shoot_button, shooter_intake_button, shooter_reverse_button,
     rotation_mode_control_panel_button, position_mode_control_panel_button,
-    full_raise, emergency_button;
+    full_raise, human_load_button, emergency_button;
 };
 
 class TeleopStateMachine
@@ -55,6 +56,7 @@ public:
         INTAKE_SHOOTER_STATE, SHOOT_STATE, SHOOTER_REVERSE_STATE,
         INTAKE_STATE, INTAKE_OUT_STATE, FULL_RAISE_STATE,
         ROTATION_MODE_CONTROL_PANEL_STATE, POSITION_MODE_CONTROL_PANEL_STATE,
+        HUMAN_LOAD_STATE,
     };
 
     static std::string StateName(States state);

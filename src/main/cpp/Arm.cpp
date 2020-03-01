@@ -18,11 +18,11 @@ double kP = 0.8, kI = 0, kD = 0.0, kIz = 0, kFF = 0, kMaxOutput = 0.3, kMinOutpu
 Arm::Arm(DriveBase* drive) {
 
 //  talonArm = new TalonSRX(1); uh maybe talon for intake not arm?
-  armSparkM0 = new rev::CANSparkMax(21, rev::CANSparkMax::MotorType::kBrushless);
+  armSparkM0 = new rev::CANSparkMax(21, rev::CANSparkMax::MotorType::kBrushless); //RIGHT SIDE Leader
   armEncoder = new rev::CANEncoder(armSparkM0->GetEncoder());
   armPID = new rev::CANPIDController(armSparkM0->GetPIDController());
   analog = new rev::CANAnalog(armSparkM0->GetAnalog());
-  armSparkM1 = new rev::CANSparkMax(24, rev::CANSparkMax::MotorType::kBrushless);
+  armSparkM1 = new rev::CANSparkMax(24, rev::CANSparkMax::MotorType::kBrushless);//LEFT SIDE Follower
   // rev::CANSparkMax armSpark0{1, rev::CANSparkMax::MotorType::kBrushless};
   armSparkM0->RestoreFactoryDefaults();
   armSparkM1->RestoreFactoryDefaults();
@@ -33,8 +33,6 @@ Arm::Arm(DriveBase* drive) {
 
   armStartPos = armEncoder->GetPosition();
   targetPos = armStartPos;
-
-  joy = new frc::Joystick(0);
 
   armPID->SetP(kP);
   armPID->SetI(kI);
@@ -115,22 +113,22 @@ void Arm::MoveToPosition(double desiredPosition){
   armPID->SetReference(desiredPosition, rev::ControlType::kPosition);
 }
 
-void Arm::ShouldBeInSmartMode() {
-  if (abs(m_drive->GetAngularSpeed()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
-    return true;
-  }
-  if (abs(m_drive->GetAngularAcceleration()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
-    return true;
-  }
-  if (abs(m_drive->GetForwardSpeed()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
-    return true;
-  }
-  if (abs(m_drive->GetForwardAcceleration()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
-    return true;
-  }
+// void Arm::ShouldBeInSmartMode() {
+//   if (abs(m_drive->GetAngularSpeed()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+//     return true;
+//   }
+//   if (abs(m_drive->GetAngularAcceleration()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+//     return true;
+//   }
+//   if (abs(m_drive->GetForwardSpeed()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+//     return true;
+//   }
+//   if (abs(m_drive->GetForwardAcceleration()) >= SMART_MODE_THRESHOLD_ANG_SPEED) {
+//     return true;
+//   }
 
 
-}
+// }
 
 void Arm::IntakeArmStateMachine() {
   armCurrPos = armEncoder->GetPosition();

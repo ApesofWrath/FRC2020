@@ -32,7 +32,9 @@ ButtonData TeleopStateMachine::GatherButtonDataFromJoysticks(Joystick* joyThrott
         joyOp->GetRawButton(ButtonIDs::POSITION_MODE_CONTROL_PANEL_BUTTON), // pmcpb
         
         joyOp->GetRawButton(ButtonIDs::FULL_RAISE_B1) && joyOp->GetRawButton(ButtonIDs::FULL_RAISE_B2),
+        joyOp->GetRawButton(ButtonIDs::HUMAN_LOAD_BUTTON),
         // joyOp->GetRawButton(ButtonIDs::EMERGENCY_BUTTON)
+        
         false
      };
 }
@@ -68,6 +70,9 @@ void TeleopStateMachine::ProcessButtonData(ButtonData data) {
     if (data.full_raise) {
       state = FULL_RAISE_STATE;
     }
+    if (data.human_load_button){
+      state = HUMAN_LOAD_STATE;
+    }
 }
 
 void TeleopStateMachine::StateMachine(ButtonData data) {
@@ -98,11 +103,7 @@ void TeleopStateMachine::StateMachine(ButtonData data) {
 
 
         case WAIT_FOR_BUTTON_STATE:
-          if (arm->intake_arm_state == arm->DOWN_STATE) {
-            arm->intake_arm_state = arm->UP_STATE;
-          } else {
-            arm->intake_arm_state = arm->REST_STATE;
-          }
+          arm->intake_arm_state = arm->UP_STATE;
           intake->intake_state = intake->STOP_STATE;
           shooter->shooter_state = shooter->STOP_STATE_H;
           control_panel->state = control_panel->IDLE;
@@ -174,6 +175,10 @@ void TeleopStateMachine::StateMachine(ButtonData data) {
           shooter->shooter_state = shooter->REVERSE_STATE_H;
           last_state = SHOOTER_REVERSE_STATE;
         break;
+
+        case HUMAN_LOAD_STATE:
+          control_panel->state = control_panel->HUMAN_LOAD;
+          last_state = HUMAN_LOAD_STATE;
     }
 
     SmartDashboard::PutString("State", TeleopStateMachine::StateName(state));

@@ -21,7 +21,7 @@ intakeSparkM0 = new rev::CANSparkMax(22, rev::CANSparkMax::MotorType::kBrushless
 void Intake::Stop() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.0);
-  intakeSparkM0->Set(0);
+  intakeSparkM0->Set(0.05);
 }
 
 void Intake::In() {

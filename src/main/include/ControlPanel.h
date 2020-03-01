@@ -1,6 +1,7 @@
 #pragma once
 
 #include "rev/ColorSensorV3.h"
+#include "rev/CANSparkMax.h"
 #include <ctre/Phoenix.h>
 
 enum Colors {
@@ -17,18 +18,28 @@ Colors ColorFromFRCColor(frc::Color);
 class ControlPanel {
 
 public:
-    TalonSRX* talon;
-
+    // TalonSRX* talon;
+    rev::CANSparkMax *controlPanelArm, *controlPanelRotator;
+    rev::CANEncoder *controlPanelArmEncoder, *controlPanelRotatorEncoder;
+    rev::CANPIDController *controlPanelArmPID, *controlPanelRotatorPID;
     std::string getColor(Colors c);
 
     ControlPanel();
 
-    const int CONTROL_PANEL_TALON = 1000;
+    const int rotCount = 3;
+    const float rotRatio = 10; //Change to actual ratio @ comp
+
+    const float armRaiseRot = 1;
+
+    float controlPanelStartPos;
+
+    // const int CONTROL_PANEL_TALON = 1000;
     const float CONTROL_PANEL_SPEEN_ON = 1.0f;
     enum States {
         IDLE,
         POSITION_MODE,
-        ROTATION_MODE
+        ROTATION_MODE, 
+        HUMAN_LOAD
     };
 
     int rotationsCompleted = 0;

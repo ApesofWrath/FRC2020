@@ -31,6 +31,8 @@ public:
   float armCurrPos;
   float targetPos;
 
+  // float upPos = 2;
+
   enum States {
     REST_STATE, UP_STATE, DOWN_STATE
   };
@@ -44,7 +46,7 @@ public:
   void Rest();
   void MoveToPosition(double desiredPosition);
 
-  void ShouldBeInSmartMode();
+  // void ShouldBeInSmartMode();
 
   void IntakeArmStateMachine();
 

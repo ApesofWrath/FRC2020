@@ -1,8 +1,34 @@
 #include "ControlPanel.h"
 #include <frc/smartdashboard/SmartDashboard.h>
 
+double CPAkP = 0.8, CPAkI = 0, CPAkD = 0.0, CPAkIz = 0, CPAkFF = 0, CPAkMaxOutput = 0.3, CPAkMinOutput = -0.3;
+double CPRkP = 0.8, CPRkI = 0, CPRkD = 0.0, CPRkIz = 0, CPRkFF = 0, CPRkMaxOutput = 0.3, CPRkMinOutput = -0.3;
+
 ControlPanel::ControlPanel() {
-    talon = new TalonSRX(CONTROL_PANEL_TALON);
+  // talon = new TalonSRX(CONTROL_PANEL_TALON);
+  controlPanelArm = new rev::CANSparkMax(32, rev::CANSparkMax::MotorType::kBrushless);
+  controlPanelArmEncoder = new rev::CANEncoder(controlPanelArm->GetEncoder());
+  controlPanelArmPID = new rev::CANPIDController(controlPanelArm->GetPIDController());
+  controlPanelRotator = new rev::CANSparkMax(31, rev::CANSparkMax::MotorType::kBrushless);
+  controlPanelRotatorEncoder = new rev::CANEncoder(controlPanelRotator->GetEncoder());
+  controlPanelRotatorPID = new rev::CANPIDController(controlPanelRotator->GetPIDController());
+  
+  controlPanelStartPos = controlPanelArmEncoder->GetPosition();
+
+  controlPanelArmPID->SetP(CPAkP);
+  controlPanelArmPID->SetI(CPAkI);
+  controlPanelArmPID->SetD(CPAkD);
+  controlPanelArmPID->SetIZone(CPAkIz);
+  controlPanelArmPID->SetFF(CPAkFF);
+  controlPanelArmPID->SetOutputRange(CPAkMinOutput, CPAkMaxOutput);
+
+  controlPanelRotatorPID->SetP(CPRkP);
+  controlPanelRotatorPID->SetI(CPRkI);
+  controlPanelRotatorPID->SetD(CPRkD);
+  controlPanelRotatorPID->SetIZone(CPRkIz);
+  controlPanelRotatorPID->SetFF(CPRkFF);
+  controlPanelRotatorPID->SetOutputRange(CPRkMinOutput, CPRkMaxOutput);
+
 }
 
 std::string ControlPanel::getColor(Colors c) {
@@ -47,12 +73,13 @@ Colors ColorFromFRCColor(frc::Color detectedColor) {
 }
 
 void ControlPanel::Rotate() {
-    talon->Set(ControlMode::PercentOutput, CONTROL_PANEL_SPEEN_ON);
+  // talon->Set(ControlMode::PercentOutput, CONTROL_PANEL_SPEEN_ON);
+  controlPanelRotatorPID->SetReference(5676, rev::ControlType::kVelocity);  
 }
 
 void ControlPanel::Stop() {
-    talon->Set(ControlMode::PercentOutput, 0);
-    state = IDLE;
+  // talon->Set(ControlMode::PercentOutput, 0);
+  state = IDLE;
 }
 
 void ControlPanel::StateMachine() {
@@ -61,29 +88,24 @@ void ControlPanel::StateMachine() {
 
     switch(state) {
         case IDLE:
-            last_state = States::IDLE;
-            break;
+          last_state = States::IDLE;
+          break;
         case POSITION_MODE:
-            if (!HasReachedPosition(ColorFromFRCColor(detectedColor))) {
-                Rotate();
-            } else {
-                Stop();
-            }
-            last_state = States::POSITION_MODE;
-            break;
+          controlPanelArmPID->SetReference(controlPanelStartPos+1, rev::ControlType::kPosition);
+          if (!HasReachedPosition(ColorFromFRCColor(detectedColor))) {
+              Rotate();
+          } else {
+              Stop();
+          }
+          last_state = States::POSITION_MODE;
+          break;
         case ROTATION_MODE:
-            // if (ColorFromFRCColor(detectedColor) == rotationModeStartingColor) {
-            //   rotations++;
-            // }
-
-
-
-            // if (rotations == neededRotations) {
-            //   Stop();
-            // } else {
-            //   Rotate();
-            // }
-            last_state = States::ROTATION_MODE;
-            break;
+          controlPanelArmPID->SetReference(controlPanelStartPos+1, rev::ControlType::kPosition);
+          controlPanelRotatorPID->SetReference(rotCount * rotRatio, rev::ControlType::kPosition);
+          last_state = States::ROTATION_MODE;
+          break;
+        case HUMAN_LOAD:
+          controlPanelArmPID->SetReference(controlPanelStartPos+1, rev::ControlType::kPosition);
+          last_state = States::HUMAN_LOAD;
     }
 }

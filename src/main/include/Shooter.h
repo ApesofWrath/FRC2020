@@ -26,9 +26,12 @@ class Shooter {
     int shooter_state = INIT_STATE_H;
 
     float speed = 0;
+    float beltPOS;
 
     // TalonSRX *canTalonBelt, *canTalonTopW, *canTalonBottomW;
     rev::CANSparkMax *beltNEO, *topWNEO, *botWNEO;
+    rev::CANPIDController *beltPID, *topWPID, *botWPID;
+    rev::CANEncoder *beltEncoder, *topWEncoder, *botWEncoder;
     frc::Joystick* joy;
 
     Shooter();
