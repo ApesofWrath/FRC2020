@@ -30,8 +30,9 @@ public:
     const float rotRatio = 10; //Change to actual ratio @ comp
 
     const float armRaiseRot = 1;
-
-    float controlPanelStartPos;
+    const float armRaisePos = 1.05;
+    float controlPanelArmStartPos;
+    float controlPanelWheelStartPos;
 
     // const int CONTROL_PANEL_TALON = 1000;
     const float CONTROL_PANEL_SPEEN_ON = 1.0f;

@@ -6,15 +6,15 @@ double CPRkP = 0.8, CPRkI = 0, CPRkD = 0.0, CPRkIz = 0, CPRkFF = 0, CPRkMaxOutpu
 
 ControlPanel::ControlPanel() {
   // talon = new TalonSRX(CONTROL_PANEL_TALON);
-  controlPanelArm = new rev::CANSparkMax(32, rev::CANSparkMax::MotorType::kBrushless);
+  controlPanelArm = new rev::CANSparkMax(31, rev::CANSparkMax::MotorType::kBrushless);
   controlPanelArmEncoder = new rev::CANEncoder(controlPanelArm->GetEncoder());
   controlPanelArmPID = new rev::CANPIDController(controlPanelArm->GetPIDController());
-  controlPanelRotator = new rev::CANSparkMax(31, rev::CANSparkMax::MotorType::kBrushless);
+  controlPanelRotator = new rev::CANSparkMax(32, rev::CANSparkMax::MotorType::kBrushless);
   controlPanelRotatorEncoder = new rev::CANEncoder(controlPanelRotator->GetEncoder());
   controlPanelRotatorPID = new rev::CANPIDController(controlPanelRotator->GetPIDController());
   
-  controlPanelStartPos = controlPanelArmEncoder->GetPosition();
-
+  controlPanelArmStartPos = controlPanelArmEncoder->GetPosition();
+  controlPanelWheelStartPos = controlPanelRotatorEncoder->GetPosition();
   controlPanelArmPID->SetP(CPAkP);
   controlPanelArmPID->SetI(CPAkI);
   controlPanelArmPID->SetD(CPAkD);
@@ -74,16 +74,17 @@ Colors ColorFromFRCColor(frc::Color detectedColor) {
 
 void ControlPanel::Rotate() {
   // talon->Set(ControlMode::PercentOutput, CONTROL_PANEL_SPEEN_ON);
-  controlPanelRotatorPID->SetReference(5676, rev::ControlType::kVelocity);  
+  controlPanelRotatorPID->SetReference(576, rev::ControlType::kVelocity);  
 }
 
 void ControlPanel::Stop() {
   // talon->Set(ControlMode::PercentOutput, 0);
+  controlPanelRotatorPID->SetReference(0, rev::ControlType::kVelocity);
   state = IDLE;
 }
 
 void ControlPanel::StateMachine() {
-
+    
     detectedColor = m_colorSensor.GetColor();
 
     switch(state) {
@@ -91,7 +92,7 @@ void ControlPanel::StateMachine() {
           last_state = States::IDLE;
           break;
         case POSITION_MODE:
-          controlPanelArmPID->SetReference(controlPanelStartPos+1, rev::ControlType::kPosition);
+          controlPanelArmPID->SetReference(controlPanelArmStartPos+1.14, rev::ControlType::kPosition);
           if (!HasReachedPosition(ColorFromFRCColor(detectedColor))) {
               Rotate();
           } else {
@@ -100,12 +101,16 @@ void ControlPanel::StateMachine() {
           last_state = States::POSITION_MODE;
           break;
         case ROTATION_MODE:
-          controlPanelArmPID->SetReference(controlPanelStartPos+1, rev::ControlType::kPosition);
-          controlPanelRotatorPID->SetReference(rotCount * rotRatio, rev::ControlType::kPosition);
+          if(last_state != ROTATION_MODE){
+            controlPanelWheelStartPos = controlPanelRotatorEncoder->GetPosition();
+          }
+          controlPanelArmPID->SetReference(controlPanelArmStartPos+1.14, rev::ControlType::kPosition);
+          controlPanelRotatorPID->SetReference(controlPanelWheelStartPos+150, rev::ControlType::kPosition);
+          
           last_state = States::ROTATION_MODE;
           break;
         case HUMAN_LOAD:
-          controlPanelArmPID->SetReference(controlPanelStartPos+1, rev::ControlType::kPosition);
+          controlPanelArmPID->SetReference(controlPanelArmStartPos+1.14, rev::ControlType::kPosition);
           last_state = States::HUMAN_LOAD;
     }
 }
