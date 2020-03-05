@@ -11,14 +11,30 @@
 
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
+// #include <frc/WPILib.h>
 
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 #include "ControlPanel.h"
 #include "Drive/DriveController.h"
 
+#include "Shooter.h"
 #include "Arm.h"
 #include "Intake.h"
+
+#include "rev/ColorSensorV3.h"
+
+#include "TeleopStateMachine.h"
+
+#define BUTTON_STOP_INTAKE     0
+#define BUTTON_IN_INTAKE       0
+#define BUTTON_OUT_INTAKE      0
+#define BUTTON_STOP_SHOOTER    0
+#define BUTTON_INTAKE_SHOOTER  0
+#define BUTTON_SHOOT_SHOOTER   0
+#define BUTTON_WAITING_SHOOTER 0
+#define BUTTON_WFB             13
+
 
 class Robot : public frc::TimedRobot {
  public: 
@@ -31,13 +47,14 @@ class Robot : public frc::TimedRobot {
   const int BUTTON_STOP = 2, POSITION_BUTTON = 5, ROTATION_BUTTON = 4, INTAKE = 3;
 
   Colors currentColor, desiredColor;
-  frc::Joystick  *joyT, *joyW;
+  frc::Joystick  *JoyThrottle, *JoyWheel, *JoyOp;
 
-  frc::Joystick* joy;
-  TalonSRX* talon1;
   Arm* arm;
   Intake* intake;
+  // TalonSRX* talon0;
+  Shooter* shooter, speed;
 
+  TeleopStateMachine *tsm;
 
   rev::CANSparkMax *neo_1, *neo_2, *neo_3, *neo_4;
   const float CONTROL_WHEEL_SPEED_ON = 1.0f;
@@ -54,13 +71,17 @@ class Robot : public frc::TimedRobot {
     
   void UpdateButtons();
 
-  bool rest, up, down, stop, in , out;
+  bool stop_intake, in_intake, out_intake;
+  
+  bool shoot_shooter, intake_shooter, stop_shooter, waiting_shooter;
 
  private:
   frc::SendableChooser<std::string> m_chooser;
 
+  frc::SendableChooser<Colors> m_descolor_chooser;
+  
   const std::string kAutoNameDefault = "Default";
   const std::string kAutoNameCustom = "My Auto";
+  const Colors kDesColorDefault = Colors::WHITE;
   std::string m_autoSelected;
 };
-

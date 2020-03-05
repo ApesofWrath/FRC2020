@@ -74,6 +74,14 @@ public:
 		double GetLeftVel();
 		double GetRightVel();
 		double GetRoll();
+		double GetAngularSpeed();
+		double GetAngularAcceleration();
+		double GetForwardSpeed();
+		double GetForwardAcceleration();
+
+    	double last_speed = 0;
+	    double last_angular_speed = 0;
+		double seconds_since_last_update = 0;
 
 		void SetMaxRpm(double rpm);
 		double GetMaxRpm();
