@@ -28,6 +28,8 @@ class Shooter {
     const int WAITING_STATE_H = 4;
     const int REVERSE_STATE_H = 5;
     
+    const int ONEROT_STATE_H = 5;
+
     int last_shooter_state = INIT_STATE_H;
     int shooter_state = INIT_STATE_H;
 

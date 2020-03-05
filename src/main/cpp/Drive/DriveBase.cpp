@@ -31,10 +31,13 @@ std::vector<std::vector<double> > auton_profile(1500, std::vector<double>(5)); /
 double last_target_heading = 0.0;
 double last_yaw_angle = 0.0;
 
-const double TICKS_TO_DISTANCE=1.0/(2048.0*(84.0/8.0)*(1/(2*PI*3))*(1/0.0254)) * 10;
 
-double getSpeedFromTicksPerSecond(int ticks_per_second) {
-	return TICKS_TO_DISTANCE * ticks_per_second;
+double getSpeedFromTicksPer100Milliseconds(int ticks_per_second) {
+	return TICKS_TO_DISTANCE * ticks_per_second * 10;
+}
+
+double getDistanceFromTicks(int ticks) {
+	return TICKS_TO_DISTANCE * ticks;
 }
 
 //WestCoast, 2-speed transmission option
@@ -113,14 +116,24 @@ DriveBase::DriveBase(int l1, int l2,
 
 
 	// Create TalonFXs
-	canTalonLeft1 = new TalonFX(LF);
-	canTalonLeft2 = new TalonFX(L2);
-	canTalonRight1 = new TalonFX(RF);
-	canTalonRight2 = new TalonFX(R2);
+	canTalonLeft1 = new WPI_TalonFX(LF);
+	canTalonLeft2 = new WPI_TalonFX(L2);
+	canTalonRight1 = new WPI_TalonFX(RF);
+	canTalonRight2 = new WPI_TalonFX(R2);
+	
+	canTalonLeft1->SetSafetyEnabled(false);
+    canTalonLeft2->SetSafetyEnabled(false);
+    canTalonRight1->SetSafetyEnabled(false);
+    canTalonRight2->SetSafetyEnabled(false);
+    canTalonLeft1->SetNeutralMode(NeutralMode::Brake);
+    canTalonLeft2->SetNeutralMode(NeutralMode::Brake);
+    canTalonRight1->SetNeutralMode(NeutralMode::Brake);
+    canTalonRight2->SetNeutralMode(NeutralMode::Brake);
+
 	
 	// Configure front TalonFXs to use Integrated Encoders
-	canTalonLeft1->ConfigSelectedFeedbackSensor(TalonFXFeedbackDevice::IntegratedSensor);
-	canTalonRight1->ConfigSelectedFeedbackSensor(TalonFXFeedbackDevice::IntegratedSensor);
+	canTalonLeft1->ConfigSelectedFeedbackSensor(FeedbackDevice::IntegratedSensor);
+	canTalonRight1->ConfigSelectedFeedbackSensor(FeedbackDevice::IntegratedSensor);
 
 	canTalonRight1->SetInverted(true); // Invert Right Side TalonFX front
 	canTalonRight2->SetInverted(true);
@@ -188,8 +201,8 @@ void DriveBase::ManualOpenLoopDrive(Joystick* throttle, Joystick* wheel) {
 	canTalonLeft1->Set(ControlMode::PercentOutput, left_out);
 	canTalonRight1->Set(ControlMode::PercentOutput, left_out);
 
-	double cspeed_l = abs(getSpeedFromTicksPerSecond(canTalonLeft1->GetSelectedSensorVelocity())) ;
-	double cspeed_r = abs(getSpeedFromTicksPerSecond(canTalonRight1->GetSelectedSensorVelocity()));
+	double cspeed_l = abs(getSpeedFromTicksPer100Milliseconds(canTalonLeft1->GetSelectedSensorVelocity())) ;
+	double cspeed_r = abs(getSpeedFromTicksPer100Milliseconds(canTalonRight1->GetSelectedSensorVelocity()));
 
 	if (cspeed_l > max_fwd_speed_l) {
 		max_fwd_speed_l = cspeed_l;
@@ -227,7 +240,7 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 
 	double target_l, target_r, target_yaw_rate;
 
-	double throttle = JoyThrottle->GetY();
+	double throttle = JoyWheel->GetX();
 
 	double reverse_y = 1.0;
 
@@ -293,7 +306,7 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 } else { //vel control wheel
 //	led_solenoid->Set(false);
 	double reverse_x = 1.0;
-	double wheel = -1.0 * JoyWheel->GetX();
+	double wheel = -1.0 * JoyThrottle->GetY();
 
 	if (wheel < 0.0) {
 		reverse_x = 1.0;//for black wheel, is opposite
@@ -562,8 +575,8 @@ void DriveBase::Controller(double ref_kick,
 
 	
 
-	double cspeed_l = getSpeedFromTicksPerSecond(canTalonLeft1->GetSelectedSensorVelocity());
-	double cspeed_r = getSpeedFromTicksPerSecond(canTalonRight1->GetSelectedSensorVelocity());
+	double cspeed_l = getSpeedFromTicksPer100Milliseconds(canTalonLeft1->GetSelectedSensorVelocity());
+	double cspeed_r = getSpeedFromTicksPer100Milliseconds(canTalonRight1->GetSelectedSensorVelocity());
 	frc::SmartDashboard::PutNumber("fwd speed left", cspeed_l);
 	frc::SmartDashboard::PutNumber("fwd speed right", cspeed_r);
 

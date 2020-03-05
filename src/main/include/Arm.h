@@ -41,7 +41,7 @@ public:
 
   States intake_arm_state = REST_STATE, last_intake_arm_state = REST_STATE;
 
-  Arm(DriveBase* drive);
+  Arm();
 
   const int rightArmSpark = 21; // leader
   const int leftArmSpark = 24; //follower
@@ -60,8 +60,7 @@ public:
 
   void UpperSoftLimit();
   void LowerSoftLimit();
-
-  DriveBase* m_drive;
+ 
   
 };
 

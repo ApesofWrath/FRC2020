@@ -13,14 +13,19 @@
 #include <frc/smartdashboard/SendableChooser.h>
 // #include <frc/WPILib.h>
 
-#include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 #include "ControlPanel.h"
 #include "Drive/DriveController.h"
+#include "RobotContainer.h"
+#include "Auton/AutonDrive.h"
+#include "AHRS.h"
 
 #include "Shooter.h"
 #include "Arm.h"
 #include "Intake.h"
+#include <cameraserver/CameraServer.h>
+// #include <frc/WPILib.h>
+#include "Shooter.h"
 
 #include "rev/ColorSensorV3.h"
 
@@ -76,12 +81,13 @@ class Robot : public frc::TimedRobot {
   bool shoot_shooter, intake_shooter, stop_shooter, waiting_shooter;
 
  private:
-  frc::SendableChooser<std::string> m_chooser;
-
+  const Colors kDesColorDefault = Colors::WHITE;
+  // const std::string kAutoNameDefault = "Default";
+  // const std::string kAutoNameCustom = "My Auto";
+  std::string m_autoSelected;
+  AutonDrive *a_drive;
   frc::SendableChooser<Colors> m_descolor_chooser;
   
-  const std::string kAutoNameDefault = "Default";
-  const std::string kAutoNameCustom = "My Auto";
-  const Colors kDesColorDefault = Colors::WHITE;
-  std::string m_autoSelected;
+  frc2::Command* m_autonomousCommand = nullptr;
+  RobotContainer *m_container;
 };

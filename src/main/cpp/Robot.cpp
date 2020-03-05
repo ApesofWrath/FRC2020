@@ -7,21 +7,38 @@
 
 #include "Robot.h"
 
+
 #include <iostream>
 
 #include <frc/smartdashboard/SmartDashboard.h>
 
-void Robot::RobotInit() {
-  m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);
-  m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
-  frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 
+constexpr double kRamseteB = 2;
+constexpr double kRamseteZeta = 0.7;
+
+
+
+
+void Robot::RobotInit() {
+  std::cout << "dc\n";
+  drive = new DriveController();
+  shooter = new Shooter();
+  arm = new Arm();
+  intake = new Intake();
+  controlpanel = new ControlPanel();
+
+  std::cout << "robo_init\n";
+  a_drive = new AutonDrive(drive, drive->ahrs);
+  m_container = new RobotContainer(a_drive, shooter, arm, intake);
 /*   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
   m_descolor_chooser.AddObject("Red",    Colors::RED);
-  m_descolor_chooser.AddObject("Blue",   Colors::BLUE);
+  m_descolor_chooser.AddObject("Blue",   Colors::BLUE); 
   m_descolor_chooser.AddObject("Green",  Colors::GREEN);
-  m_descolor_chooser.AddObject("Yellow", Colors::YELLOW);
-
+  m_descolor_chooser.AddObject("Yellow", Colors::YELLOW);*/
+  m_container->InitAutoChoices();
+  std::cout << "sd:pd am\n";
+  frc::SmartDashboard::PutData("Auto Modes", &(m_container->m_chooser));
+/*
   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
   m_descolor_chooser.AddObject("Red",    Colors::RED);
   m_descolor_chooser.AddObject("Blue",   Colors::BLUE);
@@ -42,19 +59,6 @@ void Robot::RobotInit() {
   JoyThrottle = new frc::Joystick(0);
   JoyWheel = new frc::Joystick(1);
 
-
-  drive = new DriveController();
-
-
-  // neo_1 = new rev::CANSparkMax(1, rev::CANSparkMax::MotorType::kBrushless);
-  // neo_2 = new rev::CANSparkMax(2, rev::CANSparkMax::MotorType::kBrushless);
-  // neo_3 = new rev::CANSparkMax(3, rev::CANSparkMax::MotorType::kBrushless);
-  // neo_4 = new rev::CANSparkMax(4, rev::CANSparkMax::MotorType::kBrushless);
-
-
-  arm = new Arm(drive);
-  intake = new Intake();
-
   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
   m_descolor_chooser.AddObject("Red",    Colors::RED);
   m_descolor_chooser.AddObject("Blue",   Colors::BLUE);
@@ -70,7 +74,6 @@ void Robot::RobotInit() {
 	camera.SetExposureManual(0);
 	camera.SetBrightness(100);
 
-  shooter = new Shooter();
 
   tsm = new TeleopStateMachine(shooter, intake, controlpanel, arm);
   
@@ -91,31 +94,61 @@ void Robot::RobotPeriodic() {}
  * make sure to add them to the chooser code above as well.
  */
 void Robot::AutonomousInit() {
-  m_autoSelected = m_chooser.GetSelected();
+  std::cout << "as get\n";
+  m_container->m_autoSelected = m_container->m_chooser.GetSelected();
   // m_autoSelected = SmartDashboard::GetString("Auto Selector",
   //     kAutoNameDefault);
-  std::cout << "Auto selected: " << m_autoSelected << std::endl;
+  std::cout << "Auto selected: " << m_container->m_autoSelected << std::endl;
 
-  if (m_autoSelected == kAutoNameCustom) {
-    // Custom Auto goes here
-  } else {
-    // Default Auto goes here
+  if (m_autonomousCommand != nullptr) {
+    m_autonomousCommand->Cancel();
+    m_autonomousCommand = nullptr;
   }
+  a_drive->ResetOdometry(frc::Pose2d( 0_m, 0_m, frc::Rotation2d(0_deg)));  
+
+  m_autonomousCommand = m_container->GetAutonomousCommand();
+  std::cout << "ac gotten\n";
+
+  if (m_autonomousCommand != nullptr) {
+    m_autonomousCommand->Schedule();
+    std::cout << "ac schedule\n";
+  }
+
+
+  // a_drive->ResetOdometry();
 }
 
 void Robot::AutonomousPeriodic() {
-  if (m_autoSelected == kAutoNameCustom) {
-    // Custom Auto goes here
-  } else {
-    // Default Auto goes here
-  }
+  // if (m_container->m_autoSelected == kAutoNameCustom) {
+  //   // Custom Auto goes here
+  // } else {
+  //   // Default Auto goes here
+  // }
+
+  // a_drive->Update();
+
+  frc::Pose2d pose = a_drive->GetPose();
+
+  frc::SmartDashboard::PutNumber("heading", pose.Rotation().Degrees().value());
+  frc::SmartDashboard::PutNumber("translation x", pose.Translation().X().value());
+  frc::SmartDashboard::PutNumber("translation y", pose.Translation().Y().value());
+
+
+
+  shooter->ShooterStateMachine();
+  arm->IntakeArmStateMachine();
+  intake->IntakeStateMachine();
+  // pose.
 }
 void Robot::TeleopInit() {
+  frc2::CommandScheduler::GetInstance().Disable();
+  if (m_autonomousCommand != nullptr) {
+    m_autonomousCommand->Cancel();
+    m_autonomousCommand = nullptr;
+  }
 }
-bool toggle = false;
 void Robot::TeleopPeriodic() {
   
-
 
   // if (joyT->GetRawButton(BUTTON_STOP)) {
   //   controlpanel->Stop();
@@ -173,22 +206,7 @@ void Robot::UpdateButtons(){
 
 void Robot::TestPeriodic() {}
 
-std::string Robot::getColor(Colors c) {
-  switch (c) {
-    case Colors::RED:
-      return "Red";
-    case Colors::YELLOW:
-      return "Yellow";
-    case Colors::BLUE:
-      return "Blue";
-    case Colors::GREEN:
-      return "Green";
-    case Colors::WHITE:
-      return "None";
-    default:
-      return "None";
-  }
-}
+
 
 
 #ifndef RUNNING_FRC_TESTS
