@@ -23,6 +23,12 @@ public:
 
   States intake_state = STOP_STATE;
 
+  const int intakeWheelSpark = 22;
+
+  const float IDLE_WHEEL_SPEED = 0.05;
+  const float IN_WHEEL_SPEED = 0.6069;
+  const float OUT_WHEEL_SPEED = -0.6069;
+
     Intake();
 
     void Stop();

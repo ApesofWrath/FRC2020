@@ -40,10 +40,12 @@ ButtonData TeleopStateMachine::GatherButtonDataFromJoysticks(Joystick* joyThrott
 }
 
 void TeleopStateMachine::ProcessButtonData(ButtonData data) {
-    if (data.wait_for_button) {
-        state = WAIT_FOR_BUTTON_STATE;
-    // } else if (data.intake_button) {
-    //     state = INTAKE_STATE;
+    if (data.lower_intake_button) {
+      state = INTAKE_STATE;
+    } else if (data.intake_out_button) {
+      state = INTAKE_OUT_STATE;
+    } else {
+      state = WAIT_FOR_BUTTON_STATE;
     } 
     if (data.shoot_button) {
         state = SHOOT_STATE;
@@ -64,14 +66,16 @@ void TeleopStateMachine::ProcessButtonData(ButtonData data) {
     if (data.intake_out_button) {
       state = INTAKE_OUT_STATE;
     } 
-    if (data.lower_intake_button) {
-      state = INTAKE_STATE;
-    }
     if (data.full_raise) {
       state = FULL_RAISE_STATE;
     }
     if (data.human_load_button){
       state = HUMAN_LOAD_STATE;
+    }
+    if (data.wait_for_button) {
+        state = WAIT_FOR_BUTTON_STATE;
+    // } else if (data.intake_button) {
+    //     state = INTAKE_STATE;
     }
 }
 

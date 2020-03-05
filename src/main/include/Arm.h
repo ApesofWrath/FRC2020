@@ -12,8 +12,10 @@
 #define SMART_MODE_THRESHOLD_FWD_SPEED 0.1
 #define SMART_MODE_THRESHOLD_FWD_ACCEL 0.1
 #define SMART_MODE_THRESHOLD_ANG_SPEED 0.1
-#define SMART_MODE_THRESHOLD_ANG_ACCEL 0.1
+#define SMART_MODE_THRESHOLD_ANG_ACCEL 0
 
+#define UP_POSITION 0.1994662002
+#define DOWN_POSITION 1.26561304
 
 class Arm {
 public:
@@ -40,6 +42,12 @@ public:
   States intake_arm_state = REST_STATE, last_intake_arm_state = REST_STATE;
 
   Arm(DriveBase* drive);
+
+  const int rightArmSpark = 21; // leader
+  const int leftArmSpark = 24; //follower
+
+  const float START_OFFSET = (UP_POSITION/(2*PI))*63;
+  const float DOWN_POS = (DOWN_POSITION/(2*PI))*63;
 
   void Up();
   void Down();

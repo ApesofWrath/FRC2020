@@ -7,13 +7,19 @@
 #include <ctre/Phoenix.h>
 #include <frc/Joystick.h>
 #include "rev/CANSparkMax.h"
+#include "Macros.h"
+
+#define SHOOTER_SPEED 594.3893301
 
 class Shooter {
     public:
 
-    const int TALON_ID_0 = 1;
-    const int TALON_ID_1 = 2;
-    const int TALON_ID_2 = 3;
+    const int beltSpark = 1;
+    const int topRollerSpark = 2;
+    const int bottomRollerSpark = 3;
+
+    const int topShootSpeed = ((SHOOTER_SPEED)*60)/(2*PI);
+    const int bottomShootSpeed = ((SHOOTER_SPEED)*60)/(2*PI);
 
     const int INIT_STATE_H = 0;
     const int INTAKE_STATE_H = 1;

@@ -51,7 +51,7 @@ class Robot : public frc::TimedRobot {
 
   Arm* arm;
   Intake* intake;
-  TalonSRX* talon0;
+  // TalonSRX* talon0;
   Shooter* shooter, speed;
 
   TeleopStateMachine *tsm;

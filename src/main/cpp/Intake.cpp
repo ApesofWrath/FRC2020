@@ -14,27 +14,27 @@
 Intake::Intake() {
 
 //  talonIntake = new TalonSRX(0);
-intakeSparkM0 = new rev::CANSparkMax(22, rev::CANSparkMax::MotorType::kBrushless);
+intakeSparkM0 = new rev::CANSparkMax(intakeWheelSpark, rev::CANSparkMax::MotorType::kBrushless);
 
 }
 
 void Intake::Stop() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.0);
-  intakeSparkM0->Set(0.05);
+  intakeSparkM0->Set(IDLE_WHEEL_SPEED);
 }
 
 void Intake::In() {
 
   // talonIntake->Set(ControlMode::PercentOutput, 0.3);
-  intakeSparkM0->Set(0.6069);
+  intakeSparkM0->Set(IN_WHEEL_SPEED);
 
 }
 
 void Intake::Out() {
 
   // talonIntake->Set(ControlMode::PercentOutput, -0.3);
-  intakeSparkM0->Set(-0.6069);
+  intakeSparkM0->Set(OUT_WHEEL_SPEED);
 
 }
 

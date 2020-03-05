@@ -17,13 +17,13 @@
         // topWNEO = new TalonSRX(TALON_ID_1); //2 labeled on talon
         // botWNEO = new TalonSRX(TALON_ID_2); //3 labeled on talon
 // *beltNEO, topWNEO, *botWNEO;
-        beltNEO = new rev::CANSparkMax(1, rev::CANSparkMax::MotorType::kBrushless);
+        beltNEO = new rev::CANSparkMax(beltSpark, rev::CANSparkMax::MotorType::kBrushless);
         beltPID = new rev::CANPIDController(beltNEO->GetPIDController());
         beltEncoder = new rev::CANEncoder(beltNEO->GetEncoder());
-        topWNEO = new rev::CANSparkMax(2, rev::CANSparkMax::MotorType::kBrushless);
+        topWNEO = new rev::CANSparkMax(topRollerSpark, rev::CANSparkMax::MotorType::kBrushless);
         topWPID = new rev::CANPIDController(topWNEO->GetPIDController());
         topWEncoder = new rev::CANEncoder(topWNEO->GetEncoder());
-        botWNEO = new rev::CANSparkMax(3, rev::CANSparkMax::MotorType::kBrushless);
+        botWNEO = new rev::CANSparkMax(bottomRollerSpark, rev::CANSparkMax::MotorType::kBrushless);
         botWPID = new rev::CANPIDController(botWNEO->GetPIDController());
         botWEncoder = new rev::CANEncoder(topWNEO->GetEncoder());
         
@@ -97,8 +97,8 @@
         beltNEO->Set(1);
         // topWNEO->Set(1);
         // botWNEO->Set(1);
-        topWPID->SetReference(5676, rev::ControlType::kVelocity); //5676 is max free spin rpm
-        botWPID->SetReference(5676, rev::ControlType::kVelocity);
+        topWPID->SetReference(topShootSpeed, rev::ControlType::kVelocity); //5676 is max free spin rpm
+        botWPID->SetReference(bottomShootSpeed, rev::ControlType::kVelocity);
     }
 
     void Shooter::Intake(){                

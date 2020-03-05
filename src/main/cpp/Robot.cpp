@@ -62,7 +62,7 @@ void Robot::RobotInit() {
   m_descolor_chooser.AddObject("Yellow", Colors::YELLOW);
 
   frc::SmartDashboard::PutData("Desired Color", &m_descolor_chooser);
-  talon0 = new TalonSRX(0);
+  // talon0 = new TalonSRX(0);
 
   cs::UsbCamera camera = frc::CameraServer::GetInstance()->StartAutomaticCapture("coolmethgames.gov", 0);
 
