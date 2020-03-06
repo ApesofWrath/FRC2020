@@ -4,26 +4,31 @@
 #include <iostream>
 
 
-AutonDrive::AutonDrive(DriveBase* driveb, AHRS* ahrs_) 
+AutonDrive::AutonDrive(DriveBase* driveb, AHRS* ahrs_)
 {
 
-    pdp = new PowerDistributionPanel(0);
+    std::cout << "AutoDrive start init\n";
+    // pdp = new PowerDistributionPanel(60);
     ahrs = ahrs_;
-
+    std::cout << "Saved AHRS\n";
     t_left1 = driveb->canTalonLeft1;
     t_left2 = driveb->canTalonLeft2;
     t_right1 = driveb->canTalonRight1;
     t_right2 = driveb->canTalonRight2;
+    std::cout << "Saved drive talons\n";
     
-    
-
+    m_leftMotors = new frc::SpeedControllerGroup(*t_left1, *t_left2);
+    m_rightMotors = new frc::SpeedControllerGroup(*t_right1, *t_right2);
     // t_left1.SetInverted(true);
     // // t_left2.SetInverted(true);
     
+    m_drive = new frc::DifferentialDrive(*m_leftMotors, *m_rightMotors);
 
     m_odometry = new DifferentialDriveOdometry(frc::Rotation2d(units::degree_t(GetHeading())));
+    std::cout << "Made Odometry\n";
 
-    m_drive.SetSafetyEnabled(false);
+    m_drive->SetSafetyEnabled(false);
+    std::cout << "Disabled Drive Safties\n";
       
 }
 
@@ -37,13 +42,13 @@ void AutonDrive::Periodic() {
 void AutonDrive::TankDriveVolts(units::volt_t left, units::volt_t right) {
     std::cout << GetWheelSpeeds().left << "\n";
     // t_left1.Set(left / units::volt_t(pdp->GetVoltage()));
-    m_leftMotors.SetVoltage(left);
+    m_leftMotors->SetVoltage(left);
     // t_left2.Set(left / units::volt_t(pdp->GetVoltage()));
     // fx_left1->Set(ControlMode::PercentOutput, 1.0f);
     // fx_left2->Set(ControlMode::PercentOutput, 1.0f);
 
     std::cout << GetWheelSpeeds().right << "\n";
-    m_rightMotors.SetVoltage(right);
+    m_rightMotors->SetVoltage(right);
     // fx_right1->Set(ControlMode::PercentOutput, -1.0f);
     // fx_right2->Set(ControlMode::PercentOutput, -1.0f);
 
@@ -53,7 +58,7 @@ void AutonDrive::TankDriveVolts(units::volt_t left, units::volt_t right) {
     // m_rightMotors.SetVoltage(right);
     // t_right2.Set(right / units::volt_t(pdp->GetVoltage()));
     // fx_right1->Set(ControlMode::PercentOutput, right / units::volt_t(pdp->GetVoltage()))
-    m_drive.Feed();
+    m_drive->Feed();
 }
 
 double AutonDrive::GetAverageEncoderDistance() {
@@ -61,11 +66,11 @@ double AutonDrive::GetAverageEncoderDistance() {
 }
 
 void AutonDrive::SetMaxOutput(double maxOutput) {
-    m_drive.SetMaxOutput(maxOutput);
+    m_drive->SetMaxOutput(maxOutput);
 }
 
 double AutonDrive::GetHeading() {
-    std::cout << "gh\n";
+    // std::cout << "gh\n";
     return std::remainder(-ahrs->GetAngle(), 360);
 }
 

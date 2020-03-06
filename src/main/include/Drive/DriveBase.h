@@ -41,6 +41,8 @@ public:
 	void ShiftDown();
 	void SetGainsHigh();
 	void SetGainsLow();
+
+	void ResetConfigs();
 	
 
 	void ManualOpenLoopDrive(Joystick* throttle, Joystick* wheel);

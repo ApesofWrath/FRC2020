@@ -9,8 +9,8 @@
     const int WAITING_STATE = 4;
     const int REVERSE_STATE = 5;
 
-    double shootkP = 0.8, shootkI = 0, shootkD = 0.0, shootkIz = 0, shootkFF = 0, shootkMaxOutput = 0.3, shootkMinOutput = -0.3;
-    double beltkP = 0.8, beltkI = 0, beltkD = 0.0, beltkIz = 0, beltkFF = 0, beltkMaxOutput = 0.3, beltkMinOutput = -0.3;
+    double shootkP = 10.8, shootkI = 0, shootkD = 0.0, shootkIz = 0, shootkFF = 0, shootkMaxOutput = 0.3, shootkMinOutput = -0.3;
+    double beltkP = 10.8, beltkI = 0, beltkD = 0.0, beltkIz = 0, beltkFF = 0, beltkMaxOutput = 0.3, beltkMinOutput = -0.3;
 
     Shooter::Shooter() {
         shooter_state = INIT_STATE;
@@ -97,10 +97,10 @@
 
     void Shooter::Shoot(){
         beltNEO->Set(1);
-        // topWNEO->Set(1);
-        // botWNEO->Set(1);
-        topWPID->SetReference(topShootSpeed, rev::ControlType::kVelocity); //5676 is max free spin rpm
-        botWPID->SetReference(bottomShootSpeed, rev::ControlType::kVelocity);
+        topWNEO->Set(0.5);
+        botWNEO->Set(1);
+        // topWPID->SetReference(topShootSpeed, rev::ControlType::kVelocity); //5676 is max free spin rpm
+        // botWPID->SetReference(bottomShootSpeed, rev::ControlType::kVelocity);
     }
 
     void Shooter::Intake(){                

@@ -29,14 +29,18 @@ void Robot::RobotInit() {
 
   std::cout << "robo_init\n";
   a_drive = new AutonDrive(drive, drive->ahrs);
+  std::cout << "auto init complete\n";
   m_container = new RobotContainer(a_drive, shooter, arm, intake);
+  std::cout << "robo container init complete\n";
+  
 /*   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
   m_descolor_chooser.AddObject("Red",    Colors::RED);
   m_descolor_chooser.AddObject("Blue",   Colors::BLUE); 
   m_descolor_chooser.AddObject("Green",  Colors::GREEN);
   m_descolor_chooser.AddObject("Yellow", Colors::YELLOW);*/
   m_container->InitAutoChoices();
-  std::cout << "sd:pd am\n";
+  std::cout << "auto choices init complete\n";
+
   frc::SmartDashboard::PutData("Auto Modes", &(m_container->m_chooser));
 /*
   m_descolor_chooser.AddDefault("None",  Colors::WHITE);
@@ -48,7 +52,6 @@ void Robot::RobotInit() {
 
 
 */
-  controlpanel = new ControlPanel();
 /*d
   Falcon_T = new TalonFX(0);
   Falcon_T2 = new TalonFX(1);
@@ -70,9 +73,9 @@ void Robot::RobotInit() {
 
   cs::UsbCamera camera = frc::CameraServer::GetInstance()->StartAutomaticCapture("coolmethgames.gov", 0);
 
-	camera.SetResolution(1280, 720);
-	camera.SetExposureManual(0);
-	camera.SetBrightness(100);
+	camera.SetResolution(320, 190);
+	// camera.SetExposureManual(0);
+	// camera.SetBrightness(100);
 
 
   tsm = new TeleopStateMachine(shooter, intake, controlpanel, arm);
@@ -80,7 +83,10 @@ void Robot::RobotInit() {
   JoyOp = new frc::Joystick(2);
 }
 
-void Robot::RobotPeriodic() {}
+void Robot::RobotPeriodic() {
+  frc2::CommandScheduler::GetInstance().Run();
+
+}
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
@@ -104,7 +110,6 @@ void Robot::AutonomousInit() {
     m_autonomousCommand->Cancel();
     m_autonomousCommand = nullptr;
   }
-  a_drive->ResetOdometry(frc::Pose2d( 0_m, 0_m, frc::Rotation2d(0_deg)));  
 
   m_autonomousCommand = m_container->GetAutonomousCommand();
   std::cout << "ac gotten\n";
@@ -139,6 +144,8 @@ void Robot::AutonomousPeriodic() {
   arm->IntakeArmStateMachine();
   intake->IntakeStateMachine();
   // pose.
+
+
 }
 void Robot::TeleopInit() {
   frc2::CommandScheduler::GetInstance().Disable();
@@ -146,6 +153,8 @@ void Robot::TeleopInit() {
     m_autonomousCommand->Cancel();
     m_autonomousCommand = nullptr;
   }
+
+  drive->ResetConfigs();
 }
 void Robot::TeleopPeriodic() {
   

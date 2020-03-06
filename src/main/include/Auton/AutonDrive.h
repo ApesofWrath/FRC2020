@@ -21,8 +21,8 @@ public:
 
     WPI_TalonFX *t_left1, *t_left2, *t_right1, *t_right2;
 
-    frc::SpeedControllerGroup m_leftMotors{*t_left1, *t_left2};
-    frc::SpeedControllerGroup m_rightMotors{*t_right1, *t_right2};
+    frc::SpeedControllerGroup *m_leftMotors;
+    frc::SpeedControllerGroup *m_rightMotors;
 
     frc::DifferentialDriveOdometry *m_odometry;
 
@@ -40,7 +40,7 @@ public:
 
     double percentFromVolts(units::volt_t volts);
 
-    frc::DifferentialDrive m_drive{m_leftMotors, m_rightMotors};
+    frc::DifferentialDrive* m_drive;
 
     void ResetOdometry(frc::Pose2d pose);
     double GetTurnRate();

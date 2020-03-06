@@ -184,6 +184,67 @@ DriveBase::DriveBase(int l1, int l2,
 }
 
 
+void DriveBase::ResetConfigs() {
+		canTalonLeft1->SetSafetyEnabled(false);
+    canTalonLeft2->SetSafetyEnabled(false);
+    canTalonRight1->SetSafetyEnabled(false);
+    canTalonRight2->SetSafetyEnabled(false);
+    canTalonLeft1->SetNeutralMode(NeutralMode::Brake);
+    canTalonLeft2->SetNeutralMode(NeutralMode::Brake);
+    canTalonRight1->SetNeutralMode(NeutralMode::Brake);
+    canTalonRight2->SetNeutralMode(NeutralMode::Brake);
+
+	
+	// Configure front TalonFXs to use Integrated Encoders
+	canTalonLeft1->ConfigSelectedFeedbackSensor(FeedbackDevice::IntegratedSensor);
+	canTalonRight1->ConfigSelectedFeedbackSensor(FeedbackDevice::IntegratedSensor);
+
+	canTalonRight1->SetInverted(true); // Invert Right Side TalonFX front
+	canTalonRight2->SetInverted(true);
+
+	// Configure back TalonFXs to follow their side's front TalonFX
+ 	canTalonLeft2->Follow(*canTalonLeft1);
+  	canTalonRight2->Follow(*canTalonRight1);
+	
+	
+	// Configure Current Limits
+	canTalonLeft1->ConfigSupplyCurrentLimit(SupplyCurrentLimitConfiguration(true, 30, 30, 10));
+	canTalonRight1->ConfigSupplyCurrentLimit(SupplyCurrentLimitConfiguration(true, 30, 30, 10));
+ 
+	// Configure Ramp time to go from stop to full speed (in seconds)
+	canTalonLeft1->ConfigOpenloopRamp(0.15, 0);
+	canTalonLeft2->ConfigOpenloopRamp(0.15, 0);
+
+	canTalonRight1->ConfigOpenloopRamp(0.15, 0);
+	canTalonRight2->ConfigOpenloopRamp(0.15, 0);
+
+	canTalonLeft1->ConfigVelocityMeasurementPeriod(
+			VelocityMeasPeriod::Period_10Ms, 0);
+	canTalonLeft1->ConfigVelocityMeasurementWindow(5, 0);
+
+	canTalonRight1->ConfigVelocityMeasurementPeriod(
+			VelocityMeasPeriod::Period_10Ms, 0);
+	canTalonRight1->ConfigVelocityMeasurementWindow(5, 0);
+
+	canTalonLeft1->SetControlFramePeriod(ControlFrame::Control_3_General, 5); //set talons every 5ms, default is 10
+	canTalonLeft1->SetStatusFramePeriod(
+			StatusFrameEnhanced::Status_2_Feedback0, 10, 0);
+
+  	canTalonRight1->SetControlFramePeriod(ControlFrame::Control_3_General, 5); //set talons every 5ms, default is 10
+  	canTalonRight1->SetStatusFramePeriod(
+    			StatusFrameEnhanced::Status_2_Feedback0, 10, 0);
+
+	canTalonLeft1->ConfigVoltageCompSaturation(12.0);
+  	canTalonLeft1->EnableVoltageCompensation(true);
+  	canTalonRight1->ConfigVoltageCompSaturation(12.0);
+  	canTalonRight1->EnableVoltageCompensation(true);
+
+  	canTalonLeft2->ConfigVoltageCompSaturation(12.0);
+	canTalonLeft2->EnableVoltageCompensation(true);
+  	canTalonRight2->ConfigVoltageCompSaturation(12.0);
+  	canTalonRight2->EnableVoltageCompensation(true);
+}
+
 
 double max_fwd_speed_l = 0;
 double max_fwd_speed_r = 0;
@@ -240,7 +301,7 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 
 	double target_l, target_r, target_yaw_rate;
 
-	double throttle = JoyWheel->GetX();
+	double throttle = JoyThrottle->GetY();
 
 	double reverse_y = 1.0;
 
@@ -306,7 +367,7 @@ void DriveBase::TeleopWCDrive(Joystick *JoyThrottle, //finds targets for the Con
 } else { //vel control wheel
 //	led_solenoid->Set(false);
 	double reverse_x = 1.0;
-	double wheel = -1.0 * JoyThrottle->GetY();
+	double wheel = -1.0 * JoyWheel->GetX();
 
 	if (wheel < 0.0) {
 		reverse_x = 1.0;//for black wheel, is opposite

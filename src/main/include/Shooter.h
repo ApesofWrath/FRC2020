@@ -18,7 +18,7 @@ class Shooter {
     const int topRollerSpark = 2;
     const int bottomRollerSpark = 3;
 
-    const int topShootSpeed = ((SHOOTER_SPEED)*60)/(2*PI);
+    const int topShootSpeed = ((SHOOTER_SPEED)*60)/(2*PI)/2;
     const int bottomShootSpeed = ((SHOOTER_SPEED)*60)/(2*PI);
 
     const int INIT_STATE_H = 0;

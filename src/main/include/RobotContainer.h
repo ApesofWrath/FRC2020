@@ -33,7 +33,8 @@ const std::string kAutoName_Unnamed = "Unnamed";
 
 enum Auto {
   CROSS_INIT_LINE,
-  SHOOT_PRELOAD
+  SHOOT_PRELOAD,
+  FIVE_BALL
 };
 
 /**

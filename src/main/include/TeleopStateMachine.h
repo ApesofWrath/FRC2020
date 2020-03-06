@@ -24,7 +24,7 @@ namespace ButtonIDs {
               FULL_RAISE_B2                      = 12,
               ROTATION_MODE_CONTROL_PANEL_BUTTON = 4,
               POSITION_MODE_CONTROL_PANEL_BUTTON = 1,
-              HUMAN_LOAD_BUTTON                  = 5,
+              HUMAN_LOAD_BUTTON                  = 15,
               EMERGENCY_BUTTON                   = 99;
 
 }

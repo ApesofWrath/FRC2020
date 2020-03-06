@@ -88,6 +88,8 @@ void ControlPanel::StateMachine() {
 
     switch(state) {
         case IDLE:
+          controlPanelArm->Set(0);
+          controlPanelRotator->Set(0);
           last_state = States::IDLE;
           break;
         case POSITION_MODE:
